@@ -1,0 +1,60 @@
+{
+  "id": 25,
+  "app": "Pumble",
+  "category": "Communications and Messaging",
+  "one_liner": "Team communication and messaging app offering chat, voice, and video conferencing.",
+  "official_domain": "pumble.com",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Pumble provides APIs and incoming/outgoing webhooks for workspace automation.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": "Available for workspace administrators to generate API keys or set up integrations.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://pumble.com/help/integrations/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Pumble provides public API endpoints and webhook integrations that allow building a complete AI agent toolkit.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://pumble.com/help/integrations/api",
+      "quote": "Pumble API allows you to integrate Pumble with other apps and services.",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "medium",
+    "credential_access": "medium"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:53:28.777551+00:00"
+  }
+}

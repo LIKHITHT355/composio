@@ -1,0 +1,65 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer",
+  "one_liner": "Cloud-scale monitoring and security platform for infrastructure, applications, and logs.",
+  "official_domain": "datadoghq.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Requires both an API key (for writing data or reporting access) and an Application key (associated with user permissions for reading/managing resources).",
+  "credential_access": "self_serve_trial",
+  "gate_notes": "Paid plan or trial required to access API credentials and full endpoints.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.datadoghq.com/api/latest/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Datadog provides a comprehensive public REST API fully documented with API and Application key authentication, making it ready for integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Rate limits apply per account/endpoint.",
+    "official_sdks": [
+      "python",
+      "node",
+      "ruby",
+      "go",
+      "java"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "quote": "Requests that write data require reporting access and require an API key . Requests that read data require ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "medium"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:11.604334+00:00"
+  }
+}

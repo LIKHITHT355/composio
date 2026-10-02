@@ -1,0 +1,61 @@
+{
+  "id": 21,
+  "app": "Slack",
+  "category": "Communications and Messaging",
+  "one_liner": "A channel-based messaging platform for team collaboration and workflow automation.",
+  "official_domain": "slack.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth 2.0 with scopes for user and bot tokens, or classic bot user tokens.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Creating an app requires a Slack account, but the developer portal is self-serve and free.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://api.slack.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/slackapi/mcp-slack"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Slack provides a comprehensive Web API, robust documentation, self-serve credentials, and an official Model Context Protocol (MCP) server.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Tiered rate limiting per method, typically ranging from 1 to 50 requests per minute.",
+    "official_sdks": [
+      "python",
+      "node",
+      "java",
+      "ruby",
+      "php"
+    ],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "bearer_token"
+    ]
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:53:12.138102+00:00"
+  }
+}

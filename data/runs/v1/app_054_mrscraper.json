@@ -1,0 +1,51 @@
+{
+  "id": 54,
+  "app": "MrScraper",
+  "category": "Data",
+  "one_liner": "Web scraping and SEO data extraction service.",
+  "official_domain": "mrscraper.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://mrscraper.com/docs",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "MrScraper provides a documented REST API with self-serve credential access, making it straightforward to integrate for web scraping tasks.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "medium",
+    "auth": "medium",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:17.577374+00:00"
+  }
+}

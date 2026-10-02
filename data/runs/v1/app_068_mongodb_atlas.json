@@ -1,0 +1,65 @@
+{
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "category": "Developer",
+  "one_liner": "Cloud-hosted database-as-a-service supporting MongoDB clusters with a robust Administration API.",
+  "official_domain": "mongodb.com",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Supports Service Accounts using OAuth 2.0 Client Credentials flow or API Keys with HTTP Digest Authentication.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Free tier available; self-serve signup provides access to Atlas administration API keys and service accounts.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "MongoDB Atlas offers a well-documented Administration API with self-serve API keys and OAuth 2.0 service accounts, making it fully ready for an API toolkit integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Rate limits apply per project/organization based on Atlas tier.",
+    "official_sdks": [
+      "python",
+      "node",
+      "go",
+      "java"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+      "quote": "Learn how to authenticate Atlas Administration API requests using Service Accounts with OAuth 2.0 or API Keys with HTTP Digest Authentication to manage",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:07.946701+00:00"
+  }
+}

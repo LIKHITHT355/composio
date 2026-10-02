@@ -1,0 +1,66 @@
+{
+  "id": 53,
+  "app": "Ahrefs",
+  "category": "Data",
+  "one_liner": "SEO and marketing data platform offering developer tools and APIs for keyword research, backlink analysis, and site auditing.",
+  "official_domain": "ahrefs.com",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "Provide API key in the Authorization header: Authorization: Bearer YOUR_API_KEY",
+  "credential_access": "paid_plan_required",
+  "gate_notes": "Only workspace owners and admins can create and manage API keys from Account settings.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.ahrefs.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "paid_plan",
+  "verdict_reason": "Ahrefs has a well-documented API v3 requiring workspace owner or admin privileges and a paid subscription with an API key, making it ready for integration with minor access hurdles.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "Rate limits apply per workspace plan.",
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.ahrefs.com/",
+      "quote": "Access Ahrefs marketing and search data through our APIs and developer tools to build custom integrations and workflows.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+      "quote": "Provide it in the Authorization header when making requests: Authorization: Bearer YOUR_API_KEY",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:13.008154+00:00"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": 42,
+  "app": "WooCommerce",
+  "category": "Ecommerce",
+  "one_liner": "Open-source e-commerce plugin for WordPress",
+  "official_domain": "woocommerce.com",
+  "auth_methods": [
+    "basic",
+    "oauth2"
+  ],
+  "auth_notes": "Supports Basic Authentication and OAuth 1.0a / OAuth 2 via WordPress or WooCommerce API keys.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "WooCommerce provides a comprehensive and well-documented REST API that is free and self-serve to use with WordPress.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Depends on the hosting provider and server limits of the self-hosted WordPress installation.",
+    "official_sdks": [
+      "php",
+      "node",
+      "python"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "quote": "WooCommerce REST API Documentation",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:55:02.264625+00:00"
+  }
+}

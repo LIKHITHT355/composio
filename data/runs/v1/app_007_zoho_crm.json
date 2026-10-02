@@ -1,0 +1,98 @@
+{
+  "id": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "one_liner": "Zoho CRM is a customer relationship management platform that helps businesses manage sales, marketing, and customer support processes.",
+  "official_domain": "zoho.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Zoho CRM provides a public API (V8 APIs) with clear documentation and uses standard OAuth 2.0 for authentication. Developers can access the API console to obtain credentials.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "quote": "Use Zoho CRM's V8 APIs to create custom solutions to your requirements and integrate third-party applications seamlessly with Zoho CRM.",
+      "retrieved_at": "2024-05-23T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "quote": "Use Zoho CRM's V8 APIs to create custom solutions to your requirements and integrate third-party applications seamlessly with Zoho CRM.",
+      "retrieved_at": "2024-05-23T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "quote": "Use Zoho CRM's V8 APIs to create custom solutions to your requirements and integrate third-party applications seamlessly with Zoho CRM.",
+      "retrieved_at": "2024-05-23T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "quote": "Use Zoho CRM's V8 APIs to create custom solutions to your requirements and integrate third-party applications seamlessly with Zoho CRM.",
+      "retrieved_at": "2024-05-23T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+      "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication. enables third-party applications (clients) to gain delegated access to protected resources in ...",
+      "retrieved_at": "2024-05-23T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.youtube.com/watch?v=WuDDfEgVI_8",
+      "quote": "In this tutorial, we'll guide you through the process of setting up an account with the Zoho API Developer Console. Learn how to obtain API ...",
+      "retrieved_at": "2024-05-23T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "api.styles": "high",
+    "api.breadth": "high",
+    "api.docs_url": "high",
+    "auth_methods": "high",
+    "credential_access": "medium",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:41:17.032261+00:00"
+  }
+}

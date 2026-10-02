@@ -1,0 +1,67 @@
+{
+  "id": 31,
+  "app": "Google Ads",
+  "category": "Marketing",
+  "one_liner": "A digital advertising platform by Google where advertisers pay to briefly display ads, product listings, and service offerings.",
+  "official_domain": "ads.google.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Google Ads API utilizes the OAuth 2.0 protocol for authentication and authorization, and requires a developer token.",
+  "credential_access": "approval_required",
+  "gate_notes": "Requires a Google Ads manager account and a developer token which requires approval or review.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "grpc"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.google.com/google-ads/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "Google Ads provides a comprehensive API via REST/gRPC using OAuth 2.0, but obtaining a developer token and going to production requires approval.",
+  "extras": {
+    "webhooks": false,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Rate limits apply per developer token and OAuth client.",
+    "official_sdks": [
+      "python",
+      "java",
+      "php",
+      "ruby",
+      "csharp",
+      "perl"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "quote": "Google Ads API utilizes the OAuth 2.0 protocol for authentication and authorization, allowing your app to access user accounts without handling login",
+      "retrieved_at": "2024-03-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:54:10.695357+00:00"
+  }
+}

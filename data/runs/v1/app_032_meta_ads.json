@@ -1,0 +1,66 @@
+{
+  "id": 32,
+  "app": "Meta Ads",
+  "category": "Marketing",
+  "one_liner": "API for managing advertising campaigns, audiences, and performance analytics across Meta platforms.",
+  "official_domain": "facebook.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Requires Meta Business Account and OAuth 2.0 user/system access tokens with marketing permissions.",
+  "credential_access": "approval_required",
+  "gate_notes": "App review and Meta Business Verification are required for live ad creation and management endpoints.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.facebook.com/docs/marketing-apis",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "Meta Ads has a comprehensive Marketing API, but developers must complete business verification and app review to access production capabilities.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Rate limits are based on a tiered call count system per app and ad account.",
+    "official_sdks": [
+      "python",
+      "node",
+      "php"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.docs_url",
+      "url": "https://developers.facebook.com/docs/marketing-apis",
+      "quote": "The Marketing API is an interface for managing ads, custom audiences, insights, and other marketing operations.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:54:14.199585+00:00"
+  }
+}

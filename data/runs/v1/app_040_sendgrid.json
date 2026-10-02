@@ -1,0 +1,72 @@
+{
+  "id": 40,
+  "app": "SendGrid",
+  "category": "Marketing",
+  "one_liner": "Cloud-based email delivery and marketing campaign management platform.",
+  "official_domain": "sendgrid.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses API keys passed in the Authorization header as 'Bearer <API_KEY>'.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Free tier available with limits on daily email sends.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.sendgrid.com/api-reference/",
+    "openapi_url": "https://github.com/sendgrid/sendgrid-oai"
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "SendGrid provides a comprehensive, well-documented REST API with self-serve API key creation, making it fully ready for integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Rate limits vary by endpoint, typically tracked via response headers.",
+    "official_sdks": [
+      "python",
+      "node",
+      "ruby",
+      "java",
+      "php",
+      "csharp",
+      "go"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": [
+      "api_key"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.sendgrid.com/api-reference/",
+      "quote": "Welcome to the SendGrid API Reference. Use these APIs to interact with SendGrid services.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:54:53.692796+00:00"
+  }
+}

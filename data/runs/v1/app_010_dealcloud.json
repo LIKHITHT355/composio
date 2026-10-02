@@ -1,0 +1,119 @@
+{
+  "id": 10,
+  "app": "DealCloud",
+  "category": "CRM and Sales",
+  "one_liner": "DealCloud is a preeminent CRM, deal management, and business development software.",
+  "official_domain": "dealcloud.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://api.docs.dealcloud.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "DealCloud provides comprehensive developer documentation, including API reference, authentication details, and functional APIs for user and schema management, making it ready for API toolkit integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.docs_url",
+      "url": "https://api.docs.dealcloud.com/",
+      "quote": "Dealcloud Developer Documentation. API Reference Getting Started API Keys Authorization Token.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://api.docs.dealcloud.com/",
+      "quote": "Dealcloud Developer Documentation. API Reference Getting Started API Keys Authorization Token.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.docs.dealcloud.com/",
+      "quote": "API Reference Getting Started API Keys Authorization Token.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.docs.dealcloud.com/docs",
+      "quote": "Authentication \u2013 Provides tokens for use with all other APIs.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://api.docs.dealcloud.com/docs",
+      "quote": "Overview of Functional APIs ; Authentication \u2013 Provides tokens for use with all other APIs. ; User Management \u2013 Endpoints for managing users.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://api.docs.dealcloud.com/docs/schema",
+      "quote": "The Schema APIs allow you to retrieve detailed information about the structure of a DealCloud site and the relationship between different ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "one_liner",
+      "url": "https://apitracker.io/a/dealcloud",
+      "quote": "The preeminent CRM, deal management and business development software.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://api.docs.dealcloud.com/guides/making_requests_on_behalf_of_users",
+      "quote": "The DealCloud API requires user-specific credentials and authentication tokens for access. In most cases, integrations authenticate using a ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "app": "high",
+    "official_domain": "high",
+    "auth_methods": "high",
+    "credential_access": "medium",
+    "api.exists": "high",
+    "api.styles": "high",
+    "api.breadth": "high",
+    "api.docs_url": "high",
+    "api.openapi_url": "high",
+    "mcp.status": "high",
+    "build_form": "high",
+    "verdict": "high",
+    "main_blocker": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:42:01.859473+00:00"
+  }
+}

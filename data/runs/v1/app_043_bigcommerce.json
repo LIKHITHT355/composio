@@ -1,0 +1,69 @@
+{
+  "id": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "one_liner": "E-commerce platform providing robust APIs for managing stores, customers, products, and orders.",
+  "official_domain": "bigcommerce.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses store-level API accounts with access tokens and OAuth2 tokens via query parameters (code, scope, context) during authorization callbacks.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": "API credentials can be generated directly from the store control panel under Settings > API Accounts.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.bigcommerce.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "BigCommerce provides comprehensive public REST APIs and OAuth2/token authentication accessible via self-serve store accounts.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "php"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+      "quote": "Most APIs that work with store-level API accounts use the access_token to authenticate requests to BigCommerce.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer.bigcommerce.com/",
+      "quote": "Navigate to Settings > API Accounts in your store control panel. Create credentials with the scopes you need. 3. Make your first API call.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:55:06.220763+00:00"
+  }
+}

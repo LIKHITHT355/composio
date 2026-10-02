@@ -1,0 +1,73 @@
+{
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer",
+  "one_liner": "Cloud-based data warehousing and analytics platform providing a SQL API for executing queries.",
+  "official_domain": "snowflake.com",
+  "auth_methods": [
+    "oauth2",
+    "jwt"
+  ],
+  "auth_notes": "Supports OAuth and key pair (JWT) authentication.",
+  "credential_access": "paid_plan_required",
+  "gate_notes": "Snowflake requires a paid cloud account, though self-service trial accounts are often available.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.snowflake.com/en/developer-guide/sql-api/submitting-requests",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Snowflake provides a well-documented SQL REST API with standard OAuth and key pair authentication support.",
+  "extras": {
+    "webhooks": false,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Concurrency limits on the API are determined by the concurrency limits enforced by the account/warehouse.",
+    "official_sdks": [
+      "python",
+      "node",
+      "java",
+      "go"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/submitting-requests",
+      "quote": "The Snowflake SQL API supports sending concurrent requests to the server.",
+      "retrieved_at": "2026-03-31T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://blog.dreamfactory.com/generate-a-snowflake-rest-api-in-less-than-5-minutes",
+      "quote": "Authentication: Securely authenticate using OAuth or Snowflake's key pair authentication to ensure that only authorized queries are executed.",
+      "retrieved_at": "2026-03-31T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "build_form": "high",
+    "credential_access": "medium"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:04.014252+00:00"
+  }
+}

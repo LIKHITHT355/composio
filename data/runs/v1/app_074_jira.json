@@ -1,0 +1,69 @@
+{
+  "id": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "one_liner": "Issue and project tracking software for agile teams with robust developer resources and REST APIs.",
+  "official_domain": "atlassian.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "basic"
+  ],
+  "auth_notes": "Supports OAuth 2.0 (3LO), API tokens for basic auth, and Personal Access Tokens.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Free tier available for up to 10 users with self-serve signup.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.atlassian.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Jira provides a comprehensive public REST API and developer documentation, making it fully ready for building an AI integration toolkit.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Rate limits apply based on Atlassian Cloud REST API policies.",
+    "official_sdks": [
+      "python",
+      "node"
+    ],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "api_key"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api.docs_url",
+      "url": "https://www.atlassian.com/software/jira",
+      "quote": "Jira brings teams together to reach the next level of productivity with AI ... Learn. Partners \u00b7 Training & certification \u00b7 Documentation \u00b7 Developer resources.",
+      "retrieved_at": "2025-02-16T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:32.370376+00:00"
+  }
+}

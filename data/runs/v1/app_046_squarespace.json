@@ -1,0 +1,60 @@
+{
+  "id": 46,
+  "app": "Squarespace",
+  "category": "Ecommerce",
+  "one_liner": "A website building and hosting platform offering Commerce APIs, webhooks, and developer tools for building external apps.",
+  "official_domain": "squarespace.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Squarespace uses OAuth 2.0 for app authentication and API access.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developers.squarespace.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Squarespace provides public Commerce APIs, webhooks, developer documentation, and MCP support making it fully ready for building an API toolkit.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.squarespace.com",
+      "quote": "Build and publish apps on the Squarespace Developer Platform. Use Commerce APIs, webhooks, a custom code spec, and MCP support for Claude and ChatGPT.",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:55:22.297977+00:00"
+  }
+}

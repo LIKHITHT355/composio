@@ -1,0 +1,60 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "one_liner": "An all-in-one doc that combines the flexibility of a document with the power of spreadsheets and apps.",
+  "official_domain": "coda.io",
+  "auth_methods": [
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "The Coda API uses Bearer token authentication with API tokens generated from user account settings.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://coda.io/developers",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Coda provides a well-documented public REST API accessible via self-serve API tokens.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://docs.nexla.com/user-guides/connectors/coda_api/coda_api_auth",
+      "quote": "Before creating a Coda credential, you'll need to obtain an API token from your Coda account. The Coda API uses Bearer token authentication with API tokens.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:50.175644+00:00"
+  }
+}

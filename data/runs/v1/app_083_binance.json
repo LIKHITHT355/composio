@@ -1,0 +1,154 @@
+{
+  "id": 83,
+  "app": "Binance",
+  "category": "Finance and Fintech",
+  "one_liner": "Binance is a leading global cryptocurrency exchange offering a platform for trading various digital assets.",
+  "official_domain": "binance.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/general",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Binance offers a comprehensive public REST API with clear documentation, API key authentication, and a dedicated testnet, making it readily buildable for AI agents.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.binance.com/en/docs/products/spot/testnet/rest-api",
+      "quote": "[Public Rest API for Binance SPOT Testnet]: Secure endpoints require a valid API key to be specified and authenticated.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://www.binance.com/en-NG/binance-api",
+      "quote": "API trading provides a testing environment, API documentation, and sample code in multiple programming languages.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/general",
+      "quote": "Welcome to the new Binance API documentation.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developers.binance.com/en/docs/products/spot/testnet/rest-api",
+      "quote": "[Public Rest API for Binance SPOT Testnet]: Secure endpoints require a valid API key to be specified and authenticated.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developers.binance.com/en/docs/products/derivatives-trading-options/general-info",
+      "quote": "All endpoints return either a JSON object or array.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/general",
+      "quote": "General - Spot REST API | Binance Developer Docs",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://www.binance.com/en-NG/binance-api",
+      "quote": "API trading provides a testing environment, API documentation, and sample code in multiple programming languages. Suitable for all your trading needs.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/rest-api/general",
+      "quote": "Welcome to the new Binance API documentation.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/en/docs/products/spot/testnet/rest-api",
+      "quote": "Secure endpoints require a valid API key to be specified and authenticated.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.binance.com/en/square/post/288303",
+      "quote": "An application programming interface (API) key is a unique code used by an API to identify the application or user making the request.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.binance.com/en/docs/products/derivatives-trading-options/general-info",
+      "quote": "Some endpoints will require an API Key.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.binance.com/en/docs/products/spot/testnet/rest-api",
+      "quote": "API keys can be created on the SPOT Test Network upon logging in with your Github ...",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "extras.sandbox_or_test_env",
+      "url": "https://developers.binance.com/en/docs/products/spot/testnet/rest-api",
+      "quote": "[Public Rest API for Binance SPOT Testnet]: Secure endpoints require a valid API key to be specified and authenticated.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "extras.sandbox_or_test_env",
+      "url": "https://www.binance.com/en-NG/binance-api",
+      "quote": "API trading provides a testing environment, API documentation, and sample code in multiple programming languages.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "api.styles": "high",
+    "api.breadth": "high",
+    "api.docs_url": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "extras.sandbox_or_test_env": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:38:29.324587+00:00"
+  }
+}

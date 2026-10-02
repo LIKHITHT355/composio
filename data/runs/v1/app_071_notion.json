@@ -1,0 +1,71 @@
+{
+  "id": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "one_liner": "All-in-one workspace for notes, tasks, wikis, and databases with a robust REST API.",
+  "official_domain": "notion.so",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Requests use the HTTP Authorization header with bearer tokens, and integration supports OAuth2 workflows.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.notion.com/reference/authentication",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Notion provides a well-documented public REST API with self-serve token generation and OAuth2 support, making it ready for integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Standard rate limiting applies per integration token.",
+    "official_sdks": [
+      "javascript",
+      "typescript"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://developers.notion.com/reference/authentication",
+      "quote": "Requests use the HTTP Authorization header to both authenticate and authorize operations. The Notion API accepts bearer tokens in this header.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.notion.com/guides/get-started/quick-start",
+      "quote": "1. Open Personal access tokens in the Developer portal. ; 2. Select New token. ; 3. Enter a name, select the Notion API capability, and then select Create token.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:20.640047+00:00"
+  }
+}

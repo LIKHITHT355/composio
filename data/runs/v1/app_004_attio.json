@@ -1,0 +1,128 @@
+{
+  "id": 4,
+  "app": "Attio",
+  "category": "CRM and Sales",
+  "one_liner": "Attio is a CRM platform that provides a public REST API for managing customer relationships and sales data programmatically.",
+  "official_domain": "attio.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Authentication can be done via OAuth 2.0 (authorization code grant flow) or by generating access tokens, which are scoped to a single workspace.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.attio.com/rest-api/overview",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Attio offers a public REST API with clear documentation, supporting OAuth 2.0 and access token authentication, making it readily buildable for AI agents.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.attio.com/rest-api/overview",
+      "quote": "Attio provides a public REST API which exchanges JSON over HTTPS.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://docs.attio.com/rest-api/overview",
+      "quote": "Attio provides a public REST API which exchanges JSON over HTTPS.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://docs.attio.com/rest-api/overview",
+      "quote": "Attio provides a public REST API which exchanges JSON over HTTPS. To get up and running, read our guide on how to authenticate requests.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "In order to make requests to the Attio REST API, you need to generate an access token. There are two ways to generate an access token: By implementing an OAuth ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.stacksync.com/blog/how-to-get-an-attio-developer-account-and-start-working-with-attios-api",
+      "quote": "There are two ways to authenticate with Attio: access tokens, or OAuth.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://www.stacksync.com/blog/how-to-get-an-attio-developer-account-and-start-working-with-attios-api",
+      "quote": "Access tokens are scoped to a single workspace, while OAuth is only ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/endpoint-reference/objects/get-an-object",
+      "quote": "This API uses OAuth 2.0 with the authorization code grant flow.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.openapi_url",
+      "url": "https://apitracker.io/a/attio",
+      "quote": "Attio API specs, API docs, OpenAPI support, SDKs, GraphQL, developer docs, CLI, IDE plugins, API pricing, developer experience, authentication, and API ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "extras.official_sdks",
+      "url": "https://apitracker.io/a/attio",
+      "quote": "Attio API specs, API docs, OpenAPI support, SDKs, GraphQL, developer docs, CLI, IDE plugins, API pricing, developer experience, authentication, and API ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "id": "high",
+    "app": "high",
+    "category": "high",
+    "one_liner": "medium",
+    "official_domain": "high",
+    "auth_methods": "high",
+    "auth_notes": "medium",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "build_form": "high",
+    "verdict": "high",
+    "main_blocker": "high",
+    "verdict_reason": "high",
+    "extras": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:40:02.745901+00:00"
+  }
+}

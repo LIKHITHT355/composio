@@ -1,0 +1,66 @@
+{
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "category": "Marketing",
+  "one_liner": "LinkedIn Advertising API for managing marketing campaigns, ad accounts, and analytics.",
+  "official_domain": "linkedin.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Uses OAuth 2.0 for user authorization and API authentication.",
+  "credential_access": "approval_required",
+  "gate_notes": "Requires creating an app, adding the Advertising API product, and completing an access form which LinkedIn reviews.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "LinkedIn Ads provides a robust Marketing/Advertising REST API under OAuth 2.0, but access requires submitting an application form and getting approval from LinkedIn.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+      "quote": "1. Create an app, add Advertising API, and complete the access form under My Apps > select your app > Products. \u00b7 2. LinkedIn will review your application",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+      "quote": "The LinkedIn API uses OAuth 2.0 for user authorization and API authentication.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:54:17.594782+00:00"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": 100,
+  "app": "Grain",
+  "category": "AI",
+  "one_liner": "AI-powered meeting assistant for recording, transcribing, and highlighting video meetings.",
+  "official_domain": "grain.com",
+  "auth_methods": [
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Supports Personal Access Tokens (PAT) and API keys.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developers.grain.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Grain provides a public API with Personal Access Token authentication, making it ready for building an API toolkit integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://developers.grain.com/",
+      "quote": "The Grain API lets you read and manage recordings, Personal Access Token (PAT) authenticates requests as you, with the same access you have in ...",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth": "high",
+    "api": "high",
+    "credential_access": "medium"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T12:00:21.918156+00:00"
+  }
+}

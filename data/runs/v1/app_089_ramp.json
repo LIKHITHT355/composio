@@ -1,0 +1,75 @@
+{
+  "id": 89,
+  "app": "Ramp",
+  "category": "Finance and Fintech",
+  "one_liner": "Corporate card, expense management, bill pay, and accounting automation platform.",
+  "official_domain": "ramp.com",
+  "auth_methods": [
+    "basic",
+    "bearer_token"
+  ],
+  "auth_notes": "Ramp authenticates requests to /developer/v1/token using client ID and client secret, typically with HTTP Basic Auth.",
+  "credential_access": "approval_required",
+  "gate_notes": "Requires admin access in your Ramp account to create a developer app.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.ramp.com/developer-api/v1/getting-started",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://ramp.com/developer-tools"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "Ramp provides a developer API and an official MCP server, but requires admin access and setting up a developer app inside the account.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.ramp.com/developer-api/v1/getting-started",
+      "quote": "First, you'll need to create a developer app to get your API credentials. In your Ramp account, go to Company \u2192 Developer (you'll need admin access).",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.ramp.com/developer-api/v1/authorization",
+      "quote": "Ramp authenticates requests to /developer/v1/token using your client ID and client secret, typically with HTTP Basic Auth.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://ramp.com/developer-tools",
+      "quote": "Use Ramp's MCP server and APIs to create agents that do work for you.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "medium",
+    "mcp": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:58:43.654881+00:00"
+  }
+}

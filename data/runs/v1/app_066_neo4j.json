@@ -1,0 +1,67 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer",
+  "one_liner": "Graph database and analytics platform for connected data.",
+  "official_domain": "neo4j.com",
+  "auth_methods": [
+    "basic",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses HTTP Basic Authentication or JWT Bearer tokens for connecting to Neo4j DBMS and executing Cypher queries.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "sdk_only"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://neo4j.com/docs/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/modelcontextprotocol/servers"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Neo4j provides fully documented REST and bolt/driver APIs allowing programmatic interaction with graph databases, easily buildable as a developer tool.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python",
+      "javascript",
+      "java",
+      "dotnet",
+      "go"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "official_domain",
+      "url": "https://neo4j.com",
+      "quote": "Graph Database & Analytics | Neo4j",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:56.437112+00:00"
+  }
+}

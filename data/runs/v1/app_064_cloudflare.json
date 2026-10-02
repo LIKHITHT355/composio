@@ -1,0 +1,72 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "category": "Developer",
+  "one_liner": "Cloudflare provides content delivery network services, cloud cybersecurity, DDoS mitigation, and domain registration services.",
+  "official_domain": "cloudflare.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports API tokens, Global API keys, and Origin CA keys.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Free tier users can generate API tokens and keys directly from their dashboard profile.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.cloudflare.com/api/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Cloudflare offers a comprehensive public REST and GraphQL API accessible via self-serve API tokens with robust developer documentation.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Rate limits apply per API token/user.",
+    "official_sdks": [
+      "python",
+      "typescript",
+      "go"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.docs_url",
+      "url": "https://developers.cloudflare.com/api/",
+      "quote": "API Reference | Cloudflare API: Update the AI Security for Apps custom topics of a zone.",
+      "retrieved_at": "2026-03-31T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+      "quote": "Determine if you want a user token or an Account API token. \u00b7 From the Cloudflare dashboard \u2197\ufe0e, go to My Profile > API Tokens for user tokens.",
+      "retrieved_at": "2026-03-31T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:46.865507+00:00"
+  }
+}

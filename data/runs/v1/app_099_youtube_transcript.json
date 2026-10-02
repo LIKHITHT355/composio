@@ -1,0 +1,61 @@
+{
+  "id": 99,
+  "app": "YouTube Transcript",
+  "category": "AI",
+  "one_liner": "A tool/API to extract transcripts and subtitles from any YouTube video for AI pipelines and summarizers.",
+  "official_domain": "transcriptapi.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "API keys provided via self-serve dashboard.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "narrow",
+    "docs_url": "https://transcriptapi.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "YouTube Transcript API provides a self-serve developer REST API to extract transcripts from any YouTube video with available endpoints.",
+  "extras": {
+    "webhooks": false,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://transcriptapi.com/",
+      "quote": "Extract transcripts from any YouTube video \u2014 with or without timestamps. Drop the output straight into summarizers, search indexes, or AI pipelines.",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "medium",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T12:00:14.554940+00:00"
+  }
+}

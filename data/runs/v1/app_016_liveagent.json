@@ -1,0 +1,61 @@
+{
+  "id": 16,
+  "app": "LiveAgent",
+  "category": "Support and Helpdesk",
+  "one_liner": "Help desk and live chat software for customer service management",
+  "official_domain": "liveagent.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Requires generating an API v3 key from the LiveAgent admin panel.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://www.liveagent.com/api/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "LiveAgent provides a fully documented REST API accessible via generated API keys, making it straightforward to build an AI agent toolkit.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://www.youtube.com/watch?v=oW92Fg2XemM",
+      "quote": "To migrate from or to LiveAgent, you need to generate API v3 key and find API v1 key.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:52:50.505198+00:00"
+  }
+}

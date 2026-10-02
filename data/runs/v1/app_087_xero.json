@@ -1,0 +1,81 @@
+{
+  "id": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "one_liner": "Cloud-based accounting software platform for small and medium-sized businesses with robust APIs.",
+  "official_domain": "xero.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Uses OAuth 2.0 with standard authorization code flow.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Developers can sign up for a free Xero account and create an OAuth 2.0 application.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.xero.com/documentation/api/accounting/overview",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Xero offers a comprehensive public REST API with standard OAuth 2.0 authentication and self-serve developer access.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Standard Xero API rate limits apply (e.g., 60 requests per minute per tenant).",
+    "official_sdks": [
+      "python",
+      "node",
+      "dotnet",
+      "php",
+      "java",
+      "ruby"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://developer.xero.com/documentation/api/accounting/overview",
+      "quote": "The Accounting API exposes accounting and related functions of the main Xero application and can be used for a variety of purposes such as creating transactions",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.xero.com/documentation/guides/oauth2/auth-flow/",
+      "quote": "To get started, create an OAuth2 app and make sure you select the \u201cAuth Code\u201d grant type. Your app is assigned a unique Client ID and you can then generate a ...",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer.xero.com/documentation/getting-started-guide/",
+      "quote": "Signup for a free Xero account Enable. Add your OAuth 2.0 application",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:58:20.296142+00:00"
+  }
+}

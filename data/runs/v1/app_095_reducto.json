@@ -1,0 +1,67 @@
+{
+  "id": 95,
+  "app": "Reducto",
+  "category": "AI",
+  "one_liner": "Document intelligence platform turning complex unstructured documents into structured data via API.",
+  "official_domain": "reducto.ai",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "Bearer authentication header of the form Bearer <token>",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.reducto.ai/api-reference/edit-async",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Reducto provides a well-documented public REST API for document processing with standard bearer token authentication.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://docs.reducto.ai/api-reference/edit-async",
+      "quote": "Bearer authentication header of the form Bearer <token> , where <token> is your auth token. Body. application/json. \u200b. document_url. string, UploadResponse",
+      "retrieved_at": "2024-10-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "one_liner",
+      "url": "https://trust.reducto.ai/",
+      "quote": "Reducto, Inc. is a document intelligence platform that turns complex, unstructured documents into accurate, structured data.",
+      "retrieved_at": "2024-10-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "medium",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:59:33.512022+00:00"
+  }
+}

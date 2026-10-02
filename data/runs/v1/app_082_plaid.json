@@ -1,0 +1,77 @@
+{
+  "id": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "one_liner": "Plaid is a financial technology platform that builds developer-friendly products and financial services infrastructure.",
+  "official_domain": "plaid.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses client_id and secret/API keys along with access_tokens corresponding to specific financial institution items.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Free developer dashboard access allows immediate testing in sandbox environments.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://plaid.com/docs/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Plaid provides a robust, well-documented REST API with a self-serve developer dashboard and sandbox environment.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python",
+      "node",
+      "ruby",
+      "java",
+      "go",
+      "php",
+      "dotnet"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "The Plaid API is JSON over HTTP. Requests are POST requests",
+      "retrieved_at": "2024-05-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://plaid.com/docs/api/",
+      "quote": "To gain access to the Plaid API, create an account on the Plaid Dashboard.",
+      "retrieved_at": "2024-05-18T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:58:00.149038+00:00"
+  }
+}

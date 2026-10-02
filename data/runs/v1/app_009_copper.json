@@ -1,0 +1,112 @@
+{
+  "id": 9,
+  "app": "Copper",
+  "category": "CRM and Sales",
+  "one_liner": "Copper is a CRM platform that provides a developer API for third-party integrations to access and manage CRM resources.",
+  "official_domain": "copper.com",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "The Copper Developer API supports OAuth 2.0 for authorization and authentication, and also uses token-based authentication where a token and user email are included in the header of every request.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.copper.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Copper offers a public RESTful API with clear documentation, supporting OAuth 2.0 and token-based authentication, making it ready for AI agent integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.copper.com/",
+      "quote": "The Copper Developer API provides a RESTful interface with JSON-formatted responses to access most Copper resources.",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developer.copper.com/",
+      "quote": "The Copper Developer API provides a RESTful interface with JSON-formatted responses to access most Copper resources.",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://developer.copper.com/",
+      "quote": "The Copper Developer API provides a RESTful interface with JSON-formatted responses to access most Copper resources.",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://developer.copper.com/",
+      "quote": "Copper Developer API: Getting started",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.copper.com/introduction/oauth/flow.html",
+      "quote": "Third-party integrations may take advantage of OAuth 2.0 for the purpose of authorizing and authenticating access to the Copper Developer API.",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "The Dev API uses token based authentication. You have to include the token in the header of every request, along with the email address of the user who ...",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "The Dev API uses token based authentication. You have to include the token in the header of every request, along with the email address of the user who ...",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://developer.copper.com/introduction/oauth/flow.html",
+      "quote": "Third-party integrations may take advantage of OAuth 2.0 for the purpose of authorizing and authenticating access to the Copper Developer API.",
+      "retrieved_at": "2024-05-23T12:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "medium",
+    "mcp": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:41:45.569757+00:00"
+  }
+}

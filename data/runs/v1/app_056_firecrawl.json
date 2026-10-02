@@ -1,0 +1,69 @@
+{
+  "id": 56,
+  "app": "Firecrawl",
+  "category": "Data",
+  "one_liner": "Web data API for AI agents to search, scrape, and interact with the live web to get clean Markdown or structured data.",
+  "official_domain": "firecrawl.dev",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "Requires an Authorization header containing a Bearer token (API key starting with fc-).",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Firecrawl provides a fully documented public REST API utilizing simple Bearer token authentication with self-serve signup.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python",
+      "node"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.docs_url",
+      "url": "https://docs.firecrawl.dev/api-reference/introduction",
+      "quote": "For authentication, it's required to include an Authorization header. The header should contain Bearer fc-123456789 , where fc-123456789 represents your API Key",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "app",
+      "url": "https://docs.firecrawl.dev/introduction",
+      "quote": "Firecrawl is the web data API for AI agents. Search, scrape, and interact with the live web to get clean Markdown or structured data.",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:24.351256+00:00"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "one_liner": "Help desk and customer support software with robust APIs for mailboxes, docs, and embedded apps.",
+  "official_domain": "helpscout.com",
+  "auth_methods": [
+    "oauth2",
+    "basic"
+  ],
+  "auth_notes": "OAuth2 is used for the Mailbox API 2.0. HTTP Basic Authentication with a dummy password is used for the Docs API.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": "Requires creating an OAuth2 application via your profile or using API keys depending on the endpoint.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.helpscout.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Help Scout provides robust public REST APIs with clear documentation for both Mailbox and Docs, supporting standard OAuth2 and Basic authentication.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://developer.helpscout.com/mailbox-api/",
+      "quote": "This is an HTTPS-only API, with OAuth 2 authentication and CORS support running. It uses JSON for requests, responses and error messages.",
+      "retrieved_at": "2024-10-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/docs-api/",
+      "quote": "The API key is passed via HTTP Basic Authentication and goes in the username field. A dummy password, such as X, goes in the password field.",
+      "retrieved_at": "2024-10-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:52:56.877336+00:00"
+  }
+}

@@ -80,6 +80,16 @@ def run_app_v1(app_row: dict, search: SearchProvider, llm: LLMClient, schema_jso
     raw_data["provenance"]["prompt_version"] = "v1.0"
     raw_data["provenance"]["timestamp"] = datetime.now(timezone.utc).isoformat()
 
+    # Normalize common enum typos from naive LLM
+    if "auth_methods" in raw_data and isinstance(raw_data["auth_methods"], list):
+        norm_auth = []
+        for m in raw_data["auth_methods"]:
+            m_str = str(m).lower()
+            if m_str == "token":
+                m_str = "bearer_token"
+            norm_auth.append(m_str)
+        raw_data["auth_methods"] = norm_auth
+
     # Validate against AppRecord
     record = AppRecord.model_validate(raw_data)
     record_dict = record.model_dump(mode="json")

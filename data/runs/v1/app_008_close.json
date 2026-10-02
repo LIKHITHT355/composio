@@ -1,0 +1,62 @@
+{
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "one_liner": "Close is a CRM and sales platform designed to help businesses manage customer relationships and streamline sales processes.",
+  "official_domain": "close.com",
+  "auth_methods": [],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "Based on the provided search snippets, no specific API documentation or information for Close CRM was found. Therefore, it is not buildable with the given resources.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "api.styles": "low",
+    "api.breadth": "low",
+    "api.docs_url": "low",
+    "api.openapi_url": "low",
+    "mcp.status": "low",
+    "build_form": "low",
+    "verdict": "low",
+    "main_blocker": "low",
+    "verdict_reason": "low",
+    "extras.webhooks": "low",
+    "extras.sandbox_or_test_env": "low",
+    "extras.rate_limit_note": "low",
+    "extras.official_sdks": "low",
+    "extras.composio_toolkit_exists": "low",
+    "extras.composio_auth_schemes": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:41:29.967121+00:00"
+  }
+}

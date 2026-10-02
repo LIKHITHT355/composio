@@ -1,0 +1,60 @@
+{
+  "id": 37,
+  "app": "systeme.io",
+  "category": "Marketing",
+  "one_liner": "All-in-one marketing platform to build sales funnels, email marketing campaigns, and manage affiliate programs.",
+  "official_domain": "systeme.io",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Systeme.io provides an API key generated from the dashboard settings for API access.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "API access is available on their plans including the free tier, though endpoint rate limits or quotas may scale with paid plans.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://api.systeme.io/documentation/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Systeme.io provides a documented REST API accessible with an API key, allowing integration for contacts, funnels, and tags.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Standard rate limits apply per API account.",
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://api.systeme.io/documentation/",
+      "quote": "Systeme.io API documentation for developers.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:54:44.063320+00:00"
+  }
+}

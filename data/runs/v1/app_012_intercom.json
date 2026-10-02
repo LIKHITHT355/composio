@@ -1,0 +1,106 @@
+{
+  "id": 12,
+  "app": "Intercom",
+  "category": "Support and Helpdesk",
+  "one_liner": "Intercom is a customer messaging platform that helps businesses communicate with their customers through chat, email, and in-app messages.",
+  "official_domain": "intercom.com",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Authentication options include Access Tokens for private/public apps and OAuth. Access tokens can be found in the developer hub.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "API access tokens can be found and configured within the Intercom Developer Hub.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Intercom provides a public REST API with clear authentication methods (OAuth and API keys) and comprehensive developer documentation, making it ready for integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "To access the Intercom API, you have two authentication options depending on whether you app is public or private. An Access Token is for if you're using ...",
+      "retrieved_at": "2024-07-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://endgrate.com/blog/using-the-intercom-api-to-create-or-update-companies-in-python",
+      "quote": "In your Intercom Developer Hub, navigate to the Authentication section. \u00b7 Enable the Use OAuth option.",
+      "retrieved_at": "2024-07-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.intercom.com/help/en/articles/9071694-intercom-developer-faqs",
+      "quote": "Find your access token in your developer hub and learn more about authentication here. To find your API access token, follow these steps: Open ...",
+      "retrieved_at": "2024-07-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
+      "quote": "Intercom API | Intercom and Fin Developer Platform",
+      "retrieved_at": "2024-07-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
+      "quote": "Please head over to the Developer Hub app package authentication settings to configure the required permissions. Schemas. Custom Object Instance \u00b7 Custom ... (https://developers.intercom.com/docs/references/rest-api/api.intercom.io)",
+      "retrieved_at": "2024-07-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
+      "quote": "Intercom API | Intercom and Fin Developer Platform",
+      "retrieved_at": "2024-07-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
+      "quote": "Schemas. Custom Object Instance \u00b7 Custom ...",
+      "retrieved_at": "2024-07-20T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api.exists": "high",
+    "api.styles": "high",
+    "api.breadth": "medium",
+    "api.docs_url": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:42:32.583785+00:00"
+  }
+}

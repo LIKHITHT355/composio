@@ -1,0 +1,65 @@
+{
+  "id": 28,
+  "app": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "one_liner": "Enterprise messaging platform enabling businesses to communicate with customers globally via the WhatsApp Cloud API.",
+  "official_domain": "developers.facebook.com",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Uses Facebook Graph API token authentication and system user access tokens.",
+  "credential_access": "approval_required",
+  "gate_notes": "Requires Meta Business Verification and app review for full production access, though a sandbox is available for testing.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.facebook.com/docs/whatsapp",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "WhatsApp Business provides a robust Cloud API for messaging and templates, but requires Meta Business verification and app setup.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Tiered messaging limits based on quality rating and phone number tier (e.g. 1k, 10k, 100k+ messages per day).",
+    "official_sdks": [
+      "python",
+      "node"
+    ],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "bearer_token"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+      "quote": "This documentation is for developers building on the WhatsApp Business Platform. ... This guide helps developers quickly get started with the WhatsApp Cloud API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:53:40.272214+00:00"
+  }
+}

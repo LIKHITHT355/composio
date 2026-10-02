@@ -1,0 +1,76 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer service software and support ticketing system with extensive APIs for managing tickets, users, and conversations.",
+  "official_domain": "zendesk.com",
+  "auth_methods": [
+    "oauth2",
+    "basic",
+    "api_key"
+  ],
+  "auth_notes": "Supports OAuth access tokens, basic authentication with email/password or email/API token.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Zendesk provides a comprehensive REST API with standard authentication mechanisms (OAuth 2.0, API tokens, Basic auth) and robust documentation.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "quote": "Zendesk supports using OAuth access tokens to authenticate API requests.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.zendesk.com/hc/en-us/articles/4408831452954-How-can-I-authenticate-API-requests",
+      "quote": "To authenticate API requests, use basic authentication with your email address and password, your email address and an API token, or an OAuth ...",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/tickets/",
+      "quote": "Zendesk has both a Tickets API and a Requests API. A ticket is an agent's perspective on a ticket. A request is an end user's perspective on a ticket.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "app": "high",
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:52:47.467137+00:00"
+  }
+}

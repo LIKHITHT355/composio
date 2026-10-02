@@ -1,0 +1,151 @@
+{
+  "id": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "one_liner": "Pylon is a support and helpdesk platform that integrates with development tools to provide technical context to support teams, offering features like a chat widget and an SDK for custom integrations.",
+  "official_domain": "usepylon.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": null,
+  "credential_access": "paid_plan_required",
+  "gate_notes": "Requires a workspace API key, personal API keys are not supported, implying a business account or paid plan.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "sdk_only"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.usepylon.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Pylon offers a public API and SDK with documentation, supporting integrations and core functionalities, making it ready for AI agent build-out.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "javascript"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.usepylon.com/pylon-docs/getting-started/publish-your-docs",
+      "quote": "JavaScript API",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://pylon.bot/docs/reference",
+      "quote": "Pylon SDK Documentation: If you're new to Pylon, you should check out the Getting Started section on the docs. This section serves as the Pylon SDK technical reference.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.usepylon.com/articles/9452304640-how-do-i-integrate-granola-with-pylon",
+      "quote": "Pylon requires a Granola workspace API key; Personal API keys are not supported.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://support.usepylon.com/articles/9452304640-how-do-i-integrate-granola-with-pylon",
+      "quote": "Pylon requires a Granola workspace API key; Personal API keys are not supported.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://docs.usepylon.com/pylon-docs/getting-started/publish-your-docs",
+      "quote": "JavaScript API",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://pylon.bot/docs/reference",
+      "quote": "Pylon SDK Documentation",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://docs.usepylon.com/pylon-docs/integrations/codebase",
+      "quote": "Codebase. Connect development tools to Pylon so your support and success teams have technical context when helping customers.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://docs.usepylon.com/pylon-docs/getting-started/publish-your-docs",
+      "quote": "Chat Widget. Overview \u00b7 Styling \u00b7 Functionality \u00b7 Chat Experience \u00b7 Chat Setup \u00b7 Identity Verification \u00b7 JavaScript API ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://pylon.cronit.io/docs/core-concepts/logging-and-monitoring",
+      "quote": "Learn how Pylon enhances visibility into your application's performance and behavior with its integrated monitoring capabilities, ensuring smooth operations and ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://docs.usepylon.com/pylon-docs/getting-started/publish-your-docs",
+      "quote": "Custom Authentication. Chat Widget. Overview \u00b7 Styling \u00b7 Functionality \u00b7 Chat Experience \u00b7 Chat Setup \u00b7 Identity Verification \u00b7 JavaScript API ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://pylon.bot/docs/reference",
+      "quote": "Pylon SDK Documentation: If you're new to Pylon, you should check out the Getting Started section on the docs. This section serves as the Pylon SDK technical reference.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "extras.official_sdks",
+      "url": "https://docs.usepylon.com/pylon-docs/getting-started/publish-your-docs",
+      "quote": "JavaScript API",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "extras.official_sdks",
+      "url": "https://pylon.bot/docs/reference",
+      "quote": "Pylon SDK Documentation",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "api.styles": "medium",
+    "api.breadth": "medium",
+    "api.docs_url": "high",
+    "auth_methods": "high",
+    "credential_access": "medium",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:43:34.394412+00:00"
+  }
+}

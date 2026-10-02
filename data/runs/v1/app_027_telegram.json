@@ -1,0 +1,62 @@
+{
+  "id": 27,
+  "app": "Telegram",
+  "category": "Communications and Messaging",
+  "one_liner": "Cloud-based instant messaging and voice-over-IP service with a robust Bot API.",
+  "official_domain": "telegram.org",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Telegram Bot API uses a unique token issued by @BotFather via HTTP API.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://core.telegram.org/bots/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/modelcontextprotocol/servers"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Telegram offers a mature, well-documented Bot API with self-serve free credentials, making it immediately ready for AI agent integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Generally limited to 30 messages per second.",
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "api_key"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "app": "high",
+    "api": "high",
+    "auth": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:53:36.288322+00:00"
+  }
+}

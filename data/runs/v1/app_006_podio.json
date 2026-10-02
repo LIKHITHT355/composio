@@ -1,0 +1,119 @@
+{
+  "id": 6,
+  "app": "Podio",
+  "category": "CRM and Sales",
+  "one_liner": "Podio is a customizable work management and collaboration platform that helps teams organize projects, communicate, and streamline business processes.",
+  "official_domain": "podio.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "The Podio API uses the OAuth2 protocol, supporting server-side and app authentication flows with scopes for managing access permissions.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.podio.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Podio offers a public API with comprehensive documentation, OAuth2 authentication, and mentions of API keys and client libraries, making it readily buildable.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "Rate limits are a core concept mentioned in the documentation.",
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.podio.com/",
+      "quote": "Developers - Podio API Documentation: The core concepts of Podio \u00b7 API conventions and structure \u00b7 Rate limits \u00b7 FAQ \u00b7 Get an API key \u00b7 Authentication \u00b7 API Reference \u00b7 Tutorials \u00b7 Client Libraries ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://developers.podio.com/",
+      "quote": "Developers - Podio API Documentation: The core concepts of Podio \u00b7 API conventions and structure \u00b7 Rate limits \u00b7 FAQ \u00b7 Get an API key \u00b7 Authentication \u00b7 API Reference \u00b7 Tutorials \u00b7 Client Libraries ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.podio.com/authentication",
+      "quote": "The Podio API uses the OAuth2 protocol for authentication. This allows external apps to request authorization to Podio without having direct access to the user ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://developers.podio.com/authentication/server_side",
+      "quote": "The server-side flow works by sending your user to Podio to authorize. It's a four step process: You redirect your user to Podio for authorization",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://developers.podio.com/authentication/scopes",
+      "quote": "Podio uses the concept of scopes to manage access restriction in order to ensure a safe relationship between a user's account and the externally connected ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.podio.com/",
+      "quote": "Developers - Podio API Documentation: ... Get an API key ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "extras.rate_limit_note",
+      "url": "https://developers.podio.com/",
+      "quote": "Developers - Podio API Documentation: The core concepts of Podio \u00b7 API conventions and structure \u00b7 Rate limits \u00b7 FAQ \u00b7 Get an API key \u00b7 Authentication \u00b7 API Reference \u00b7 Tutorials \u00b7 Client Libraries ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "extras.official_sdks",
+      "url": "https://developers.podio.com/",
+      "quote": "Developers - Podio API Documentation: ... Client Libraries ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "id": "high",
+    "app": "high",
+    "category": "high",
+    "one_liner": "medium",
+    "official_domain": "high",
+    "auth_methods": "high",
+    "auth_notes": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "build_form": "high",
+    "verdict": "high",
+    "verdict_reason": "high",
+    "extras": "medium"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:40:52.037813+00:00"
+  }
+}

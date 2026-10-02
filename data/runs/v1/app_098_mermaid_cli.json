@@ -1,0 +1,62 @@
+{
+  "id": 98,
+  "app": "Mermaid CLI",
+  "category": "AI",
+  "one_liner": "Command-line interface for the Mermaid library to generate SVG/PNG/PDF diagrams from definition files.",
+  "official_domain": "github.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "not_applicable",
+  "gate_notes": "It is an open source CLI tool requiring no authentication or API credentials.",
+  "api": {
+    "exists": false,
+    "styles": [
+      "cli"
+    ],
+    "breadth": "none",
+    "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "cli_skill",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "not_a_hosted_service",
+  "verdict_reason": "Mermaid CLI is a command-line tool rather than a hosted web API, making it buildable as a CLI skill or local wrapper.",
+  "extras": {
+    "webhooks": false,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "node"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "This is a command-line interface (CLI) for mermaid. It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "app": "high",
+    "api": "high",
+    "auth": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T12:00:10.282764+00:00"
+  }
+}

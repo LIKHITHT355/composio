@@ -1,0 +1,66 @@
+{
+  "id": 52,
+  "app": "SE Ranking",
+  "category": "Data",
+  "one_liner": "SEO and digital marketing platform providing tools for rank tracking, competitor analysis, website audits, and reporting.",
+  "official_domain": "seranking.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "To authenticate your requests, include the API key in the Authorization header of your HTTP requests, using the Token scheme.",
+  "credential_access": "paid_plan_required",
+  "gate_notes": "Requires an active SE Ranking account and subscription to access the API.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://seranking.com/api/data/getting-started/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "paid_plan",
+  "verdict_reason": "SE Ranking provides a robust REST API with token authentication, but a paid subscription is required to generate and use API keys.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://seranking.com/api/data/getting-started/",
+      "quote": "This guide will walk you through authenticating your account, making your first request, understanding our credit system, and more.",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "quote": "To authenticate your requests, include the API key in the Authorization header of your HTTP requests, using the Token scheme.",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:55:49.359356+00:00"
+  }
+}

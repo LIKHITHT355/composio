@@ -1,0 +1,65 @@
+{
+  "id": 63,
+  "app": "Netlify",
+  "category": "Developer",
+  "one_liner": "A cloud platform that provides hosting and serverless backend services for static websites and web applications.",
+  "official_domain": "netlify.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth 2 for authentication or personal access tokens/bearer tokens.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://open-api.netlify.com/",
+    "openapi_url": "https://open-api.netlify.com/netlify-api.yaml"
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Netlify provides a well-documented REST-style OpenAPI specification with OAuth 2 and bearer token authentication, making it fully ready for API toolkit integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "node",
+      "javascript"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://www.postman.com/api-evangelist/workspace/netlify/documentation/35240-8c1eb649-0d02-4b6a-acad-531c06ab944b?entity=request-35240-b4f8b07a-67f4-4a35-84b5-62b68c9fdf55",
+      "quote": "This is a REST-style API that uses JSON for serialization and OAuth 2 for authentication. This document is an OpenAPI reference for the Netlify API that you can ...",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:42.923518+00:00"
+  }
+}

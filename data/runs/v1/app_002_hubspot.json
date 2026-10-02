@@ -1,0 +1,130 @@
+{
+  "id": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "one_liner": "HubSpot is a comprehensive CRM and sales platform offering tools for marketing, sales, customer service, and content management.",
+  "official_domain": "hubspot.com",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "sdk_only"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "unknown",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "HubSpot provides a well-documented API with OAuth and API key authentication, along with SDKs, making it readily buildable for AI agents.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.hubspot.com/",
+      "quote": "Craft experiences with HubSpot's Developer Platform\u2014APIs, SDKs, tooling, and sample apps, plus a world-class builder community.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+      "quote": "2026-09 API reference - HubSpot docs",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+      "quote": "There are two ways to authenticate calls to HubSpot's APIs: OAuth, and private app access tokens.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://community.hubspot.com/t/basic-rest-integration/105223",
+      "quote": "If you'd like to authenticate via the \u201cPrivate App\u201d authentication method, you'll need to use your Private App's Access Token.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://community.hubspot.com/t/basic-rest-integration/105223",
+      "quote": "Basic REST integration?",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developers.hubspot.com/",
+      "quote": "Craft experiences with HubSpot's Developer Platform\u2014APIs, SDKs, tooling, and sample apps, plus a world-class builder community.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+      "quote": "Authentication. API Guide. OAuth tokens. Automation. Email templates ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+      "quote": "2026-09 API reference - HubSpot docs",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.hubspot.com/",
+      "quote": "Get started with a free ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "id": "high",
+    "app": "high",
+    "category": "high",
+    "one_liner": "high",
+    "official_domain": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api.exists": "high",
+    "api.styles": "high",
+    "api.breadth": "high",
+    "api.docs_url": "high",
+    "mcp.status": "low",
+    "build_form": "high",
+    "verdict": "high",
+    "main_blocker": "high",
+    "verdict_reason": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:39:28.516633+00:00"
+  }
+}

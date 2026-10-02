@@ -1,0 +1,66 @@
+{
+  "id": 92,
+  "app": "Otter AI",
+  "category": "AI",
+  "one_liner": "AI-powered meeting assistant that transcribes audio, generates summaries, and extracts action items.",
+  "official_domain": "otter.ai",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "All API requests require authentication using Bearer token authentication via a generated API key.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "API keys can be generated directly in Account Settings \u2192 Developer.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://connect.tryotter.com/docs/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Otter.ai provides a public API with bearer token authentication and developer documentation, making it ready for integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "quote": "All API requests require authentication using Bearer token authentication. Follow the steps below to create your API key.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://connect.tryotter.com/docs/",
+      "quote": "New to the Otter API? Learn the core concepts, choose an application scenario, make your first API call, or jump to exact reference details.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:59:07.748290+00:00"
+  }
+}

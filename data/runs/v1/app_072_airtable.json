@@ -1,0 +1,72 @@
+{
+  "id": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "one_liner": "A low-code platform for building collaborative apps, spreadsheets, and databases with a Web API.",
+  "official_domain": "airtable.com",
+  "auth_methods": [
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Airtable supports personal access tokens (PAT) and API keys (legacy).",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://www.airtable.com/developers/web/api/introduction",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Airtable provides a comprehensive REST Web API accessible via personal access tokens, making it fully ready for AI agent integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "5 requests per second per base.",
+    "official_sdks": [
+      "javascript",
+      "python"
+    ],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "bearer_token"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://www.airtable.com/developers/web/api/introduction",
+      "quote": "Airtable is a low-code platform for building collaborative apps. Customize your workflow, collaborate, and achieve ambitious outcomes.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://ones.com/blog/developers-quick-start-to-airtable-api-documentation/",
+      "quote": "Start with the authentication method. Airtable supports personal access tokens and API keys.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:24.952513+00:00"
+  }
+}

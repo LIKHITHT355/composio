@@ -1,0 +1,67 @@
+{
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "one_liner": "A REST-based API that helps Amazon selling partners programmatically access their data on orders, shipments, payments, and more.",
+  "official_domain": "developer-docs.amazon.com",
+  "auth_methods": [
+    "oauth2",
+    "aws_sigv4"
+  ],
+  "auth_notes": "Uses Login with Amazon (LWA) access tokens combined with AWS SigV4 signing.",
+  "credential_access": "approval_required",
+  "gate_notes": "Requires approval and registering an Amazon Developer account with role access.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "The Selling Partner API is broad and fully documented, but requires developer account approval and rigorous OAuth/AWS SigV4 authentication.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Tiered rate limits depending on the specific API operation.",
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+      "quote": "A Login with Amazon (LWA) access token authorizes your application to take certain actions on behalf of a selling partner.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer-docs.amazon/sp-api/docs/authorizing-selling-partner-api-applications",
+      "quote": "Authorization is the process by which a selling partner grants your application permission to call the Selling Partner API",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:55:36.699826+00:00"
+  }
+}

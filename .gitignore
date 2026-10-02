@@ -13,10 +13,8 @@ env/
 venv/
 .venv/
 
-# Caches & Runs (except inputs and schemas)
+# Caches (keep runs, inputs, and schemas)
 data/cache/
-data/runs/*
-!data/runs/.gitkeep
 
 # OS & Editor
 .DS_Store

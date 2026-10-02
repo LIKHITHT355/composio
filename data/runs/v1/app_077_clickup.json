@@ -1,0 +1,65 @@
+{
+  "id": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "one_liner": "A cloud-based collaboration and project management tool that provides a centralized platform for task management, document sharing, goal tracking, and team communication.",
+  "official_domain": "clickup.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "ClickUp supports Personal API Tokens (Bearer tokens) and OAuth 2.0 for third-party integrations.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "API access is available on free and paid plans with varying rate limits.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://clickup.com/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "ClickUp has a robust, publicly documented REST API with self-serve token generation, making it fully ready for AI agent integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "100 requests per minute per token.",
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "bearer_token"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api.docs_url",
+      "url": "https://clickup.com/api",
+      "quote": "ClickUp API Reference",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:44.252692+00:00"
+  }
+}

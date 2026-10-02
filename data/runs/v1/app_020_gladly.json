@@ -1,0 +1,62 @@
+{
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer service platform built around people, not tickets.",
+  "official_domain": "gladly.com",
+  "auth_methods": [
+    "basic"
+  ],
+  "auth_notes": "Gladly API uses token-based Basic Authentication associated with designated users having API User permissions.",
+  "credential_access": "paid_plan_required",
+  "gate_notes": "Requires an active Gladly account and specific user permissions to generate API tokens.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developer.gladly.com/rest/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Gladly provides a REST API with token-based basic authentication, though it requires a paid subscription plan and specific user privileges.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "node"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Gladly API uses token-based Basic Authentication. API tokens are associated with designated Gladly users.",
+      "retrieved_at": "2026-03-31T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "medium",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:53:06.670561+00:00"
+  }
+}

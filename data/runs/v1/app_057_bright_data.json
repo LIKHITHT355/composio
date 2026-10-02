@@ -1,0 +1,67 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data",
+  "one_liner": "Web data platform offering web scraping, proxy networks, and scraper APIs.",
+  "official_domain": "brightdata.com",
+  "auth_methods": [
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "API calls use a Bearer API token or API key for authentication.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.brightdata.com/api-reference/authentication",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Bright Data provides a comprehensive REST API with Bearer token authentication and free tier access, making it fully buildable into an API toolkit.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "quote": "Bright Data provides two primary methods for authentication: API Access - Authenticate and interact with the Bright Data platform using an API key/token.",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/api-evangelist/brightdata",
+      "quote": "REST calls use a Bearer API token ( Authorization: Bearer <API_KEY> ).",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api_exists": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:27.594746+00:00"
+  }
+}

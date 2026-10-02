@@ -1,0 +1,57 @@
+{
+  "id": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "one_liner": "Pipedrive is a sales CRM and pipeline management software designed to help businesses organize sales leads, track progress, and automate sales processes.",
+  "official_domain": "pipedrive.com",
+  "auth_methods": [],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "unknown",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No information regarding Pipedrive's public API, documentation, or authentication methods could be found in the provided search snippets. Therefore, its API buildability cannot be determined from the given data.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "api.styles": "low",
+    "api.breadth": "low",
+    "api.docs_url": "low",
+    "api.openapi_url": "low",
+    "mcp.status": "low",
+    "build_form": "low",
+    "verdict": "low",
+    "main_blocker": "low",
+    "verdict_reason": "low",
+    "extras": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:39:42.585182+00:00"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": 61,
+  "app": "GitHub",
+  "category": "Developer",
+  "one_liner": "A web-based platform for version control and collaboration using Git.",
+  "official_domain": "github.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Supports personal access tokens (classic and fine-grained) and OAuth apps.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.github.com/en/rest",
+    "openapi_url": "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json"
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/modelcontextprotocol/servers"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "GitHub provides a robust, publicly documented REST and GraphQL API with self-serve credentials and existing MCP support.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "5000 requests per hour for authenticated requests",
+    "official_sdks": [
+      "python",
+      "node",
+      "ruby",
+      "go"
+    ],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "bearer_token"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://docs.github.com/en/rest",
+      "quote": "Authenticating to the REST API. You can authenticate to the REST API to access more endpoints and have a higher rate limit.",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:36.653428+00:00"
+  }
+}

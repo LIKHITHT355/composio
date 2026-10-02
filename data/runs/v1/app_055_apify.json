@@ -1,0 +1,64 @@
+{
+  "id": 55,
+  "app": "Apify",
+  "category": "Data",
+  "one_liner": "Cloud platform for web scraping and data extraction, providing ready-made scrapers and API automation.",
+  "official_domain": "apify.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Apify API tokens can be passed as a query parameter or as an Authorization header (Bearer token).",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Free tier available with starting credits; immediate self-serve sign-up.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.apify.com/api/v2",
+    "openapi_url": "https://api.apify.com/v2/docs"
+  },
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/apify/apify-mcp-server"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Apify has a fully documented REST API with comprehensive endpoint coverage for actors, datasets, and tasks, making it ready for an immediate API toolkit integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Rate limits apply depending on the subscription plan, typically tracked via headers.",
+    "official_sdks": [
+      "python",
+      "node"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://docs.apify.com/api/v2",
+      "quote": "The Apify API is a RESTful HTTP API that allows you to integrate Apify into your applications.",
+      "retrieved_at": "2025-02-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "app": "high",
+    "api": "high",
+    "auth": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:21.058792+00:00"
+  }
+}

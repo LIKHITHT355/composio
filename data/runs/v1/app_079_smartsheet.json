@@ -1,0 +1,74 @@
+{
+  "id": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "one_liner": "Online project management, collaboration, and spreadsheet-style task tracking tool.",
+  "official_domain": "smartsheet.com",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Supports Personal Access Tokens (PATs) generated in the UI and OAuth 2.0 authorization flow.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+    "openapi_url": "https://developers.smartsheet.com/api/smartsheet/openapi"
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Smartsheet provides a robust REST API with comprehensive developer documentation, standard OAuth 2.0 and API token authentication, and self-serve access.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python",
+      "node",
+      "csharp",
+      "java",
+      "ruby"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "quote": "The SDKs handle authentication, request formatting, and response parsing so you can focus on building your integration.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "quote": "The API authenticates using access tokens (API keys). You can generate access tokens in the Smartsheet UI.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:53.413699+00:00"
+  }
+}

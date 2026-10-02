@@ -1,0 +1,107 @@
+{
+  "id": 58,
+  "app": "Sherlock",
+  "category": "Data",
+  "one_liner": "A tool or service for open-source investigations and data scraping, often used to find user accounts across social networks or extract data from the web.",
+  "official_domain": "apify.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "narrow",
+    "docs_url": "https://apify.com/misceres/sherlock/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "other",
+  "verdict_reason": "An API for a \"Sherlock\" tool focused on data/scraping exists on Apify, and other Sherlock APIs are mentioned. However, multiple products share the name, making it challenging to confirm the exact scope and features of the intended application based on the provided hint.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "one_liner",
+      "url": "https://github.com/bellingcat/toolkit/blob/main/gitbook/tools/sherlock/README.md",
+      "quote": "Sherlock is designed to be straightforward for open source investigations: it does not require API keys or login credentials for the sites it ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "official_domain",
+      "url": "https://apify.com/misceres/sherlock/api",
+      "quote": "The Sherlock is identified within the API by its ID, which is the creator's username and the name of the Actor. When the Sherlock run finishes you can list the ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.sherlock.cloudferro.com/category/documentation/",
+      "quote": "Authentication. API Keys \u00b7 Getting Started.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://apify.com/misceres/sherlock/api",
+      "quote": "The Sherlock is identified within the API by its ID, which is the creator's username and the name of the Actor. When the Sherlock run finishes you can list the ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developer.synopsys.com/docs/sherlock-apis-2025-r2/getting-started.md",
+      "quote": "To use Sherlock's API's, you must connect to the gRPC server.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://apify.com/misceres/sherlock/api",
+      "quote": "When the Sherlock run finishes you can list the ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://apify.com/misceres/sherlock/api",
+      "quote": "The Sherlock is identified within the API by its ID, which is the creator's username and the name of the Actor. When the Sherlock run finishes you can list the ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "official_domain": "medium",
+    "auth_methods": "medium",
+    "credential_access": "medium",
+    "api.exists": "high",
+    "api.styles": "medium",
+    "api.breadth": "low",
+    "api.docs_url": "medium",
+    "verdict": "medium",
+    "main_blocker": "medium"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:38:09.313941+00:00"
+  }
+}

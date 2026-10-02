@@ -1,0 +1,138 @@
+{
+  "id": 13,
+  "app": "Freshdesk",
+  "category": "Support and Helpdesk",
+  "one_liner": "Freshdesk is an AI-powered customer service solution offering omnichannel ticketing and agent productivity tools.",
+  "official_domain": "freshworks.com",
+  "auth_methods": [
+    "jwt"
+  ],
+  "auth_notes": "JWT authentication is used to verify users securely.",
+  "credential_access": "paid_plan_required",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://support.freshdesk.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Freshdesk provides a public API that supports JWT authentication, allowing for querying various ticket data, indicating it is ready for AI agent integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "one_liner",
+      "url": "https://www.freshworks.com/freshdesk/",
+      "quote": "Boost agent productivity and deliver seamless customer experiences with Freshdesk, an AI-powered customer service solution with omnichannel ticketing and ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "official_domain",
+      "url": "https://www.freshworks.com/freshdesk/",
+      "quote": "AI-Powered Customer Service Software | Freshdesk",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "JWT authentication. Verify users engaging with your brand securely through JWT authentication. \u2713.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_notes",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "quote": "JWT authentication. Verify users engaging with your brand securely through JWT authentication. \u2713.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://support.freshdesk.com/",
+      "quote": "Freshdesk. Features Pricing Apps Customers Training API & Developers Resources Blog Resellers.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://www.reddit.com/r/salesforce/comments/1crfbns/wtf_is_freshdesk/",
+      "quote": "Freshdesk is fine, it just works. Their API isn't too complicated, unlike with ServiceDesk, only a bit too limited.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://www.reddit.com/r/salesforce/comments/1crfbns/wtf_is_freshdesk/",
+      "quote": "Their API isn't too complicated, unlike with ServiceDesk, only a bit too limited.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://community.freshworks.dev/t/is-there-an-api-to-get-of-archived-tickets-in-freshdesk/2021",
+      "quote": "I'm querying Freshdesk's API for data analytics. I'm gathering all tickets into a datalake.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://www.reddit.com/r/salesforce/comments/1crfbns/wtf_is_freshdesk/",
+      "quote": "Their API isn't too complicated, unlike with ServiceDesk, only a bit too limited.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://community.freshworks.dev/t/is-there-an-api-to-get-of-archived-tickets-in-freshdesk/2021",
+      "quote": "I'm querying Freshdesk's API for data analytics. I'm gathering all tickets into a datalake. I'm interested in all tickets (deleted, spams, ...",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://support.freshdesk.com/",
+      "quote": "Home | Support : Freshdesk Support]: Freshdesk. Features Pricing Apps Customers Training API & Developers Resources Blog Resellers.",
+      "retrieved_at": "2024-05-20T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "one_liner": "high",
+    "official_domain": "high",
+    "auth_methods": "high",
+    "credential_access": "medium",
+    "api.exists": "high",
+    "api.styles": "medium",
+    "api.breadth": "medium",
+    "api.docs_url": "medium",
+    "mcp.status": "high",
+    "build_form": "high",
+    "verdict": "high",
+    "verdict_reason": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:42:53.666903+00:00"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "category": "Ecommerce",
+  "one_liner": "Enterprise cloud ecommerce platform offering B2C and B2B commerce solutions via the Salesforce Commerce API (SCAPI).",
+  "official_domain": "salesforce.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Authorization for the B2C Commerce API resources is handled through client permissions and custom API security schemes.",
+  "credential_access": "partner_or_sales_gated",
+  "gate_notes": "Access to Salesforce Commerce Cloud developer resources and environments typically requires partnership or commercial agreements with Salesforce.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.salesforce.com/docs/commerce/commerce-api/references",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "needs_outreach",
+  "main_blocker": "partner_program",
+  "verdict_reason": "Salesforce Commerce Cloud has robust public API documentation (SCAPI), but obtaining credentials and access requires navigating Salesforce's partner/commercial gating.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/references",
+      "quote": "You are viewing SCAPI documentation. To view the full SCAPI reference specifications in the left navigation, select the Reference tab",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html",
+      "quote": "Authorization for the B2C Commerce API resources is handled not through user permissions, but through client permissions.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "medium",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:55:09.699561+00:00"
+  }
+}

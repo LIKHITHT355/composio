@@ -1,0 +1,69 @@
+{
+  "id": 26,
+  "app": "Discord",
+  "category": "Communications and Messaging",
+  "one_liner": "Voice, video, and text communication service used by tens of millions of people to talk and hang out.",
+  "official_domain": "discord.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Bot tokens are used to authenticate as a bot user, and OAuth2 is available for user-facing applications.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Creating an application and bot token is free and self-serve via the Discord Developer Portal.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.discord.com/developers/docs/intro",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Discord provides a comprehensive, publicly accessible REST API and bot token authentication which can be integrated immediately.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Global and per-route rate limits apply, tracked via response headers.",
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "quote": "OAuth2 enables application developers to build applications that utilize authentication and data from the Discord API.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions",
+      "quote": "When you create a bot user in the Developer Portal, Discord generates a bot token. Your code uses this token to authenticate as the bot user",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "build_form": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:53:32.214501+00:00"
+  }
+}

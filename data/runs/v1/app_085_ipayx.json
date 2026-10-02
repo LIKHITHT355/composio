@@ -1,0 +1,56 @@
+{
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "one_liner": "Electronic billing, payment portal, and payment plan management platform for healthcare and B2B organizations.",
+  "official_domain": "ipayx.ai",
+  "auth_methods": [],
+  "auth_notes": null,
+  "credential_access": "partner_or_sales_gated",
+  "gate_notes": "No self-serve developer portal or public API documentation is available; integration requires contacting sales or partnership.",
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "iPayX does not provide a public developer API or self-serve documentation, making it unbuildable for AI agents at this time.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.healthcarefinancenews.com/news/ipayx-adds-payment-plan-function-electronic-billing-and-payment-portal",
+      "quote": "iPayX adds payment plan function to electronic billing and payment portal",
+      "retrieved_at": "2026-02-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:58:08.490699+00:00"
+  }
+}

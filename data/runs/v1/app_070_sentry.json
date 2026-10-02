@@ -1,0 +1,61 @@
+{
+  "id": 70,
+  "app": "Sentry",
+  "category": "Developer",
+  "one_liner": "Application monitoring and error tracking software that helps developers find, triage, and fix errors in real-time.",
+  "official_domain": "sentry.io",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Supports user auth tokens, internal integrations, and OAuth2 for third-party integrations.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.sentry.io/api/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Sentry provides a robust and well-documented REST API for managing issues, projects, and organizations, accessible freely via self-serve accounts.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": "Rate limits apply per organization/token tier.",
+    "official_sdks": [
+      "python",
+      "javascript",
+      "ruby",
+      "php",
+      "go",
+      "java",
+      "csharp"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "build_form": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:57:14.422655+00:00"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "id": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "one_liner": "Front is a customer communication platform that unifies email, chat, and social media into a single inbox for teams.",
+  "official_domain": "front.com",
+  "auth_methods": [
+    "oauth2",
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Bearer tokens are used for the Core API and must be sent in the Authorization header.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://dev.frontapp.com/reference/introduction",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Front provides a public API with clear documentation, supporting OAuth2.0, API tokens, and Bearer token authentication, allowing for self-serve credential access.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://dev.frontapp.com/reference/introduction",
+      "quote": "Front supports OAuth2.0 as well as API Tokens.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "The Core API uses Bearer tokens to authenticate its user. You MUST send the token for each request in the Authorization header.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://dev.frontapp.com/reference/introduction",
+      "quote": "Front supports OAuth2.0 as well as API Tokens. To learn about authenticating with Front, see our guide on authentication. API is designed to communicate with ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://dev.frontapp.com/docs/authentication",
+      "quote": "The Core API uses Bearer tokens to authenticate its user. You MUST send the token for each request in the Authorization header.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.breadth",
+      "url": "https://endgrate.com/blog/using-the-front-api-to-create-or-update-accounts-(with-javascript-examples))",
+      "quote": "Front's API uses API tokens for authentication. Copy the generated API token and store it securely, as you'll need it to authenticate your API ...",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://dev.frontapp.com/reference/introduction",
+      "quote": "To learn about authenticating with Front, see our guide on authentication.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://dev.frontapp.com/docs/welcome",
+      "quote": "You must use a unique email to create a developer account.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api.exists": "high",
+    "api.styles": "high",
+    "api.breadth": "medium",
+    "api.docs_url": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:43:16.126636+00:00"
+  }
+}

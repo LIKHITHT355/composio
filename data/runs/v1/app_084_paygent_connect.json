@@ -1,0 +1,61 @@
+{
+  "id": 84,
+  "app": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "one_liner": "Payment gateway service providing credit card processing, convenience store payments, and settlement services in Japan.",
+  "official_domain": "paygent.co.jp",
+  "auth_methods": [
+    "api_key",
+    "other"
+  ],
+  "auth_notes": "Uses merchant ID, telegram/request IDs, and cryptographic checksums or basic/API keys for secure transmission.",
+  "credential_access": "partner_or_sales_gated",
+  "gate_notes": "Requires merchant application approval and contractual agreement with Paygent before API credentials are provided.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://www.paygent.co.jp/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "needs_outreach",
+  "main_blocker": "partner_program",
+  "verdict_reason": "Paygent Connect provides payment APIs for merchants, but merchant accounts and API credentials require formal application and business verification (partner or sales gate).",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "official_domain",
+      "url": "https://www.paygent.co.jp/",
+      "quote": "Paygent payment gateway services",
+      "retrieved_at": "2025-02-16T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "medium",
+    "credential_access": "high",
+    "api_exists": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:58:03.319770+00:00"
+  }
+}

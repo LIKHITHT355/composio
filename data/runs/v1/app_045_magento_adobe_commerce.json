@@ -1,0 +1,55 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "one_liner": "Open-source and enterprise e-commerce platform providing robust online store capabilities and robust web APIs.",
+  "official_domain": "adobe.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "bearer_token"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql",
+      "soap"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.adobe.com/commerce/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Magento provides extensive REST, GraphQL, and SOAP APIs with self-serve developer access, making it fully ready for building an API toolkit integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T12:01:29.685095+00:00"
+  }
+}

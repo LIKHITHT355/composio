@@ -1,0 +1,51 @@
+{
+  "id": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "one_liner": "Private market financial data and research platform providing data on venture capital, private equity, and M&A.",
+  "official_domain": "pitchbook.com",
+  "auth_methods": [
+    "other"
+  ],
+  "auth_notes": "PitchBook provides enterprise data feeds (such as via AWS Data Exchange or direct bulk/API integrations) which require enterprise subscription and customized authentication credentials.",
+  "credential_access": "partner_or_sales_gated",
+  "gate_notes": "Requires an enterprise subscription and direct contract sales approval to access specialized data feeds and APIs.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "needs_outreach",
+  "main_blocker": "partner_program",
+  "verdict_reason": "PitchBook offers enterprise-grade data feeds and APIs, but access is strictly gated behind commercial sales agreements and enterprise subscriptions.",
+  "extras": {
+    "webhooks": false,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "medium",
+    "auth": "medium",
+    "credential_access": "high"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:59:02.961881+00:00"
+  }
+}

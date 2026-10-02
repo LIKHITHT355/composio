@@ -1,0 +1,73 @@
+{
+  "id": 41,
+  "app": "Shopify",
+  "category": "Ecommerce",
+  "one_liner": "Global ecommerce platform providing APIs for managing stores, products, orders, and customers.",
+  "official_domain": "shopify.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports OAuth authorization code grant flow for standalone/API-only apps and client credentials grant for organization stores, using access tokens in request headers.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Creating a partner account and development store is self-serve and free.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://shopify.dev/docs",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Shopify offers robust REST and GraphQL APIs with extensive documentation and self-serve developer access, making it fully ready for AI agent integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Leaky bucket algorithm based on cost for GraphQL and rate limits per second for REST.",
+    "official_sdks": [
+      "python",
+      "node",
+      "php",
+      "ruby"
+    ],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://shopify.dev/docs/api/usage/authentication",
+      "quote": "To call a Shopify API, your code sends an access token in a request header to authenticate the identity that token represents (your app or a buyer)",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://shopify.dev/docs/apps/build/authentication-authorization/authenticate-standalone-apps",
+      "quote": "Use the OAuth authorization code grant flow to get access tokens for standalone and API-only apps that live outside the Shopify admin.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:54:57.408724+00:00"
+  }
+}

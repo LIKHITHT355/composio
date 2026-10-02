@@ -1,0 +1,110 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "one_liner": "Salesforce is a leading cloud-based customer relationship management (CRM) platform offering sales, service, marketing, and analytics solutions.",
+  "official_domain": "salesforce.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.salesforce.com/docs/apis",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Salesforce provides extensive REST APIs with OAuth 2.0 authentication and comprehensive developer documentation, making it highly buildable for AI agents.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/intro_using_oauth.html",
+      "quote": "Connect REST API uses OAuth to securely identify your application before connecting to Salesforce. To use Connect REST API, create a REST entry point.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/intro_using_oauth.html",
+      "quote": "Connect REST API uses OAuth to securely identify your application before connecting to Salesforce. To use Connect REST API, create a REST entry point.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html",
+      "quote": "To successfully send requests, REST API requires an access token obtained by authentication. Although you can create and authenticate against your own.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://developer.salesforce.com/docs/apis",
+      "quote": "Explore developer guides and reference docs for Salesforce APIs. Top models Supports industry-leading models from Anthropic, Google, and OpenAI. enrich data, ...",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/intro_using_oauth.html",
+      "quote": "Connect REST API uses OAuth to securely identify your application before connecting to Salesforce. To use Connect REST API, create a REST entry point.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/quickstart-oauth.html",
+      "quote": "To successfully send requests, REST API requires an access token obtained by authentication. Although you can create and authenticate against your own.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.salesforce.com/docs/marketing/pardot/guide/authentication.html",
+      "quote": "You must have Salesforce OAuth set up in the org. To set up a connected app for OAuth, the \u201cpardot_api\u201d scope must be one of the selected OAuth scopes.",
+      "retrieved_at": "2024-05-01T00:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "id": "high",
+    "app": "high",
+    "category": "high",
+    "one_liner": "medium",
+    "official_domain": "high",
+    "auth_methods": "high",
+    "credential_access": "medium",
+    "api": "high",
+    "mcp": "high",
+    "build_form": "high",
+    "verdict": "high",
+    "verdict_reason": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:37:34.712764+00:00"
+  }
+}

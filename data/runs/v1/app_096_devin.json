@@ -1,0 +1,67 @@
+{
+  "id": 96,
+  "app": "Devin",
+  "category": "AI",
+  "one_liner": "An AI software engineer that can handle complex engineering tasks independently.",
+  "official_domain": "devin.ai",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses a principal + token model or service keys depending on the API surface (e.g., Desktop API vs v1 API).",
+  "credential_access": "approval_required",
+  "gate_notes": "Every API endpoint except GET /v3/self is gated by a specific permission.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.devin.ai/api-reference/overview",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Devin provides documented API endpoints and authentication models, but access is gated by specific permissions and requires enterprise/approval onboarding.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://docs.devin.ai/api-reference/overview",
+      "quote": "The Devin API enables you to integrate Devin into your applications, automate workflows, and build powerful tools.",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "quote": "The Devin API uses a principal + token model. A principal is who you are (your identity), and a token is how you prove it (your credential).",
+      "retrieved_at": "2024-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "medium",
+    "verdict": "medium"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:59:42.671460+00:00"
+  }
+}

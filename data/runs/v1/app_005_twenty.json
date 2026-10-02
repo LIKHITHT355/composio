@@ -1,0 +1,91 @@
+{
+  "id": 5,
+  "app": "Twenty",
+  "category": "CRM and Sales",
+  "one_liner": "The #1 Open Source CRM for modern teams. Modular, scalable, and built to fit your business.",
+  "official_domain": "twenty.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.twenty.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Twenty is an open-source CRM with documented REST API, allowing for broad integration and self-serve credential management upon deployment.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "one_liner",
+      "url": "https://twenty.com",
+      "quote": "The #1 Open Source CRM for modern teams. Modular, scalable, and built to fit your business. Build your Enterprise CRM at AI Speed | Twenty gives technical teams the building blocks for a custom CRM that meets complex business needs and quickly adapts as the business evolves.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.exists",
+      "url": "https://docs.twenty.com/",
+      "quote": "Welcome to the Twenty documentation. Here you'll find guides on how to install, configure, and extend Twenty, including our API Reference.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.docs_url",
+      "url": "https://docs.twenty.com/",
+      "quote": "Welcome to the Twenty documentation. Here you'll find guides on how to install, configure, and extend Twenty, including our API Reference.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "api.styles",
+      "url": "https://docs.twenty.com/",
+      "quote": "Our API Reference provides detailed information on how to interact with Twenty programmatically using standard HTTP methods.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://twenty.com",
+      "quote": "The #1 Open Source CRM for modern teams. Modular, scalable, and built to fit your business.",
+      "retrieved_at": "2024-07-23T12:00:00Z",
+      "quote_verified": false
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "api.docs_url": "high",
+    "api.styles": "medium",
+    "api.breadth": "medium",
+    "auth_methods": "medium",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-2.5-flash",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:40:38.093456+00:00"
+  }
+}

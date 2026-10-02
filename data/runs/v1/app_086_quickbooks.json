@@ -1,0 +1,64 @@
+{
+  "id": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "one_liner": "Accounting and financial management software for small businesses with an online API.",
+  "official_domain": "quickbooks.intuit.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Uses OAuth 2.0 for secure authentication requiring user interaction.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Requires setting up a developer account on Intuit Developer portal.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "QuickBooks has a robust public REST API using OAuth 2.0, but requires user interactive authorization flows.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python",
+      "node",
+      "php",
+      "ruby"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api",
+      "url": "https://liveflow.com/learn/quickbooks-api",
+      "quote": "The API uses OAuth 2.0 for secure authentication, ensuring that user data is protected and accessed only by authorized applications.",
+      "retrieved_at": "2024-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "api": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:58:12.771260+00:00"
+  }
+}

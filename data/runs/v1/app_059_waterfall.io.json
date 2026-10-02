@@ -1,0 +1,50 @@
+{
+  "id": 59,
+  "app": "Waterfall.io",
+  "category": "Data",
+  "one_liner": "SEO and web scraping platform.",
+  "official_domain": "waterfall.io",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": "No public self-serve developer API documentation or portal is available.",
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "Waterfall.io does not offer a public developer API or documentation, making it unbuildable for AI agents at this time.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "medium",
+    "credential_access": "high",
+    "verdict": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:56:30.353700+00:00"
+  }
+}

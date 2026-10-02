@@ -1,0 +1,55 @@
+{
+  "id": 94,
+  "app": "Consensus",
+  "category": "AI",
+  "one_liner": "AI academic search engine for peer-reviewed literature and research analysis.",
+  "official_domain": "consensus.app",
+  "auth_methods": [],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "Consensus does not offer a public developer API or documentation for programmatic integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://consensus.app/search/",
+      "quote": "Consensus is an AI academic search engine for peer-reviewed literature\u2014your research OS for finding, organizing, and analyzing science 10x faster.",
+      "retrieved_at": "2025-05-15T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "high",
+    "credential_access": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v1_naive",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1.0",
+    "timestamp": "2026-10-02T11:59:17.097430+00:00"
+  }
+}
