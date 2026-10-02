@@ -1,0 +1,51 @@
+{
+  "id": 40,
+  "app": "SendGrid",
+  "category": "Marketing",
+  "one_liner": "Cloud-based email delivery and marketing platform.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No evidence or passages were available to verify API access, authentication methods, or developer documentation for this application.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api.exists": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:59:02.768278+00:00"
+  }
+}

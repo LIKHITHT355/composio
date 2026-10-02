@@ -1,0 +1,83 @@
+{
+  "id": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "one_liner": "Pylon's API can be used to programmatically access and take action on data within Pylon.",
+  "official_domain": "usepylon.com",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "Use the token to authenticate Pylon API requests with a Bearer header: Authorization: Bearer <token>",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.usepylon.com/pylon-docs/developer/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Pylon provides a well-documented public REST API with straightforward bearer token authentication via API tokens creatable in settings.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+      "quote": "Pylon\u2019s API can be used to programmatically access and take action on data within Pylon.",
+      "retrieved_at": "2026-03-05T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.usepylon.com/articles/4735104435-how-do-i-create-an-api-token",
+      "quote": "Use the token to authenticate Pylon API requests with a Bearer header:\n\nApplies to: Pylon API access\n\nEnter a token name, then finish creation.\n\nEnter a token name, then finish creation.\n\nCopy the token immediately and store it in a secure location. Pylon only shows the full token value once.\n\nCopy ",
+      "retrieved_at": "2026-03-05T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://support.usepylon.com/articles/4735104435-how-do-i-create-an-api-token",
+      "quote": "To create a Pylon API token, sign in as a user with permission to manage API tokens, then open Settings \u2192 API Tokens.",
+      "retrieved_at": "2026-03-05T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "low",
+    "credential_access": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:31:08.547046+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 3,
+    "verified_quotes": 2,
+    "quote_accuracy": 0.6666666666666666,
+    "flags": [
+      "Unverified quote for auth_methods: 'Use the token to authenticate Pylon API requests w...'"
+    ]
+  }
+}

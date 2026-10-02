@@ -1,0 +1,66 @@
+{
+  "id": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "one_liner": "HubSpot brings together your teams, tools, AI, and customer data on the same platform, so every customer interaction drives growth.",
+  "official_domain": "hubspot.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "The provided text passages do not contain any documentation, existence, or details regarding a public API for HubSpot, making it unbuildable based on the current evidence.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.hubspot.com/",
+      "quote": "HubSpot brings together your teams, tools, AI, and customer data on the same platform, so every customer interaction drives growth.",
+      "retrieved_at": "2023-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:18:37.889639+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 1,
+    "verified_quotes": 1,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": 64,
+  "app": "Cloudflare",
+  "category": "Developer",
+  "one_liner": "Cloudflare infrastructure and security platform API",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No fetched web passages or documentation were available to substantiate public API endpoints or authentication methods.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "verdict": "low",
+    "api.exists": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:01:58.953688+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 0,
+    "verified_quotes": 0,
+    "quote_accuracy": 0.0,
+    "flags": []
+  }
+}

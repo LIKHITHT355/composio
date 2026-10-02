@@ -37,4 +37,14 @@ class FieldDiscoverer:
         q_mcp = f"{app_name} model context protocol MCP server site:github.com"
         results["mcp"] = self.search.search_snippets(app_name, hint, query=q_mcp)
 
+        # 5. Direct standard developer subdomains & paths
+        subdomain_candidates = [
+            f"https://developer.{domain}",
+            f"https://docs.{domain}",
+            f"https://{domain}/docs",
+            f"https://{domain}/api",
+            f"https://{domain}/developers"
+        ]
+        results["direct_candidates"] = [{"url": u, "title": f"{app_name} Developer Portal", "snippet": ""} for u in subdomain_candidates]
+
         return results

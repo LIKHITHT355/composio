@@ -1,0 +1,69 @@
+{
+  "id": 98,
+  "app": "Mermaid CLI",
+  "category": "AI",
+  "one_liner": "Command-line interface for mermaid to generate SVG/PNG/PDF from definition files",
+  "official_domain": "github.com/mermaid-js/mermaid-cli",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "not_applicable",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [
+      "cli"
+    ],
+    "breadth": "narrow",
+    "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "cli_skill",
+  "verdict": "not_an_api_product",
+  "main_blocker": "not_a_hosted_service",
+  "verdict_reason": "Mermaid CLI is an open-source command-line tool that can be packaged as a CLI skill without requiring API credentials.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "This is a command-line interface (CLI) for mermaid. It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "quote": "npm install -g @mermaid-js/mermaid-cli",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "high",
+    "api.exists": "high",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:05:26.777880+00:00"
+  }
+}

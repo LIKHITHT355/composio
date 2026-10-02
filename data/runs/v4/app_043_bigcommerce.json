@@ -1,0 +1,113 @@
+{
+  "id": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "one_liner": "Use REST and GraphQL APIs to manage products, orders, customers, and store settings programmatically.",
+  "official_domain": "developer.bigcommerce.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses X-Auth-Token header and Bearer token for authentication.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.bigcommerce.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "BigCommerce provides comprehensive REST and GraphQL APIs with self-serve trial store access and clear documentation.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+      "quote": "Use REST and GraphQL APIs to manage products, orders, customers, and store settings programmatically.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+      "quote": "X-Auth-Token: {{ACCESS_TOKEN}}",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+      "quote": "Sign up for a free BigCommerce trial store to test API calls and build integrations without affecting live data.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.bigcommerce.com/api",
+      "quote": "BigCommerce has several APIs that let you manage store data, authenticate customers, make client-side queries for product information, and more.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+      "quote": "Use REST and GraphQL APIs to manage products, orders, customers, and store settings programmatically.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.346046+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developer.bigcommerce.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.bigcommerce.com/api",
+      "https://docs.bigcommerce.com/developer/docs/overview/quick-start"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims are fully supported by the provided documentation quotes. BigCommerce provides a proper REST and GraphQL API, supports bearer token authentication via X-Auth-Token, offers self-serve free trial stores for development, and is ready for immediate integration.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer",
+  "one_liner": "Neo4j graph database platform",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "unknown",
+  "credential_access": "no_public_api",
+  "gate_notes": "unknown",
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "unknown",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No fetched evidence passages or public API documentation were available to evaluate this application.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api.exists": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp.status": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:02:35.493862+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 0,
+    "verified_quotes": 0,
+    "quote_accuracy": 0.0,
+    "flags": []
+  }
+}

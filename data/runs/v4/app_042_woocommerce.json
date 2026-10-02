@@ -1,0 +1,109 @@
+{
+  "id": 42,
+  "app": "WooCommerce",
+  "category": "Ecommerce",
+  "one_liner": "A customizable, open-source ecommerce platform built on WordPress connecting stores to external systems via REST API.",
+  "official_domain": "woocommerce.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "API keys are linked to a WordPress user with a Consumer Key and Consumer Secret.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "WooCommerce provides a fully documented REST API with self-serve API key generation directly in the WordPress dashboard.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "The WooCommerce REST API connects your store to external systems and services. Most integrations require you to generate API keys in WooCommerce and enter them in the external service to establish the connection.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "After generating the key, the screen displays your Consumer Key, Consumer Secret, a QR Code, and a Revoke Key link. Copy the Consumer Key and Consumer Secret and enter them in the application you are connecting to.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "This documentation is about the free, core WooCommerce plugin, for which support is provided in our community forums on WordPress.org.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.woocommerce.com",
+      "quote": "Call for Testing: WooCommerce MCP Beta By Brian Coords | Nov 3, 2025",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/",
+      "quote": "Select Create an API key or Add Key. The Key Details screen opens.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "verdict": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.346046+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "woocommerce.com API docs"
+    ],
+    "urls_inspected": [
+      "https://woocommerce.com/document/woocommerce-rest-api/",
+      "https://developer.woocommerce.com"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence strongly supports the claims. WooCommerce provides a fully functional REST API natively within the free core plugin, keys are generated via self-serve administrative actions in the dashboard, and authentication uses Consumer Keys and Secrets as cited.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

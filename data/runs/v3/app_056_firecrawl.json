@@ -1,0 +1,98 @@
+{
+  "id": 56,
+  "app": "Firecrawl",
+  "category": "Data",
+  "one_liner": "SEO and Scraping tool",
+  "official_domain": "SEO",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No fetched evidence or API documentation is available for Firecrawl.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:46.192761+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "needs_human",
+    "verdict": "disputed",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "SEO API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": false,
+    "skeptic_notes": "Firecrawl is a well-known commercial web scraping API product with a public REST interface and self-serve API keys, not a local CLI-only tool or a product lacking an API.",
+    "disagreements": [
+      {
+        "field": "api_exists",
+        "counter_claim": "true",
+        "critique": "Firecrawl provides a widely used public cloud API for web scraping and crawling, contrary to the claim that no public API exists."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "self_serve_free",
+        "critique": "Firecrawl offers self-serve API keys with a free tier available directly on their website."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "ready_now",
+        "critique": "Since a public cloud API with self-serve signup exists, the verdict should be ready_now rather than blocked."
+      },
+      {
+        "field": "auth_methods",
+        "counter_claim": "[\"api_key\"]",
+        "critique": "Firecrawl's public API requires an API key for authentication."
+      },
+      {
+        "field": "api_styles",
+        "counter_claim": "[\"rest\"]",
+        "critique": "Firecrawl operates via a standard RESTful HTTP API."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: Firecrawl's public API requires an API key for authentication.",
+      "Flagged credential_access as disputed: Firecrawl offers self-serve API keys with a free tier available directly on their website.",
+      "Flagged verdict as disputed: Since a public cloud API with self-serve signup exists, the verdict should be ready_now rather than blocked."
+    ]
+  }
+}

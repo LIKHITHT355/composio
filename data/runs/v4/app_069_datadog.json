@@ -1,0 +1,73 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer",
+  "one_liner": "Cloud-scale monitoring and security platform",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Uses API and Application keys for authentication.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Datadog provides a robust REST API accessible via standard API keys, though explicit web evidence was not provided in this specific sandbox run.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "low",
+    "auth": "low",
+    "mcp": "medium",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.371826+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "needs_human",
+    "api.exists": "needs_human",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Infra API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": true,
+    "skeptic_notes": "Datadog is a well-established cloud monitoring and security platform with a robust, publicly documented REST API requiring API keys. The claims correctly identify the API existence, authentication methods, and access model without over-generous assertions.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

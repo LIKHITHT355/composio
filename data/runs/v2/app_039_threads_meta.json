@@ -1,0 +1,60 @@
+{
+  "id": 39,
+  "app": "Threads (Meta)",
+  "category": "Marketing",
+  "one_liner": "Threads API by Meta for managing social posts and content.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Uses Meta OAuth 2.0 for user authentication and authorization.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Requires a Meta Developer account and app configuration.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developers.facebook.com/docs/threads",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Threads provides a public REST API accessible via standard developer onboarding and OAuth 2.0.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": "Standard Meta platform rate limits apply.",
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "mcp.status": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:48:43.971263+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 0,
+    "verified_quotes": 0,
+    "quote_accuracy": 0.0,
+    "flags": []
+  }
+}

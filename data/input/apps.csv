@@ -29,16 +29,16 @@ id,app,category,hint
 28,WhatsApp Business,Communications and Messaging,developers.facebook.com/docs/whatsapp
 29,Aircall,Communications and Messaging,aircall.io
 30,Vonage,Communications and Messaging,developer.vonage.com
-31,Google Ads,Marketing, Ads, Email and Social,developers.google.com/google-ads
-32,Meta Ads,Marketing, Ads, Email and Social,developers.facebook.com/docs/marketing-apis
-33,LinkedIn Ads,Marketing, Ads, Email and Social,learn.microsoft.com/linkedin/marketing
-34,GoHighLevel,Marketing, Ads, Email and Social,highlevel.stoplight.io
-35,Mailchimp,Marketing, Ads, Email and Social,mailchimp.com/developer
-36,Klaviyo,Marketing, Ads, Email and Social,developers.klaviyo.com
-37,systeme.io,Marketing, Ads, Email and Social,systeme.io (funnel builder)
-38,Pinterest,Marketing, Ads, Email and Social,developers.pinterest.com
-39,Threads (Meta),Marketing, Ads, Email and Social,developers.facebook.com/docs/threads
-40,SendGrid,Marketing, Ads, Email and Social,sendgrid.com
+31,Google Ads,"Marketing, Ads, Email and Social",developers.google.com/google-ads
+32,Meta Ads,"Marketing, Ads, Email and Social",developers.facebook.com/docs/marketing-apis
+33,LinkedIn Ads,"Marketing, Ads, Email and Social",learn.microsoft.com/linkedin/marketing
+34,GoHighLevel,"Marketing, Ads, Email and Social",highlevel.stoplight.io
+35,Mailchimp,"Marketing, Ads, Email and Social",mailchimp.com/developer
+36,Klaviyo,"Marketing, Ads, Email and Social",developers.klaviyo.com
+37,systeme.io,"Marketing, Ads, Email and Social",systeme.io (funnel builder)
+38,Pinterest,"Marketing, Ads, Email and Social",developers.pinterest.com
+39,Threads (Meta),"Marketing, Ads, Email and Social",developers.facebook.com/docs/threads
+40,SendGrid,"Marketing, Ads, Email and Social",sendgrid.com
 41,Shopify,Ecommerce,shopify.dev
 42,WooCommerce,Ecommerce,woocommerce.com/document/woocommerce-rest-api
 43,BigCommerce,Ecommerce,developer.bigcommerce.com
@@ -49,26 +49,26 @@ id,app,category,hint
 48,Gumroad,Ecommerce,gumroad.com/api
 49,Amazon Selling Partner,Ecommerce,developer-docs.amazon.com/sp-api
 50,fanbasis,Ecommerce,fanbasis.com
-51,DataForSEO,Data, SEO and Scraping,docs.dataforseo.com
-52,SE Ranking,Data, SEO and Scraping,seranking.com/api
-53,Ahrefs,Data, SEO and Scraping,ahrefs.com/api
-54,MrScraper,Data, SEO and Scraping,docs.mrscraper.com
-55,Apify,Data, SEO and Scraping,docs.apify.com
-56,Firecrawl,Data, SEO and Scraping,firecrawl.dev
-57,Bright Data,Data, SEO and Scraping,brightdata.com
-58,Sherlock,Data, SEO and Scraping,github.com/sherlock-project/sherlock
-59,Waterfall.io,Data, SEO and Scraping,waterfall.io (contact/company intel)
-60,Clay,Data, SEO and Scraping,clay.com
-61,GitHub,Developer, Infra and Data platforms,docs.github.com/rest
-62,Vercel,Developer, Infra and Data platforms,vercel.com/docs/rest-api
-63,Netlify,Developer, Infra and Data platforms,docs.netlify.com/api
-64,Cloudflare,Developer, Infra and Data platforms,developers.cloudflare.com/api
-65,Supabase,Developer, Infra and Data platforms,supabase.com/docs
-66,Neo4j,Developer, Infra and Data platforms,neo4j.com/docs/api
-67,Snowflake,Developer, Infra and Data platforms,docs.snowflake.com
-68,MongoDB Atlas,Developer, Infra and Data platforms,mongodb.com/docs/atlas/api
-69,Datadog,Developer, Infra and Data platforms,docs.datadoghq.com/api
-70,Sentry,Developer, Infra and Data platforms,docs.sentry.io/api
+51,DataForSEO,"Data, SEO and Scraping",docs.dataforseo.com
+52,SE Ranking,"Data, SEO and Scraping",seranking.com/api
+53,Ahrefs,"Data, SEO and Scraping",ahrefs.com/api
+54,MrScraper,"Data, SEO and Scraping",docs.mrscraper.com
+55,Apify,"Data, SEO and Scraping",docs.apify.com
+56,Firecrawl,"Data, SEO and Scraping",firecrawl.dev
+57,Bright Data,"Data, SEO and Scraping",brightdata.com
+58,Sherlock,"Data, SEO and Scraping",github.com/sherlock-project/sherlock
+59,Waterfall.io,"Data, SEO and Scraping",waterfall.io (contact/company intel)
+60,Clay,"Data, SEO and Scraping",clay.com
+61,GitHub,"Developer, Infra and Data platforms",docs.github.com/rest
+62,Vercel,"Developer, Infra and Data platforms",vercel.com/docs/rest-api
+63,Netlify,"Developer, Infra and Data platforms",docs.netlify.com/api
+64,Cloudflare,"Developer, Infra and Data platforms",developers.cloudflare.com/api
+65,Supabase,"Developer, Infra and Data platforms",supabase.com/docs
+66,Neo4j,"Developer, Infra and Data platforms",neo4j.com/docs/api
+67,Snowflake,"Developer, Infra and Data platforms",docs.snowflake.com
+68,MongoDB Atlas,"Developer, Infra and Data platforms",mongodb.com/docs/atlas/api
+69,Datadog,"Developer, Infra and Data platforms",docs.datadoghq.com/api
+70,Sentry,"Developer, Infra and Data platforms",docs.sentry.io/api
 71,Notion,Productivity and Project Management,developers.notion.com
 72,Airtable,Productivity and Project Management,airtable.com/developers
 73,Linear,Productivity and Project Management,developers.linear.app
@@ -89,13 +89,13 @@ id,app,category,hint
 88,Brex,Finance and Fintech,developer.brex.com
 89,Ramp,Finance and Fintech,docs.ramp.com
 90,PitchBook,Finance and Fintech,pitchbook.com (research API)
-91,NotebookLM,AI, Research and Media-native,cloud.google.com/gemini (Enterprise API)
-92,Otter AI,AI, Research and Media-native,help.otter.ai (MCP server)
-93,Fathom,AI, Research and Media-native,fathom.video
-94,Consensus,AI, Research and Media-native,consensus.app (OAuth requested)
-95,Reducto,AI, Research and Media-native,reducto.ai (document parsing)
-96,Devin,AI, Research and Media-native,docs.devin.ai (MCP)
-97,higgsfield,AI, Research and Media-native,higgsfield.ai/cli (content suite)
-98,Mermaid CLI,AI, Research and Media-native,github.com/mermaid-js/mermaid-cli
-99,YouTube Transcript,AI, Research and Media-native,transcriptapi.com
-100,Grain,AI, Research and Media-native,grain.com (meeting notes)
+91,NotebookLM,"AI, Research and Media-native",cloud.google.com/gemini (Enterprise API)
+92,Otter AI,"AI, Research and Media-native",help.otter.ai (MCP server)
+93,Fathom,"AI, Research and Media-native",fathom.video
+94,Consensus,"AI, Research and Media-native",consensus.app (OAuth requested)
+95,Reducto,"AI, Research and Media-native",reducto.ai (document parsing)
+96,Devin,"AI, Research and Media-native",docs.devin.ai (MCP)
+97,higgsfield,"AI, Research and Media-native",higgsfield.ai/cli (content suite)
+98,Mermaid CLI,"AI, Research and Media-native",github.com/mermaid-js/mermaid-cli
+99,YouTube Transcript,"AI, Research and Media-native",transcriptapi.com
+100,Grain,"AI, Research and Media-native",grain.com (meeting notes)

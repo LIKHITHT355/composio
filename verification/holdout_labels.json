@@ -1,0 +1,172 @@
+[
+  {
+    "id": 2,
+    "app": "HubSpot",
+    "category": "CRM and Sales",
+    "official_domain": "hubspot.com",
+    "auth_methods": ["oauth2", "api_key", "bearer_token"],
+    "credential_access": "self_serve_free",
+    "api": {
+      "exists": true,
+      "styles": ["rest"]
+    },
+    "mcp": {
+      "status": "community"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 11,
+    "app": "Zendesk",
+    "category": "Support and Helpdesk",
+    "official_domain": "zendesk.com",
+    "auth_methods": ["basic", "oauth2", "api_key", "bearer_token"],
+    "credential_access": "self_serve_trial",
+    "api": {
+      "exists": true,
+      "styles": ["rest"]
+    },
+    "mcp": {
+      "status": "community"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 21,
+    "app": "Slack",
+    "category": "Communications and Messaging",
+    "official_domain": "slack.com",
+    "auth_methods": ["oauth2", "bearer_token"],
+    "credential_access": "self_serve_free",
+    "api": {
+      "exists": true,
+      "styles": ["rest"]
+    },
+    "mcp": {
+      "status": "community"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 35,
+    "app": "Mailchimp",
+    "category": "Marketing, Ads, Email and Social",
+    "official_domain": "mailchimp.com",
+    "auth_methods": ["api_key", "oauth2"],
+    "credential_access": "self_serve_free",
+    "api": {
+      "exists": true,
+      "styles": ["rest"]
+    },
+    "mcp": {
+      "status": "community"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 41,
+    "app": "Shopify",
+    "category": "Ecommerce",
+    "official_domain": "shopify.dev",
+    "auth_methods": ["oauth2", "bearer_token"],
+    "credential_access": "self_serve_free",
+    "api": {
+      "exists": true,
+      "styles": ["rest", "graphql"]
+    },
+    "mcp": {
+      "status": "community"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 51,
+    "app": "DataForSEO",
+    "category": "Data, SEO and Scraping",
+    "official_domain": "dataforseo.com",
+    "auth_methods": ["basic", "api_key"],
+    "credential_access": "self_serve_trial",
+    "api": {
+      "exists": true,
+      "styles": ["rest"]
+    },
+    "mcp": {
+      "status": "none"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 61,
+    "app": "GitHub",
+    "category": "Developer, Infra and Data platforms",
+    "official_domain": "github.com",
+    "auth_methods": ["bearer_token", "api_key", "oauth2"],
+    "credential_access": "self_serve_free",
+    "api": {
+      "exists": true,
+      "styles": ["rest", "graphql"]
+    },
+    "mcp": {
+      "status": "official"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 73,
+    "app": "Linear",
+    "category": "Productivity and Project Management",
+    "official_domain": "linear.app",
+    "auth_methods": ["oauth2", "api_key", "bearer_token"],
+    "credential_access": "self_serve_free",
+    "api": {
+      "exists": true,
+      "styles": ["graphql"]
+    },
+    "mcp": {
+      "status": "community"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 81,
+    "app": "Stripe",
+    "category": "Finance and Fintech",
+    "official_domain": "stripe.com",
+    "auth_methods": ["bearer_token", "api_key"],
+    "credential_access": "self_serve_free",
+    "api": {
+      "exists": true,
+      "styles": ["rest"]
+    },
+    "mcp": {
+      "status": "official"
+    },
+    "verdict": "ready_now",
+    "main_blocker": "none"
+  },
+  {
+    "id": 96,
+    "app": "Devin",
+    "category": "AI, Research and Media-native",
+    "official_domain": "devin.ai",
+    "auth_methods": ["bearer_token", "api_key"],
+    "credential_access": "paid_plan_required",
+    "api": {
+      "exists": true,
+      "styles": ["rest"]
+    },
+    "mcp": {
+      "status": "official"
+    },
+    "verdict": "ready_with_caveats",
+    "main_blocker": "paid_plan"
+  }
+]

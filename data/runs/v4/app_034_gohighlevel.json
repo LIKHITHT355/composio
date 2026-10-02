@@ -1,0 +1,126 @@
+{
+  "id": 34,
+  "app": "GoHighLevel",
+  "category": "Marketing",
+  "one_liner": "All-in-one marketing and CRM platform for agencies and businesses with automation, funnels, and API access.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Supports bearer token API keys and OAuth2 client credentials.",
+  "credential_access": "paid_plan_required",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/drausal/gohighlevel-mcp"
+  },
+  "build_form": "reuse_existing_mcp",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "paid_plan",
+  "verdict_reason": "GoHighLevel provides API access with bearer token and OAuth2 authentication, and a community MCP server is available.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.gohighlevel.com/pricing",
+      "quote": "Basic API Access",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/drausal/gohighlevel-mcp",
+      "quote": "API credentials (Bearer token or OAuth2 client credentials)",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.gohighlevel.com/pricing",
+      "quote": "Yes, we offer a 14-day free trial. You get full access to the features of your chosen tier so you can set up your account, build funnels, and test automations before you pay a dime.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://github.com/drausal/gohighlevel-mcp",
+      "quote": "A Model Context Protocol (MCP) server providing access to the complete GoHighLevel API.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://github.com/drausal/gohighlevel-mcp",
+      "quote": "A Model Context Protocol (MCP) server providing access to the complete GoHighLevel API. This server enables AI assistants like Claude to interact with GoHighLevel's services including contacts, opportunities, calendars, workflows, and more.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "low",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.339580+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "disputed",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Ads API docs"
+    ],
+    "urls_inspected": [
+      "https://github.com/drausal/gohighlevel-mcp",
+      "https://www.gohighlevel.com/pricing"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The API exists and uses OAuth2/Bearer tokens, but access is gated behind GoHighLevel's paid subscription tiers (with a trial), making 'self_serve_trial' or 'paid' more accurate than a free self-serve option.",
+    "disagreements": [
+      {
+        "field": "credential_access",
+        "counter_claim": "paid",
+        "critique": "The evidence explicitly states a 14-day free trial on a paid pricing tier ('choose tier... before you pay a dime'), meaning it is not a self-serve free tier."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "requires_paid_plan",
+        "critique": "GoHighLevel is a paid SaaS platform requiring a subscription to access its API, meaning 'ready_now' without noting the subscription prerequisite is misleading."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged credential_access as disputed: The evidence explicitly states a 14-day free trial on a paid pricing tier ('choose tier... before you pay a dime'), meaning it is not a self-serve free tier.",
+      "Flagged verdict as disputed: GoHighLevel is a paid SaaS platform requiring a subscription to access its API, meaning 'ready_now' without noting the subscription prerequisite is misleading."
+    ]
+  }
+}

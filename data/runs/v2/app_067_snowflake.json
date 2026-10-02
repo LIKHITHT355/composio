@@ -1,0 +1,61 @@
+{
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer",
+  "one_liner": "Cloud-based data storage and analytics platform.",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "other"
+  ],
+  "auth_notes": "unknown",
+  "credential_access": "paid_plan_required",
+  "gate_notes": "unknown",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "needs_outreach",
+  "main_blocker": "other",
+  "verdict_reason": "No fetched web passages available to verify complete API documentation and credentials.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp": "low",
+    "verdict": "low",
+    "api.exists": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:02:56.287505+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 0,
+    "verified_quotes": 0,
+    "quote_accuracy": 0.0,
+    "flags": []
+  }
+}

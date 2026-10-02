@@ -1,0 +1,105 @@
+{
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "one_liner": "Close is a sales CRM built for teams that sell, combining calling, email, SMS, pipeline management, reporting, and an AI sales agent.",
+  "official_domain": "close.com",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "API keys for scripts or OAuth 2.0 for user-facing integrations.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developer.close.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Close provides a fully documented REST API with API keys and OAuth 2.0 support, along with an official MCP server, making it ready for integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.close.com/",
+      "quote": "API keys for scripts or OAuth 2.0 for user-facing integrations.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://casrai.org/guides/is-close-crm-free",
+      "quote": "What it offers instead is a 14-day free trial, no credit card required, with real calling and AI credits included so you can test the product properly before paying.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://close.com",
+      "quote": "REST API, webhooks, and MCP server. Everything you need to customize Close for the way your team works.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.close.com/",
+      "quote": "Power AI agents \u2014 Give Claude, ChatGPT, Cursor, and other tools direct access to Close data via the MCP server \u2014 no code required.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api.exists": "high",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:24.741640+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "close.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.close.com/",
+      "https://close.com",
+      "https://casrai.org/guides/is-close-crm-free"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims are fully supported by the provided evidence quotes. Close offers a documented REST API and OAuth2/API key authentication, accessible via a self-serve trial.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

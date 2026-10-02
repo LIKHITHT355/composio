@@ -1,0 +1,109 @@
+{
+  "id": 25,
+  "app": "Pumble",
+  "category": "Communications and Messaging",
+  "one_liner": "Pumble is a team communication and messaging tool that provides an API addon and webhooks to send messages, reactions, and interact with workspaces.",
+  "official_domain": "pumble.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Users can generate an API key via the Pumble API addon which can be entered into Swagger or used via simple HTTP requests.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Pumble provides a documented public API accessible via API keys generated through its API addon, allowing integration and automated workflows.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "By using the Pumble API addon, you can interact with Pumble\u2019s API documentation without using any complex authentication processes. This addon lets you generate an API key that allows you to send messages, reactions, and more via simple HTTP requests.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "You\u2019ll receive an ephemeral message containing the generated API key. This message is not visible to other users. Copy this key for future use. The generated key enables interaction with the Addon\u2019s public API",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "Once your API addon is installed, you can generate API keys directly in Pumble.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "By using the Pumble API addon, you can interact with Pumble\u2019s API documentation without using any complex authentication processes.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "quote": "The generated key enables interaction with the Addon\u2019s public API, allowing users to send requests and execute various actions within Pumble",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "mcp.status": "high",
+    "verdict": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:58:01.642161+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "pumble.com API docs"
+    ],
+    "urls_inspected": [
+      "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence provided thoroughly supports the existence of a REST API using API key authentication. The documentation confirms self-serve access via the Pumble API addon.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

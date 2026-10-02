@@ -1,0 +1,110 @@
+{
+  "id": 83,
+  "app": "Binance",
+  "category": "Finance and Fintech",
+  "one_liner": "Cryptocurrency exchange providing trading tools, market data, and account management capabilities.",
+  "official_domain": "binance-docs.github.io",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Requires API key and API secret, with testnet support available.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/AnalyticAce/binance-mcp-server"
+  },
+  "build_form": "reuse_existing_mcp",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Binance has self-serve API keys, testnet environment access, and an existing community MCP server implementation.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "credential_access",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "quote": "Create a new API Key.",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "quote": "BINANCE_API_KEY\n\nBINANCE_API_KEY\n\nYour Binance API key\n\nBINANCE_API_SECRET\n\nBINANCE_API_SECRET\n\nYour Binance API secret",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "quote": "Unofficial tools and server implementation for Binance's Model Context Protocol (MCP).",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "quote": "A powerful Model Context Protocol (MCP) server that enables AI agents to interact seamlessly with the Binance cryptocurrency exchange.",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "quote": "Recommended: Use testnet for development and safe testing export BINANCE_TESTNET=\"true\"",
+      "retrieved_at": "2025-02-17T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "medium",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:13:34.617819+00:00"
+  },
+  "field_status": {
+    "auth_methods": "agent_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "binance-docs.github.io API docs"
+    ],
+    "urls_inspected": [
+      "https://github.com/AnalyticAce/binance-mcp-server"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence correctly points to Binance's actual web API accessed via standard API keys, and Binance provides self-serve API key generation for users directly on their platform. The referenced MCP server is merely an interface client to the real underlying Binance REST API.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "one_liner": "Financial data and software company that provides data on the private and public markets.",
+  "official_domain": "pitchbook.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "There are no fetched web passages or documentation providing a public API or authentication methods for PitchBook.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api.exists": "low",
+    "credential_access": "low",
+    "auth_methods": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:04:42.784772+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "needs_human",
+    "api.exists": "needs_human",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "pitchbook.com API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims accurately reflect that PitchBook does not provide a public API and access is blocked/restricted to enterprise subscribers through proprietary channels.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

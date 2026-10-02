@@ -1,0 +1,182 @@
+[
+  {
+    "id": "4",
+    "app": "Attio",
+    "category": "CRM and Sales",
+    "hint": "attio.com"
+  },
+  {
+    "id": "5",
+    "app": "Twenty",
+    "category": "CRM and Sales",
+    "hint": "twenty.com (open-source CRM)"
+  },
+  {
+    "id": "10",
+    "app": "DealCloud",
+    "category": "CRM and Sales",
+    "hint": "api.docs.dealcloud.com"
+  },
+  {
+    "id": "14",
+    "app": "Front",
+    "category": "Support and Helpdesk",
+    "hint": "front.com"
+  },
+  {
+    "id": "17",
+    "app": "Plain",
+    "category": "Support and Helpdesk",
+    "hint": "plain.com"
+  },
+  {
+    "id": "20",
+    "app": "Gladly",
+    "category": "Support and Helpdesk",
+    "hint": "gladly.com"
+  },
+  {
+    "id": "24",
+    "app": "Lark (Larksuite)",
+    "category": "Communications and Messaging",
+    "hint": "open.larksuite.com"
+  },
+  {
+    "id": "25",
+    "app": "Pumble",
+    "category": "Communications and Messaging",
+    "hint": "pumble.com"
+  },
+  {
+    "id": "28",
+    "app": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "hint": "developers.facebook.com/docs/whatsapp"
+  },
+  {
+    "id": "31",
+    "app": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "developers.google.com/google-ads"
+  },
+  {
+    "id": "34",
+    "app": "GoHighLevel",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "highlevel.stoplight.io"
+  },
+  {
+    "id": "37",
+    "app": "systeme.io",
+    "category": "Marketing, Ads, Email and Social",
+    "hint": "systeme.io (funnel builder)"
+  },
+  {
+    "id": "44",
+    "app": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "hint": "developer.salesforce.com/docs/commerce"
+  },
+  {
+    "id": "49",
+    "app": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "hint": "developer-docs.amazon.com/sp-api"
+  },
+  {
+    "id": "50",
+    "app": "fanbasis",
+    "category": "Ecommerce",
+    "hint": "fanbasis.com"
+  },
+  {
+    "id": "56",
+    "app": "Firecrawl",
+    "category": "Data, SEO and Scraping",
+    "hint": "firecrawl.dev"
+  },
+  {
+    "id": "58",
+    "app": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "hint": "github.com/sherlock-project/sherlock"
+  },
+  {
+    "id": "59",
+    "app": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "hint": "waterfall.io (contact/company intel)"
+  },
+  {
+    "id": "64",
+    "app": "Cloudflare",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "developers.cloudflare.com/api"
+  },
+  {
+    "id": "68",
+    "app": "MongoDB Atlas",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "mongodb.com/docs/atlas/api"
+  },
+  {
+    "id": "69",
+    "app": "Datadog",
+    "category": "Developer, Infra and Data platforms",
+    "hint": "docs.datadoghq.com/api"
+  },
+  {
+    "id": "71",
+    "app": "Notion",
+    "category": "Productivity and Project Management",
+    "hint": "developers.notion.com"
+  },
+  {
+    "id": "75",
+    "app": "Asana",
+    "category": "Productivity and Project Management",
+    "hint": "developers.asana.com"
+  },
+  {
+    "id": "76",
+    "app": "Monday.com",
+    "category": "Productivity and Project Management",
+    "hint": "developer.monday.com"
+  },
+  {
+    "id": "86",
+    "app": "QuickBooks",
+    "category": "Finance and Fintech",
+    "hint": "developer.intuit.com"
+  },
+  {
+    "id": "88",
+    "app": "Brex",
+    "category": "Finance and Fintech",
+    "hint": "developer.brex.com"
+  },
+  {
+    "id": "90",
+    "app": "PitchBook",
+    "category": "Finance and Fintech",
+    "hint": "pitchbook.com (research API)"
+  },
+  {
+    "id": "91",
+    "app": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "hint": "cloud.google.com/gemini (Enterprise API)"
+  },
+  {
+    "id": "98",
+    "app": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "hint": "github.com/mermaid-js/mermaid-cli"
+  },
+  {
+    "id": "100",
+    "app": "Grain",
+    "category": "AI, Research and Media-native",
+    "hint": "grain.com (meeting notes)"
+  }
+]

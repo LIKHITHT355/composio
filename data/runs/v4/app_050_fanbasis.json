@@ -1,0 +1,115 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "one_liner": "An online business platform for creating, selling, and managing digital products, courses, communities, and webinars with built-in payments, APIs, and SDKs.",
+  "official_domain": "fanbasis.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "moderate",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Fanbasis mentions APIs, SDKs, and an MCP server, but lacks public documentation or self-serve developer credential access in the provided text.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.fanbasis.com/",
+      "quote": "Enterprise & APIs\nEmbedded checkouts, multi-rail payouts, APIs and SDKs. Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.fanbasis.com/",
+      "quote": "Enterprise & APIs\nEmbedded checkouts, multi-rail payouts, APIs and SDKs.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://www.fanbasis.com/",
+      "quote": "MCP\nRun Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.fanbasis.com/",
+      "quote": "Enterprise & APIs\nEmbedded checkouts, multi-rail payouts, APIs and SDKs.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "medium",
+    "credential_access": "low",
+    "mcp": "high",
+    "verdict": "low",
+    "auth_methods": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.353684+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "disputed",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "fanbasis.com API docs"
+    ],
+    "urls_inspected": [
+      "https://www.fanbasis.com/"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The application mentions APIs and SDKs under an Enterprise heading, meaning credentials are not publicly self-serve and require sales contact/approval.",
+    "disagreements": [
+      {
+        "field": "credential_access",
+        "counter_claim": "request_form",
+        "critique": "The quote explicitly labels the APIs under 'Enterprise & APIs', which implies that public self-serve credential access does not exist and sales contact or enterprise onboarding is required."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "needs_approval",
+        "critique": "Since the APIs are offered under an 'Enterprise' tier, the verdict cannot be 'ready_with_caveats' as standard developers cannot access them immediately without going through sales."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged credential_access as disputed: The quote explicitly labels the APIs under 'Enterprise & APIs', which implies that public self-serve credential access does not exist and sales contact or enterprise onboarding is required.",
+      "Flagged verdict as disputed: Since the APIs are offered under an 'Enterprise' tier, the verdict cannot be 'ready_with_caveats' as standard developers cannot access them immediately without going through sales."
+    ]
+  }
+}

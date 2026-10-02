@@ -1,0 +1,107 @@
+{
+  "id": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "one_liner": "HubSpot brings together your teams, tools, AI, and customer data on the same platform, so every customer interaction drives growth.",
+  "official_domain": "hubspot.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "The provided text passages do not contain any documentation, existence, or details regarding a public API for HubSpot, making it unbuildable based on the current evidence.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "api_key"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.hubspot.com/",
+      "quote": "HubSpot brings together your teams, tools, AI, and customer data on the same platform, so every customer interaction drives growth.",
+      "retrieved_at": "2023-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:55:48.207395+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "disputed",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "hubspot.com API docs"
+    ],
+    "urls_inspected": [
+      "https://www.hubspot.com/"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The claim incorrectly asserts that HubSpot has no public API and uses a generic homepage quote as evidence, completely ignoring HubSpot's extensive and well-documented developer API.",
+    "disagreements": [
+      {
+        "field": "api_exists",
+        "counter_claim": "true",
+        "critique": "HubSpot is widely known to have a robust, publicly available REST API and developer platform, contradicting the claim that no public API exists."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "self_serve_free",
+        "critique": "HubSpot developer accounts and API keys/OAuth apps can be created via self-serve without contacting sales."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "ready_now",
+        "critique": "A fully documented public API exists and is accessible via self-serve developer accounts."
+      },
+      {
+        "field": "auth_methods",
+        "counter_claim": "OAuth2 / API Key",
+        "critique": "HubSpot APIs use OAuth 2.0 and Private App access tokens (API keys), not 'none'."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: HubSpot APIs use OAuth 2.0 and Private App access tokens (API keys), not 'none'.",
+      "Flagged credential_access as disputed: HubSpot developer accounts and API keys/OAuth apps can be created via self-serve without contacting sales.",
+      "Flagged verdict as disputed: A fully documented public API exists and is accessible via self-serve developer accounts."
+    ]
+  }
+}

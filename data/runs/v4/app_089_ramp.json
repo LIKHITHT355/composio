@@ -1,0 +1,53 @@
+{
+  "id": 89,
+  "app": "Ramp",
+  "category": "Finance and Fintech",
+  "one_liner": "Corporate cards, expense management, and bill pay platform",
+  "official_domain": "docs.ramp.com",
+  "auth_methods": [
+    "other"
+  ],
+  "auth_notes": "none",
+  "credential_access": "no_public_api",
+  "gate_notes": "No cached evidence provided to determine access or existence of API.",
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "There are no fetched web passages or documentation available to verify the existence of a public API or authentication methods for Ramp.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api_exists": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp_status": "high",
+    "verdict": "low",
+    "api.exists": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:04:41.148369+00:00"
+  }
+}

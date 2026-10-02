@@ -1,0 +1,70 @@
+{
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data",
+  "one_liner": "Web data platform providing proxy networks, web scrapers, and datasets for data collection.",
+  "official_domain": "SEO",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No fetched web passages or documentation were available to verify API accessibility, authentication, or endpoints for Bright Data.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api_exists": "low",
+    "mcp_status": "low",
+    "verdict": "low",
+    "api.exists": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:47.709277+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "needs_human",
+    "api.exists": "needs_human",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "SEO API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The application is correctly assessed as having no public API, consistent with the evidence and constraints.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

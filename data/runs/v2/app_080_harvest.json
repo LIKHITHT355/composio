@@ -1,0 +1,69 @@
+{
+  "id": 80,
+  "app": "Harvest",
+  "category": "Productivity and Project Management",
+  "one_liner": "Harvest helps professional teams track time, bill clients, optimize team time, and measure performance with confidence.",
+  "official_domain": "harvestapp.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No public API details or documentation are provided in the source text to evaluate or build an integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.getharvest.com",
+      "quote": "Harvest helps professional teams track time, bill clients, optimize team time, and measure performance with confidence.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:10:22.971638+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 1,
+    "verified_quotes": 1,
+    "quote_accuracy": 1.0,
+    "flags": [
+      "Third-party evidence domain used: https://www.getharvest.com"
+    ]
+  }
+}

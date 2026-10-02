@@ -1,0 +1,103 @@
+{
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "one_liner": "Agentic commerce and customer service platform uniting shopping, support, and omnichannel conversations.",
+  "official_domain": "gladly.com",
+  "auth_methods": [
+    "basic",
+    "jwt",
+    "hmac_signing"
+  ],
+  "auth_notes": "Gladly API uses token-based Basic Authentication. User Identity endpoints use JWT, and Lookup API uses keys for signing.",
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.gladly.com/rest/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Gladly provides a comprehensive REST API and Lookup API with token-based basic authentication and webhooks, but credential access details are not fully specified in the documentation.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "REST APIAgentsgetList AgentsgetGet AgentgetGet Agent CallRecorderpatchUpdate Agent CallRecorderPublic AnswergetSearch public answersgetList public answersgetList Help Center Answer TitlesgetGet public answerAnswer ManagementgetGet answerspostAdd answergetGet AnswerpatchUpdate AnswerdelDelete Answerg",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Like the REST API, the Lookup API is specified using REST semantics, and exchanges JSON requests and responses authenticated and signed with secure keys.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "Gladly API uses token-based Basic Authentication. API tokens are associated with designated Gladly users. To create and use an API token, your user must have the API User permission. An API token can be used to perform any API request without restriction.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.gladly.com/rest/",
+      "quote": "User IdentitypostCreate a User Identity JWT",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:57:50.227679+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "needs_human",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "gladly.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.gladly.com/rest/"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence clearly supports the existence of a REST API with documentation, and the auth methods (basic, JWT, HMAC/secure keys) are supported by the provided quotes. Credential access correctly indicates 'no_public_api' since API tokens require specific Gladly user permissions and are not entirely self-serve public registration.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

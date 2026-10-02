@@ -1,0 +1,88 @@
+{
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "one_liner": "An online business platform for creating, selling, and managing digital products, courses, communities, and webinars with built-in payments, APIs, and SDKs.",
+  "official_domain": "fanbasis.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "moderate",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Fanbasis mentions APIs, SDKs, and an MCP server, but lacks public documentation or self-serve developer credential access in the provided text.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.fanbasis.com/",
+      "quote": "Enterprise & APIs\nEmbedded checkouts, multi-rail payouts, APIs and SDKs. Everything you'd replace Stripe with, plus BNPL, recovery and lower effective rates.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.fanbasis.com/",
+      "quote": "Enterprise & APIs\nEmbedded checkouts, multi-rail payouts, APIs and SDKs.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://www.fanbasis.com/",
+      "quote": "MCP\nRun Commas from your AI assistant. Create checkout links, issue refunds and pull your numbers in plain English.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.fanbasis.com/",
+      "quote": "Enterprise & APIs\nEmbedded checkouts, multi-rail payouts, APIs and SDKs.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "medium",
+    "credential_access": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "auth_methods": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:55:33.932114+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 4,
+    "verified_quotes": 4,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

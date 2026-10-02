@@ -1,0 +1,3820 @@
+{
+  "v1": {
+    "total_apps_evaluated": 30,
+    "all_kf_correct": {
+      "count": 5,
+      "total": 30,
+      "accuracy": 0.1667,
+      "ci_95": [
+        0.0734,
+        0.3356
+      ]
+    },
+    "fields": {
+      "auth_methods_exact": {
+        "correct": 16,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.5333,
+        "ci_95": [
+          0.3614,
+          0.6977
+        ]
+      },
+      "auth_methods_overlap": {
+        "correct": 24,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.8,
+        "ci_95": [
+          0.6269,
+          0.905
+        ]
+      },
+      "credential_access": {
+        "correct": 19,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6333,
+        "ci_95": [
+          0.4551,
+          0.7813
+        ]
+      },
+      "api.exists": {
+        "correct": 27,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.9,
+        "ci_95": [
+          0.7438,
+          0.9654
+        ]
+      },
+      "mcp.status": {
+        "correct": 18,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6,
+        "ci_95": [
+          0.4232,
+          0.7541
+        ]
+      },
+      "verdict": {
+        "correct": 19,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6333,
+        "ci_95": [
+          0.4551,
+          0.7813
+        ]
+      },
+      "main_blocker": {
+        "correct": 17,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.5667,
+        "ci_95": [
+          0.392,
+          0.7262
+        ]
+      }
+    },
+    "confusion_matrices": {
+      "verdict": {
+        "ready_now": {
+          "ready_now": 12
+        },
+        "needs_outreach": {
+          "ready_now": 1,
+          "ready_with_caveats": 1,
+          "needs_outreach": 2,
+          "blocked": 1
+        },
+        "ready_with_caveats": {
+          "ready_now": 5,
+          "ready_with_caveats": 4
+        },
+        "blocked": {
+          "blocked": 1,
+          "ready_with_caveats": 1
+        },
+        "not_an_api_product": {
+          "ready_with_caveats": 2
+        }
+      },
+      "credential_access": {
+        "self_serve_free": {
+          "self_serve_free": 11
+        },
+        "partner_or_sales_gated": {
+          "self_serve_free": 1,
+          "paid_plan_required": 1,
+          "partner_or_sales_gated": 2,
+          "no_public_api": 1
+        },
+        "self_serve_trial": {
+          "self_serve_free": 1,
+          "self_serve_trial": 1
+        },
+        "paid_plan_required": {
+          "self_serve_trial": 3,
+          "self_serve_free": 1
+        },
+        "approval_required": {
+          "approval_required": 3,
+          "self_serve_free": 1
+        },
+        "no_public_api": {
+          "no_public_api": 1,
+          "approval_required": 1
+        },
+        "not_applicable": {
+          "self_serve_free": 1,
+          "not_applicable": 1
+        }
+      }
+    },
+    "error_taxonomy": {
+      "hallucinated": 2,
+      "wrong_entity": 2,
+      "stale_docs": 0,
+      "missed_gating_nuance": 54,
+      "over_generous_verdict": 6,
+      "bad_evidence": 0
+    },
+    "misses": [
+      {
+        "app": "Attio",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Twenty",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "bearer_token"
+        ],
+        "truth": [
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "needs_outreach",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "DealCloud",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "api_key",
+          "bearer_token"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "self_serve_trial",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Plain",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "credential_access",
+        "agent": "paid_plan_required",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "api_key"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "credential_access",
+        "agent": "self_serve_trial",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "Pumble",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "api_key"
+        ],
+        "truth": [
+          "oauth2",
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "credential_access",
+        "agent": "self_serve_trial",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Salesforce Commerce Cloud",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "main_blocker",
+        "agent": "app_review_or_approval",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "auth_methods",
+        "agent": [],
+        "truth": [
+          "none"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "auth_methods",
+        "agent": [
+          "bearer_token"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Sherlock",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "none"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Sherlock",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "not_applicable",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Sherlock",
+        "field": "api.exists",
+        "agent": true,
+        "truth": false,
+        "cause": "hallucinated"
+      },
+      {
+        "app": "Sherlock",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Sherlock",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "not_an_api_product",
+        "cause": "wrong_entity"
+      },
+      {
+        "app": "Sherlock",
+        "field": "main_blocker",
+        "agent": "other",
+        "truth": "not_a_hosted_service",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "api_key"
+        ],
+        "truth": [
+          "basic",
+          "hmac_signing"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Datadog",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Notion",
+        "field": "mcp.status",
+        "agent": "community",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Asana",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "approval_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "app_review_or_approval",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "Brex",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "main_blocker",
+        "agent": "partner_program",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "NotebookLM",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "api_key"
+        ],
+        "truth": [
+          "none"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "NotebookLM",
+        "field": "credential_access",
+        "agent": "approval_required",
+        "truth": "no_public_api",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "NotebookLM",
+        "field": "api.exists",
+        "agent": true,
+        "truth": false,
+        "cause": "hallucinated"
+      },
+      {
+        "app": "NotebookLM",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "blocked",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "NotebookLM",
+        "field": "main_blocker",
+        "agent": "app_review_or_approval",
+        "truth": "no_public_api",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "not_an_api_product",
+        "cause": "wrong_entity"
+      },
+      {
+        "app": "Grain",
+        "field": "credential_access",
+        "agent": "self_serve_trial",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "Grain",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      }
+    ]
+  },
+  "v2": {
+    "total_apps_evaluated": 30,
+    "all_kf_correct": {
+      "count": 3,
+      "total": 30,
+      "accuracy": 0.1,
+      "ci_95": [
+        0.0346,
+        0.2562
+      ]
+    },
+    "fields": {
+      "auth_methods_exact": {
+        "correct": 9,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.3,
+        "ci_95": [
+          0.1666,
+          0.4788
+        ]
+      },
+      "auth_methods_overlap": {
+        "correct": 19,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6333,
+        "ci_95": [
+          0.4551,
+          0.7813
+        ]
+      },
+      "credential_access": {
+        "correct": 16,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.5333,
+        "ci_95": [
+          0.3614,
+          0.6977
+        ]
+      },
+      "api.exists": {
+        "correct": 20,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6667,
+        "ci_95": [
+          0.4878,
+          0.8077
+        ]
+      },
+      "mcp.status": {
+        "correct": 13,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.4333,
+        "ci_95": [
+          0.2738,
+          0.608
+        ]
+      },
+      "verdict": {
+        "correct": 14,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.4667,
+        "ci_95": [
+          0.3023,
+          0.6386
+        ]
+      },
+      "main_blocker": {
+        "correct": 12,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.4,
+        "ci_95": [
+          0.2459,
+          0.5768
+        ]
+      }
+    },
+    "confusion_matrices": {
+      "verdict": {
+        "ready_now": {
+          "ready_now": 8,
+          "blocked": 3,
+          "ready_with_caveats": 1
+        },
+        "needs_outreach": {
+          "needs_outreach": 2,
+          "ready_with_caveats": 1,
+          "blocked": 2
+        },
+        "ready_with_caveats": {
+          "ready_now": 2,
+          "blocked": 4,
+          "ready_with_caveats": 3
+        },
+        "blocked": {
+          "ready_with_caveats": 1,
+          "blocked": 1
+        },
+        "not_an_api_product": {
+          "ready_with_caveats": 1,
+          "ready_now": 1
+        }
+      },
+      "credential_access": {
+        "self_serve_free": {
+          "self_serve_free": 8,
+          "no_public_api": 3
+        },
+        "partner_or_sales_gated": {
+          "partner_or_sales_gated": 2,
+          "no_public_api": 3
+        },
+        "self_serve_trial": {
+          "self_serve_free": 1,
+          "self_serve_trial": 1
+        },
+        "paid_plan_required": {
+          "self_serve_trial": 2,
+          "no_public_api": 2
+        },
+        "approval_required": {
+          "no_public_api": 1,
+          "approval_required": 2,
+          "self_serve_free": 1
+        },
+        "no_public_api": {
+          "no_public_api": 2
+        },
+        "not_applicable": {
+          "no_public_api": 1,
+          "not_applicable": 1
+        }
+      }
+    },
+    "error_taxonomy": {
+      "hallucinated": 2,
+      "wrong_entity": 2,
+      "stale_docs": 0,
+      "missed_gating_nuance": 90,
+      "over_generous_verdict": 2,
+      "bad_evidence": 0
+    },
+    "misses": [
+      {
+        "app": "Twenty",
+        "field": "auth_methods",
+        "agent": [
+          "bearer_token"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Twenty",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "bearer_token",
+          "api_key"
+        ],
+        "truth": [
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "bearer_token",
+          "api_key",
+          "basic"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "self_serve_trial",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "auth_methods",
+        "agent": [
+          "basic",
+          "jwt",
+          "hmac_signing"
+        ],
+        "truth": [
+          "basic"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Lark (Larksuite)",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Lark (Larksuite)",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "credential_access",
+        "agent": "self_serve_trial",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "Pumble",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "approval_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "app_review_or_approval",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Google Ads",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "jwt"
+        ],
+        "truth": [
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Google Ads",
+        "field": "mcp.status",
+        "agent": "community",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "auth_methods",
+        "agent": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "oauth2",
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "credential_access",
+        "agent": "self_serve_trial",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "mcp.status",
+        "agent": "community",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Salesforce Commerce Cloud",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "oauth2",
+          "aws_sigv4"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "main_blocker",
+        "agent": "app_review_or_approval",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "api.exists",
+        "agent": true,
+        "truth": false,
+        "cause": "hallucinated"
+      },
+      {
+        "app": "fanbasis",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "blocked",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "no_public_api",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Sherlock",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "not_applicable",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Sherlock",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "not_an_api_product",
+        "cause": "wrong_entity"
+      },
+      {
+        "app": "Sherlock",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "not_a_hosted_service",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "basic",
+          "hmac_signing"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "mcp.status",
+        "agent": "unknown",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "main_blocker",
+        "agent": "other",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Datadog",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Datadog",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Notion",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "bearer_token",
+          "api_key"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Notion",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Asana",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "approval_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "app_review_or_approval",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "api.exists",
+        "agent": true,
+        "truth": false,
+        "cause": "hallucinated"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "not_an_api_product",
+        "cause": "wrong_entity"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "not_a_hosted_service",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      }
+    ]
+  },
+  "v3": {
+    "total_apps_evaluated": 30,
+    "all_kf_correct": {
+      "count": 3,
+      "total": 30,
+      "accuracy": 0.1,
+      "ci_95": [
+        0.0346,
+        0.2562
+      ]
+    },
+    "fields": {
+      "auth_methods_exact": {
+        "correct": 9,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.3,
+        "ci_95": [
+          0.1666,
+          0.4788
+        ]
+      },
+      "auth_methods_overlap": {
+        "correct": 19,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6333,
+        "ci_95": [
+          0.4551,
+          0.7813
+        ]
+      },
+      "credential_access": {
+        "correct": 16,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.5333,
+        "ci_95": [
+          0.3614,
+          0.6977
+        ]
+      },
+      "api.exists": {
+        "correct": 21,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.7,
+        "ci_95": [
+          0.5212,
+          0.8334
+        ]
+      },
+      "mcp.status": {
+        "correct": 13,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.4333,
+        "ci_95": [
+          0.2738,
+          0.608
+        ]
+      },
+      "verdict": {
+        "correct": 16,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.5333,
+        "ci_95": [
+          0.3614,
+          0.6977
+        ]
+      },
+      "main_blocker": {
+        "correct": 14,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.4667,
+        "ci_95": [
+          0.3023,
+          0.6386
+        ]
+      }
+    },
+    "confusion_matrices": {
+      "verdict": {
+        "ready_now": {
+          "ready_now": 8,
+          "blocked": 3,
+          "ready_with_caveats": 1
+        },
+        "needs_outreach": {
+          "needs_outreach": 2,
+          "ready_with_caveats": 1,
+          "blocked": 2
+        },
+        "ready_with_caveats": {
+          "ready_now": 2,
+          "blocked": 4,
+          "ready_with_caveats": 3
+        },
+        "blocked": {
+          "ready_with_caveats": 1,
+          "blocked": 1
+        },
+        "not_an_api_product": {
+          "not_an_api_product": 2
+        }
+      },
+      "credential_access": {
+        "self_serve_free": {
+          "self_serve_free": 8,
+          "no_public_api": 3
+        },
+        "partner_or_sales_gated": {
+          "partner_or_sales_gated": 2,
+          "no_public_api": 3
+        },
+        "self_serve_trial": {
+          "self_serve_free": 1,
+          "self_serve_trial": 1
+        },
+        "paid_plan_required": {
+          "self_serve_trial": 2,
+          "no_public_api": 2
+        },
+        "approval_required": {
+          "no_public_api": 1,
+          "approval_required": 2,
+          "self_serve_free": 1
+        },
+        "no_public_api": {
+          "no_public_api": 2
+        },
+        "not_applicable": {
+          "no_public_api": 1,
+          "not_applicable": 1
+        }
+      }
+    },
+    "error_taxonomy": {
+      "hallucinated": 1,
+      "wrong_entity": 0,
+      "stale_docs": 0,
+      "missed_gating_nuance": 88,
+      "over_generous_verdict": 2,
+      "bad_evidence": 0
+    },
+    "misses": [
+      {
+        "app": "Twenty",
+        "field": "auth_methods",
+        "agent": [
+          "bearer_token"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Twenty",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "bearer_token",
+          "api_key"
+        ],
+        "truth": [
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "bearer_token",
+          "api_key",
+          "basic"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "self_serve_trial",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "auth_methods",
+        "agent": [
+          "basic",
+          "jwt",
+          "hmac_signing"
+        ],
+        "truth": [
+          "basic"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Lark (Larksuite)",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Lark (Larksuite)",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "credential_access",
+        "agent": "self_serve_trial",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "Pumble",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "approval_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "app_review_or_approval",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Google Ads",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "jwt"
+        ],
+        "truth": [
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Google Ads",
+        "field": "mcp.status",
+        "agent": "community",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "auth_methods",
+        "agent": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "oauth2",
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "credential_access",
+        "agent": "self_serve_trial",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "mcp.status",
+        "agent": "community",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "verdict",
+        "agent": "ready_now",
+        "truth": "ready_with_caveats",
+        "cause": "over_generous_verdict"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Salesforce Commerce Cloud",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "oauth2",
+          "aws_sigv4"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "main_blocker",
+        "agent": "app_review_or_approval",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "api.exists",
+        "agent": true,
+        "truth": false,
+        "cause": "hallucinated"
+      },
+      {
+        "app": "fanbasis",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "blocked",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "no_public_api",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Sherlock",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "not_applicable",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "basic",
+          "hmac_signing"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "mcp.status",
+        "agent": "unknown",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "main_blocker",
+        "agent": "other",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Datadog",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Datadog",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Notion",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2",
+          "bearer_token",
+          "api_key"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Notion",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Asana",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "approval_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "app_review_or_approval",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      }
+    ]
+  },
+  "v4": {
+    "total_apps_evaluated": 30,
+    "all_kf_correct": {
+      "count": 4,
+      "total": 30,
+      "accuracy": 0.1333,
+      "ci_95": [
+        0.0531,
+        0.2968
+      ]
+    },
+    "fields": {
+      "auth_methods_exact": {
+        "correct": 9,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.3,
+        "ci_95": [
+          0.1666,
+          0.4788
+        ]
+      },
+      "auth_methods_overlap": {
+        "correct": 19,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6333,
+        "ci_95": [
+          0.4551,
+          0.7813
+        ]
+      },
+      "credential_access": {
+        "correct": 20,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6667,
+        "ci_95": [
+          0.4878,
+          0.8077
+        ]
+      },
+      "api.exists": {
+        "correct": 21,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.7,
+        "ci_95": [
+          0.5212,
+          0.8334
+        ]
+      },
+      "mcp.status": {
+        "correct": 13,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.4333,
+        "ci_95": [
+          0.2738,
+          0.608
+        ]
+      },
+      "verdict": {
+        "correct": 19,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6333,
+        "ci_95": [
+          0.4551,
+          0.7813
+        ]
+      },
+      "main_blocker": {
+        "correct": 19,
+        "total": 30,
+        "unsure": 0,
+        "accuracy": 0.6333,
+        "ci_95": [
+          0.4551,
+          0.7813
+        ]
+      }
+    },
+    "confusion_matrices": {
+      "verdict": {
+        "ready_now": {
+          "ready_now": 8,
+          "blocked": 3,
+          "ready_with_caveats": 1
+        },
+        "needs_outreach": {
+          "needs_outreach": 2,
+          "ready_with_caveats": 1,
+          "blocked": 2
+        },
+        "ready_with_caveats": {
+          "ready_with_caveats": 6,
+          "blocked": 3
+        },
+        "blocked": {
+          "ready_with_caveats": 1,
+          "blocked": 1
+        },
+        "not_an_api_product": {
+          "not_an_api_product": 2
+        }
+      },
+      "credential_access": {
+        "self_serve_free": {
+          "self_serve_free": 7,
+          "no_public_api": 4
+        },
+        "partner_or_sales_gated": {
+          "partner_or_sales_gated": 2,
+          "no_public_api": 3
+        },
+        "self_serve_trial": {
+          "self_serve_free": 1,
+          "self_serve_trial": 1
+        },
+        "paid_plan_required": {
+          "paid_plan_required": 3,
+          "no_public_api": 1
+        },
+        "approval_required": {
+          "no_public_api": 1,
+          "approval_required": 3
+        },
+        "no_public_api": {
+          "no_public_api": 2
+        },
+        "not_applicable": {
+          "not_applicable": 2
+        }
+      }
+    },
+    "error_taxonomy": {
+      "hallucinated": 1,
+      "wrong_entity": 0,
+      "stale_docs": 0,
+      "missed_gating_nuance": 78,
+      "over_generous_verdict": 0,
+      "bad_evidence": 0
+    },
+    "misses": [
+      {
+        "app": "Twenty",
+        "field": "auth_methods",
+        "agent": [
+          "bearer_token"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Twenty",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DealCloud",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "basic",
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "credential_access",
+        "agent": "self_serve_free",
+        "truth": "self_serve_trial",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Front",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "auth_methods",
+        "agent": [
+          "basic",
+          "hmac_signing",
+          "jwt"
+        ],
+        "truth": [
+          "basic"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Gladly",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Lark (Larksuite)",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Lark (Larksuite)",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Pumble",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "approval_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "WhatsApp Business",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "app_review_or_approval",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Google Ads",
+        "field": "auth_methods",
+        "agent": [
+          "jwt",
+          "oauth2"
+        ],
+        "truth": [
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Google Ads",
+        "field": "mcp.status",
+        "agent": "community",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GoHighLevel",
+        "field": "mcp.status",
+        "agent": "community",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "systeme.io",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Salesforce Commerce Cloud",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "oauth2",
+          "aws_sigv4"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Amazon Selling Partner",
+        "field": "main_blocker",
+        "agent": "app_review_or_approval",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "api.exists",
+        "agent": true,
+        "truth": false,
+        "cause": "hallucinated"
+      },
+      {
+        "app": "fanbasis",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "blocked",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "fanbasis",
+        "field": "main_blocker",
+        "agent": "none",
+        "truth": "no_public_api",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Firecrawl",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Waterfall.io",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "auth_methods",
+        "agent": [
+          "api_key"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Cloudflare",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "basic",
+          "hmac_signing"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "mcp.status",
+        "agent": "unknown",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "MongoDB Atlas",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "complex_auth",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Datadog",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Datadog",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Notion",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Notion",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "official",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Asana",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Asana",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "auth_methods",
+        "agent": [
+          "oauth2"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Monday.com",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "QuickBooks",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Brex",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "partner_or_sales_gated",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "needs_outreach",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "PitchBook",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "contact_sales",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mermaid CLI",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": "community",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "api.exists",
+        "agent": false,
+        "truth": true,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Grain",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      }
+    ]
+  },
+  "holdout_v4": {
+    "total_apps_evaluated": 10,
+    "all_kf_correct": {
+      "count": 0,
+      "total": 10,
+      "accuracy": 0.0,
+      "ci_95": [
+        0.0,
+        0.2775
+      ]
+    },
+    "fields": {
+      "auth_methods_exact": {
+        "correct": 0,
+        "total": 10,
+        "unsure": 0,
+        "accuracy": 0.0,
+        "ci_95": [
+          0.0,
+          0.2775
+        ]
+      },
+      "auth_methods_overlap": {
+        "correct": 3,
+        "total": 10,
+        "unsure": 0,
+        "accuracy": 0.3,
+        "ci_95": [
+          0.1078,
+          0.6032
+        ]
+      },
+      "credential_access": {
+        "correct": 5,
+        "total": 10,
+        "unsure": 0,
+        "accuracy": 0.5,
+        "ci_95": [
+          0.2366,
+          0.7634
+        ]
+      },
+      "api.exists": {
+        "correct": 0,
+        "total": 10,
+        "unsure": 0,
+        "accuracy": 0.0,
+        "ci_95": [
+          0.0,
+          0.2775
+        ]
+      },
+      "mcp.status": {
+        "correct": 0,
+        "total": 10,
+        "unsure": 0,
+        "accuracy": 0.0,
+        "ci_95": [
+          0.0,
+          0.2775
+        ]
+      },
+      "verdict": {
+        "correct": 4,
+        "total": 10,
+        "unsure": 0,
+        "accuracy": 0.4,
+        "ci_95": [
+          0.1682,
+          0.6873
+        ]
+      },
+      "main_blocker": {
+        "correct": 5,
+        "total": 10,
+        "unsure": 0,
+        "accuracy": 0.5,
+        "ci_95": [
+          0.2366,
+          0.7634
+        ]
+      }
+    },
+    "confusion_matrices": {
+      "verdict": {
+        "ready_now": {
+          "blocked": 4,
+          "ready_now": 4,
+          "ready_with_caveats": 1
+        },
+        "ready_with_caveats": {
+          "blocked": 1
+        }
+      },
+      "credential_access": {
+        "self_serve_free": {
+          "no_public_api": 2,
+          "self_serve_free": 5
+        },
+        "self_serve_trial": {
+          "no_public_api": 2
+        },
+        "paid_plan_required": {
+          "no_public_api": 1
+        }
+      }
+    },
+    "error_taxonomy": {
+      "hallucinated": 0,
+      "wrong_entity": 0,
+      "stale_docs": 0,
+      "missed_gating_nuance": 46,
+      "over_generous_verdict": 0,
+      "bad_evidence": 0
+    },
+    "misses": [
+      {
+        "app": "HubSpot",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "oauth2",
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "HubSpot",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "HubSpot",
+        "field": "api.exists",
+        "agent": false,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "HubSpot",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "HubSpot",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "HubSpot",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Zendesk",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "basic",
+          "oauth2",
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Zendesk",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_trial",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Zendesk",
+        "field": "api.exists",
+        "agent": true,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Zendesk",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Zendesk",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Zendesk",
+        "field": "main_blocker",
+        "agent": "docs_unclear",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Slack",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "bearer_token",
+          "oauth2"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Slack",
+        "field": "api.exists",
+        "agent": true,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Slack",
+        "field": "mcp.status",
+        "agent": "official",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mailchimp",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "api_key",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mailchimp",
+        "field": "api.exists",
+        "agent": true,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mailchimp",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Mailchimp",
+        "field": "verdict",
+        "agent": "ready_with_caveats",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Shopify",
+        "field": "auth_methods",
+        "agent": [
+          "other"
+        ],
+        "truth": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Shopify",
+        "field": "api.exists",
+        "agent": true,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Shopify",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DataForSEO",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "basic",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DataForSEO",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_trial",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DataForSEO",
+        "field": "api.exists",
+        "agent": false,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DataForSEO",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DataForSEO",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "DataForSEO",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GitHub",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key",
+          "oauth2"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GitHub",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "self_serve_free",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GitHub",
+        "field": "api.exists",
+        "agent": false,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GitHub",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GitHub",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_now",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "GitHub",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "none",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Linear",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "oauth2"
+        ],
+        "truth": [
+          "oauth2",
+          "api_key",
+          "bearer_token"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Linear",
+        "field": "api.exists",
+        "agent": true,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Linear",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Stripe",
+        "field": "auth_methods",
+        "agent": [
+          "api_key",
+          "basic"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Stripe",
+        "field": "api.exists",
+        "agent": true,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Stripe",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Devin",
+        "field": "auth_methods",
+        "agent": [
+          "none"
+        ],
+        "truth": [
+          "bearer_token",
+          "api_key"
+        ],
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Devin",
+        "field": "credential_access",
+        "agent": "no_public_api",
+        "truth": "paid_plan_required",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Devin",
+        "field": "api.exists",
+        "agent": false,
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Devin",
+        "field": "mcp.status",
+        "agent": "none",
+        "truth": null,
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Devin",
+        "field": "verdict",
+        "agent": "blocked",
+        "truth": "ready_with_caveats",
+        "cause": "missed_gating_nuance"
+      },
+      {
+        "app": "Devin",
+        "field": "main_blocker",
+        "agent": "no_public_api",
+        "truth": "paid_plan",
+        "cause": "missed_gating_nuance"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": 10,
+  "app": "DealCloud",
+  "category": "CRM and Sales",
+  "one_liner": "DealCloud provides a comprehensive overview of REST APIs, their capabilities, and available endpoints for custom integrations and workflow automation.",
+  "official_domain": "api.docs.dealcloud.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token, which is then used in the HTTP Authentication header for API requests.",
+  "credential_access": "partner_or_sales_gated",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://api.docs.dealcloud.com/docs",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "needs_outreach",
+  "main_blocker": "none",
+  "verdict_reason": "DealCloud provides detailed REST API documentation and supports OAuth2 Client Credentials authentication, making it fully ready for integration development.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://api.docs.dealcloud.com/docs",
+      "quote": "This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints.",
+      "retrieved_at": "2024-03-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "quote": "DealCloud uses the OAuth2 Client Credentials flow to generate a bearer token, which is then used in the HTTP Authentication header for API requests.",
+      "retrieved_at": "2024-03-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "quote": "The client application sends a POST request to the token endpoint, providing its client_id, apiKey, and the required scope(s).",
+      "retrieved_at": "2024-03-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://api.docs.dealcloud.com/docs",
+      "quote": "Welcome to the DealCloud API Docs! This site provides a comprehensive overview of our REST APIs, their capabilities, and available endpoints.",
+      "retrieved_at": "2024-03-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:26:54.749635+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 4,
+    "verified_quotes": 4,
+    "quote_accuracy": 1.0,
+    "flags": [
+      "Inconsistency: Gated access (CredentialAccessEnum.PARTNER_OR_SALES_GATED) cannot be ready_now."
+    ]
+  }
+}

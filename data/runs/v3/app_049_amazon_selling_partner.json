@@ -1,0 +1,98 @@
+{
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "category": "Ecommerce",
+  "one_liner": "API platform for Amazon selling partners to manage listings, orders, fulfillment, and more.",
+  "official_domain": "developer-docs.amazon.com",
+  "auth_methods": [
+    "other"
+  ],
+  "auth_notes": null,
+  "credential_access": "approval_required",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer-docs.amazon.com/sp-api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "blocked",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "Amazon Selling Partner API has extensive REST API documentation and SDKs, but requires developer registration and approval.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "C#",
+      "Java"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer-docs.amazon.com/sp-api",
+      "quote": "What is the Selling Partner API?",
+      "retrieved_at": "2024-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer-docs.amazon.com/sp-api",
+      "quote": "Selling Partner API Onboarding Overview",
+      "retrieved_at": "2024-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer-docs.amazon.com/sp-api",
+      "quote": "Welcome to SP-API Documentation",
+      "retrieved_at": "2024-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "low",
+    "credential_access": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:59:45.718559+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developer-docs.amazon.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer-docs.amazon.com/sp-api"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The Amazon Selling Partner API is a legitimate REST API. The credential access requires formal approval, matching the provided claims and evidence. No over-generous assertions found.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

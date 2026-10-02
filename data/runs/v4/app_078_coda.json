@@ -1,0 +1,103 @@
+{
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "one_liner": "A RESTful API that lets you programmatically interact with data in Superhuman Docs (formerly Coda).",
+  "official_domain": "coda.io",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses an API token in the Authorization header as a Bearer token.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "API is available to all users free of charge, in both free and paid workspaces.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.superhuman.com/developers/apis/v1",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Coda provides a clear RESTful API with free self-serve credential access via bearer tokens.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "The Superhuman Docs API is a RESTful API that lets you programmatically interact with data in Superhuman Docs (formerly Coda):",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "import requests headers = {'Authorization': 'Bearer <your API token>'} uri = 'https://coda.io/apis/v1/folders' res = requests.get(uri, headers=headers).json() for folder in res['items']: print(f'Folder: {folder[\"name\"]}')",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "We make the Superhuman Docs API available to all of our users free of charge, in both free and paid workspaces.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "quote": "The Superhuman Docs API is a RESTful API that lets you programmatically interact with data in Superhuman Docs (formerly Coda):",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "mcp.status": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.378557+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "coda.io API docs"
+    ],
+    "urls_inspected": [
+      "https://docs.superhuman.com/developers/apis/v1"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence provided supports the claims: Coda (now rebranded or referred to in this context via Superhuman Docs) provides a REST API, uses bearer token authentication, is free to access for users, and is ready for integration.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

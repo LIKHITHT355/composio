@@ -1,0 +1,76 @@
+{
+  "id": 58,
+  "app": "Sherlock",
+  "category": "Data",
+  "one_liner": "Hunt down social media accounts by username across 400+ social networks",
+  "official_domain": "github.com/sherlock-project/sherlock",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "not_applicable",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [
+      "cli"
+    ],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/Burnsedia/sherlock-mcp"
+  },
+  "build_form": "cli_skill",
+  "verdict": "not_an_api_product",
+  "main_blocker": "not_a_hosted_service",
+  "verdict_reason": "Sherlock is a CLI tool rather than a hosted API service, but community MCP integrations exist for AI workflows.",
+  "extras": {
+    "webhooks": false,
+    "sandbox_or_test_env": false,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": false,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "Hunt down social media accounts by username across 400+ social networks",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://github.com/Burnsedia/sherlock-mcp",
+      "quote": "FastMCP server integration for the Sherlock OSINT tool \u2013 Seamlessly search social media accounts across 400+ platforms using the Model Context Protocol.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "quote": "sherlock: Find Usernames Across Social Networks",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "high",
+    "api.exists": "high",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:49.663109+00:00"
+  }
+}

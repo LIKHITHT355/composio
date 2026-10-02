@@ -1,0 +1,52 @@
+{
+  "id": 91,
+  "app": "NotebookLM",
+  "category": "AI",
+  "one_liner": "Google's AI note-taking app that allows people to use AI to research specific topics and organize notes.",
+  "official_domain": "Research",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "There is no public API documentation or endpoint available for NotebookLM in the provided evidence.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api.exists": "low",
+    "credential_access": "low",
+    "mcp.status": "high",
+    "verdict": "low",
+    "auth_methods": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:04:44.234860+00:00"
+  }
+}

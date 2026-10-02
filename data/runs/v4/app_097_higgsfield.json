@@ -1,0 +1,53 @@
+{
+  "id": 97,
+  "app": "higgsfield",
+  "category": "AI",
+  "one_liner": "Research and Media-native AI platform",
+  "official_domain": "Research",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "There are no fetched web passages or documentation providing evidence of a public API or authentication methods for Higgsfield.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api_exists": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp_status": "high",
+    "verdict": "low",
+    "api.exists": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:06:32.022536+00:00"
+  }
+}

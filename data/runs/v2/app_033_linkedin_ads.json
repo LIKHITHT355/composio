@@ -1,0 +1,103 @@
+{
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "category": "Marketing",
+  "one_liner": "Marketing and advertising API for LinkedIn, enabling management of ad accounts, campaigns, creatives, and reporting.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses 3-legged OAuth to obtain member access tokens and client credentials.",
+  "credential_access": "approval_required",
+  "gate_notes": "Requires creating a LinkedIn Developer app, getting approved for the Advertising API, and passing app review.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "LinkedIn Ads provides a fully usable REST API with 3-legged OAuth, but requires developer app registration and advertising API approval.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "quote": "LinkedIn Ads uses a Developer app plus 3-legged OAuth\u2014you get a Client ID and Client Secret, then obtain per-member access tokens through the OAuth flow.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "quote": "Marketing/Ads APIs require 3-legged OAuth (acting on behalf of a member). The 2-legged client-credentials flow is explicitly not allowed for Ads.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "quote": "You create a LinkedIn Developer app, get approved for the Advertising API, and use 3-legged OAuth to get access tokens.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "main_blocker",
+      "url": "https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "quote": "Getting through LinkedIn's app review and OAuth flow is real work\u2014and it's work you repeat for every ad platform.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "quote": "Unified provides LinkedIn Ads through its normalized Advertising API\u2014working with ad accounts (organizations), campaigns, groups, ads, creatives, targeting, and performance reports as consistent objects",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "mcp.status": "low",
+    "verdict": "low",
+    "main_blocker": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:45:29.061229+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 5,
+    "verified_quotes": 5,
+    "quote_accuracy": 1.0,
+    "flags": [
+      "Third-party evidence domain used: https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "Third-party evidence domain used: https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "Third-party evidence domain used: https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "Third-party evidence domain used: https://unified.to/blog/how_to_get_your_linkedin_ads_api_key",
+      "Third-party evidence domain used: https://unified.to/blog/how_to_get_your_linkedin_ads_api_key"
+    ]
+  }
+}

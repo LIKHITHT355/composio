@@ -1,0 +1,103 @@
+{
+  "id": 88,
+  "app": "Brex",
+  "category": "Finance and Fintech",
+  "one_liner": "Fully unified spend platform with global corporate cards, expense management, reimbursements, travel, and bill pay.",
+  "official_domain": "developer.brex.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.brex.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Brex provides REST APIs with OpenAPI specifications across multiple domains, but specific credential access methods are not detailed in the text.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.brex.com",
+      "quote": "Brex APIs use the REST architecture, are defined using the OpenAPI specification and use standard HTTP response codes and verbs.",
+      "retrieved_at": "2025-05-08T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "extras.webhooks",
+      "url": "https://developer.brex.com",
+      "quote": "Webhooks API: Send real-time notifications based on events",
+      "retrieved_at": "2025-05-08T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth": "low",
+    "credential_access": "low",
+    "auth_methods": "low",
+    "api.exists": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:04:39.696603+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developer.brex.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.brex.com"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The API existence and REST style are well-supported, but the claim that authentication is 'none' and credential access is 'no_public_api' while simultaneously grading it 'ready_with_caveats' is contradictory and inaccurate for a commercial banking/fintech API.",
+    "disagreements": [
+      {
+        "field": "auth_methods",
+        "counter_claim": "bearer",
+        "critique": "The claim states auth_methods is ['none'], which is highly unlikely for a financial platform like Brex; APIs typically require OAuth or Bearer token authentication."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "approval_required",
+        "critique": "Brex is a corporate card and financial services platform; API access generally requires developer account approval, KYC, and application review, contradicting 'no_public_api' or open access."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: The claim states auth_methods is ['none'], which is highly unlikely for a financial platform like Brex; APIs typically require OAuth or Bearer token authentication.",
+      "Flagged credential_access as disputed: Brex is a corporate card and financial services platform; API access generally requires developer account approval, KYC, and application review, contradicting 'no_public_api' or open access."
+    ]
+  }
+}

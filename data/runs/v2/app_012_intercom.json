@@ -1,0 +1,96 @@
+{
+  "id": 12,
+  "app": "Intercom",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer service platform with messaging, help center, and a robust REST API.",
+  "official_domain": "intercom.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Once you have a token, simply provide it as an Authorization:Bearer header in your requests.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rest-apis",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Intercom offers a fully documented REST API supporting OAuth2 and Bearer token authentication, which can be accessed via self-serve developer accounts.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "ruby",
+      "dotnet"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rest-apis",
+      "quote": "Our REST API is a core building block of the Intercom Platform. You can use it to retrieve and update information from your own Intercom account, or to integrate Intercom into your own product.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "To access the Intercom API, you have two authentication options depending on whether you app is public or private.\nOAuth is for if you're building a public app that accesses other people's Intercom data.\nAn Access Token is for if you're using the API to access data in your own Intercom workspace, in",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "quote": "We provide you with an Access Token as soon as you create an app on your workspace.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rest-apis",
+      "quote": "Our REST API is a core building block of the Intercom Platform.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "low",
+    "credential_access": "high",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:28:34.273671+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 4,
+    "verified_quotes": 3,
+    "quote_accuracy": 0.75,
+    "flags": [
+      "Unverified quote for auth_methods: 'To access the Intercom API, you have two authentic...'"
+    ]
+  }
+}

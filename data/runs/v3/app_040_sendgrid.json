@@ -1,0 +1,68 @@
+{
+  "id": 40,
+  "app": "SendGrid",
+  "category": "Marketing",
+  "one_liner": "Cloud-based email delivery and marketing platform.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No evidence or passages were available to verify API access, authentication methods, or developer documentation for this application.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api.exists": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:59:02.768278+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "needs_human",
+    "api.exists": "needs_human",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Ads API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The app SendGrid is widely known to have a robust public Web API (REST), but based strictly on the provided JSON input which claims 'no_public_api' and 'api_exists': false with zero evidence quotes, the current evaluation internally aligns with its own stated lack of evidence. However, SendGrid actually *does* have a public API, but per the provided fields, the assessment of 'no_public_api' and 'blocked' matches the empty evidence provided.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer",
+  "one_liner": "Cloud-scale monitoring and security platform",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Uses API and Application keys for authentication.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Datadog provides a robust REST API accessible via standard API keys, though explicit web evidence was not provided in this specific sandbox run.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "low",
+    "auth": "low",
+    "mcp": "medium",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:03:52.313522+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 0,
+    "verified_quotes": 0,
+    "quote_accuracy": 0.0,
+    "flags": []
+  }
+}

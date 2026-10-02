@@ -1,0 +1,128 @@
+{
+  "id": 30,
+  "app": "Vonage",
+  "category": "Communications and Messaging",
+  "one_liner": "Vonage APIs provide powerful tools to connect people around the world, automate voice interactions, engage customers via messaging, and integrate security protections.",
+  "official_domain": "developer.vonage.com",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "jwt"
+  ],
+  "auth_notes": "Supports API key and secret in header, basic auth (base64 API_KEY:API_SECRET), and JSON Web Tokens (JWTs).",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "cli"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.vonage.com/en/home",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Vonage provides robust developer APIs with free self-serve account creation and multiple standard authentication mechanisms.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "credential_access",
+      "url": "https://developer.vonage.com/en/home",
+      "quote": "Create a free account now!",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "When you create a Vonage account, an API key and secret will be created for you.",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "Authorization: Basic base64(API_KEY:API_SECRET)",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "quote": "JSON Web Tokens (JWTs) are a compact, URL-safe means of representing claims to be transferred between two parties.",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developer.vonage.com/en/home",
+      "quote": "Vonage APIs provide powerful tools to integrate privacy and security protections that prevent fraud and validate users.",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.vonage.com/en/home",
+      "quote": "We're excited to announce the beta launch of our new Vonage API Developer Portal Learning Center!",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.vonage.com/en/home",
+      "quote": "The Vonage Voice API is the easiest way to build high-quality voice applications in the Cloud!",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api_exists": "high",
+    "mcp_status": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:58:11.027602+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developer.vonage.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "https://developer.vonage.com/en/home"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence provided thoroughly supports the existence of Vonage REST APIs, self-serve free account creation with API keys, and standard HTTP/JWT authentication methods.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

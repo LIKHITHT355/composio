@@ -1,0 +1,119 @@
+{
+  "id": 31,
+  "app": "Google Ads",
+  "category": "Marketing",
+  "one_liner": "API and developer tools to help advertisers manage their Google Ads accounts and campaigns more efficiently.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "jwt",
+    "oauth2"
+  ],
+  "auth_notes": "The Google Ads API uses OAuth 2.0 for authorizing API requests. Both OAuth 2.0 user authentication flow and service account flow are supported. A developer token is also required in the developer-token HTTP header for every API call.",
+  "credential_access": "approval_required",
+  "gate_notes": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.google.com/google-ads/api/rest/auth",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "Google Ads provides a fully functional REST API with OAuth2 and developer tokens, but obtaining access requires an application review process.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.google.com/google-ads/api/rest/auth",
+      "quote": "When calling the Google Ads API, you need both OAuth 2.0 application credentials and a developer token.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.google.com/google-ads/api/rest/auth",
+      "quote": "The Google Ads API uses OAuth 2.0 for authorizing API requests. Both OAuth 2.0 user authentication flow and service account flow are supported.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "quote": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "quote": "The Google Ads API has access levels associated with the Google Cloud project, and uses an application review process to grant various access levels.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "main_blocker",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "quote": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://support.google.com/adspolicy/answer/6169371?hl=en",
+      "quote": "The Google Ads API and other Google Ads developer tools like MCPs (\u201cDeveloper Services\u201d) let developers build tools that help advertisers manage their Google Ads accounts and campaigns more efficiently and creatively.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "verdict": "high",
+    "mcp.status": "low",
+    "main_blocker": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.336739+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "rule_verified"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Ads API docs"
+    ],
+    "urls_inspected": [
+      "https://support.google.com/adspolicy/answer/6169371?hl=en",
+      "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "https://developers.google.com/google-ads/api/rest/auth"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims accurately reflect the Google Ads API documentation. OAuth 2.0 and developer tokens are verified by the quotes, and application review is explicitly required for access levels, supporting the 'approval_required' and 'ready_with_caveats' verdicts.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

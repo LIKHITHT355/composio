@@ -1,0 +1,76 @@
+{
+  "id": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "one_liner": "Atlassian's issue and project tracking software with cloud platform REST APIs and MCP server support.",
+  "official_domain": "developer.atlassian.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.atlassian.com/docs",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Jira provides extensive cloud platform REST APIs and an official Atlassian MCP server, making it fully ready for integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.atlassian.com/docs",
+      "quote": "Jira Cloud platform\nGetting started\nIntegrating with Jira platform\nREST API",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.atlassian.com/docs",
+      "quote": "Atlassian MCP server",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "mcp": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:07:26.655960+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 2,
+    "verified_quotes": 2,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

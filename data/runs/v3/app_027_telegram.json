@@ -1,0 +1,104 @@
+{
+  "id": 27,
+  "app": "Telegram",
+  "category": "Communications and Messaging",
+  "one_liner": "A cloud-based mobile and desktop messaging app with a rich developer API for bots and clients.",
+  "official_domain": "core.telegram.org",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Each bot is given a unique authentication token when it is created, used in the HTTPS URL scheme (e.g. https://api.telegram.org/bot<token>/METHOD_NAME).",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://core.telegram.org/bots/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Telegram provides a fully public and free Bot API with clear documentation and self-serve token generation.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://core.telegram.org/",
+      "quote": "The Bot API allows you to easily create programs that use Telegram messages for an interface.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://core.telegram.org/",
+      "quote": "You are welcome to use both APIs free of charge.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://core.telegram.org/bots/api",
+      "quote": "Each bot is given a unique authentication token when it is created. The token looks something like 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11, but we'll use simply <token> in this document instead.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://core.telegram.org/",
+      "quote": "We offer three kinds of APIs for developers. The Bot API allows you to easily create programs that use Telegram messages for an interface.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:58:05.295578+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "core.telegram.org API docs"
+    ],
+    "urls_inspected": [
+      "https://core.telegram.org/",
+      "https://core.telegram.org/bots/api"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims are fully supported by the provided evidence. Telegram's Bot API exists, is free of charge, uses a token-based authentication mechanism (api_key equivalent), and requires no manual approval or sales contact for creation via BotFather.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

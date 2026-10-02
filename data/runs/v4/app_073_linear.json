@@ -1,0 +1,124 @@
+{
+  "id": 73,
+  "app": "Linear",
+  "category": "Productivity and Project Management",
+  "one_liner": "Linear is a purpose-built tool for planning and building products, featuring a GraphQL API for querying and mutating data.",
+  "official_domain": "developers.linear.app",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "Supports OAuth 2.0 or personal API keys.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "graphql",
+      "sdk_only"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.linear.app",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Linear provides a fully documented GraphQL API and TypeScript SDK with self-serve authentication options like OAuth 2.0 and personal API keys.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "typescript"
+    ],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "api_key"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.linear.app",
+      "quote": "Use OAuth 2.0 or personal API keys to authenticate your requests to the Linear API",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developers.linear.app",
+      "quote": "Learn how to use the GraphQL API to query and mutate your data",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.linear.app",
+      "quote": "Use OAuth 2.0 or personal API keys to authenticate your requests to the Linear API",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developers.linear.app",
+      "quote": "How to best integrate an AI agent into Linear",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.linear.app",
+      "quote": "Install the Linear SDK to use strongly typed models and operations",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "main_blocker",
+      "url": "https://developers.linear.app",
+      "quote": "Learn how to use the GraphQL API to query and mutate your data",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.376265+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "rule_verified"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developers.linear.app API docs"
+    ],
+    "urls_inspected": [
+      "https://developers.linear.app"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence provided directly supports all claims. Linear features a fully functional public GraphQL API with self-serve OAuth2 and personal API keys, and requires no special approvals.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

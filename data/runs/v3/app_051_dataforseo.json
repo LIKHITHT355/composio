@@ -1,0 +1,106 @@
+{
+  "id": 51,
+  "app": "DataForSEO",
+  "category": "Data",
+  "one_liner": "SEO and Scraping",
+  "official_domain": "SEO",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No evidence passages or public API information were provided for DataForSEO.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:33.442394+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "needs_human",
+    "verdict": "disputed",
+    "main_blocker": "disputed"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "SEO API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The initial evaluation incorrectly claimed that DataForSEO has no public API, confusing it with a non-API product. DataForSEO is explicitly an API-first platform utilizing HTTP Basic Auth.",
+    "disagreements": [
+      {
+        "field": "official_domain",
+        "counter_claim": "dataforseo.com",
+        "critique": "The official domain was incorrectly stated as 'SEO' instead of the actual domain 'dataforseo.com'."
+      },
+      {
+        "field": "api_exists",
+        "counter_claim": true,
+        "critique": "DataForSEO is a well-known commercial REST API provider for SEO and SERP data, so an API definitely exists."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "self_serve_paid",
+        "critique": "DataForSEO provides a publicly accessible commercial API requiring registration and payment, not 'no_public_api'."
+      },
+      {
+        "field": "auth_methods",
+        "counter_claim": [
+          "http_basic"
+        ],
+        "critique": "DataForSEO uses HTTP Basic Authentication (login and password/API key) for its API requests."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "ready_now",
+        "critique": "The API is fully public and accessible immediately upon registration and funding an account."
+      },
+      {
+        "field": "main_blocker",
+        "counter_claim": "none",
+        "critique": "There is no blocker; the API is publicly available for integration."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: DataForSEO uses HTTP Basic Authentication (login and password/API key) for its API requests.",
+      "Flagged credential_access as disputed: DataForSEO provides a publicly accessible commercial API requiring registration and payment, not 'no_public_api'.",
+      "Flagged verdict as disputed: The API is fully public and accessible immediately upon registration and funding an account.",
+      "Flagged main_blocker as disputed: There is no blocker; the API is publicly available for integration."
+    ]
+  }
+}

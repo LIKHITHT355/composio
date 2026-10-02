@@ -1,0 +1,96 @@
+{
+  "id": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "one_liner": "An expressive GraphQL API and developer platform to interact with workflows, automate processes, and build full-stack apps.",
+  "official_domain": "developer.monday.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "OAuth2 scopes built in with support for granular scopes like boards:read.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.monday.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Monday.com provides a well-documented GraphQL API, built-in OAuth2 scopes, an official Model Context Protocol (MCP) server, and developer platform features.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.monday.com",
+      "quote": "An expressive GraphQL API to interact with your workflows, automate processes, power integrations, and more!",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.monday.com",
+      "quote": "OAuth2 scopes built in",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.monday.com",
+      "quote": "Connect the developer MCP to any agent. Scaffold, set env vars, and promote versions from chat.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "mcp": "high",
+    "credential_access": "low",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.378557+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "needs_human",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developer.monday.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.monday.com"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence supports the claims made. Monday.com provides a robust GraphQL API with OAuth2 authentication and self-serve developer access without mandatory sales gatekeeping.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "one_liner": "Online payment processing and financial infrastructure platform for internet businesses.",
+  "official_domain": "stripe.com",
+  "auth_methods": [
+    "api_key",
+    "basic"
+  ],
+  "auth_notes": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.stripe.com/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Stripe provides a comprehensive REST API with public self-serve test keys and documentation, making it fully ready for integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.stripe.com/api",
+      "quote": "The Stripe API authenticates requests using HTTP Basic Auth. Provide your API key as the basic auth username value. You don\u2019t need to provide a password.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://docs.stripe.com/api",
+      "quote": "The Stripe API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://docs.stripe.com/api",
+      "quote": "Test mode secret keys start with sk_test_ and have unrestricted access to their sandboxes.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://docs.stripe.com/api",
+      "quote": "The Stripe API uses API keys to authenticate requests. You can view and manage your API keys in the Stripe Dashboard.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.stripe.com/api",
+      "quote": "A sample test API key is included in all the examples here, so you can test any example right away.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:10:50.087400+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 5,
+    "verified_quotes": 5,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

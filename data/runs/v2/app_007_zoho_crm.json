@@ -1,0 +1,97 @@
+{
+  "id": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "one_liner": "Perform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints.",
+  "official_domain": "zoho.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Zoho's OAuth implementation uses Bearer authentication scheme, hence while making API calls, the access token has to be passed in the Authorization header with the prefix Bearer.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://www.zoho.com/crm/developer/docs/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Zoho CRM offers comprehensive REST and GraphQL APIs, supports OAuth 2.0 authentication, and provides multiple SDKs for integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "PHP",
+      "Node JS",
+      "C#",
+      "Ruby"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.zoho.com/crm/developer/docs/",
+      "quote": "Core APIsPerform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+      "quote": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/developer/oauth/introduction.html",
+      "quote": "Zoho's OAuth implementation uses Bearer authentication scheme, hence while making API calls, the access token has to be passed in the Authorization header with the prefix Bearer.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://www.zoho.com/crm/developer/docs/",
+      "quote": "Perform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "low",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:23:17.912343+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 4,
+    "verified_quotes": 4,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

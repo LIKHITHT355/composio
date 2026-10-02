@@ -1,0 +1,72 @@
+{
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer",
+  "one_liner": "Cloud-based data storage and analytics platform.",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "other"
+  ],
+  "auth_notes": "unknown",
+  "credential_access": "paid_plan_required",
+  "gate_notes": "unknown",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "needs_outreach",
+  "main_blocker": "other",
+  "verdict_reason": "No fetched web passages available to verify complete API documentation and credentials.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp": "low",
+    "verdict": "low",
+    "api.exists": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:03:42.832966+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "needs_human",
+    "api.exists": "needs_human",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Infra API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evaluation aligns with the evidence and constraints. Snowflake provides well-documented REST APIs (e.g., SQL API), but access requires a paid plan or active account, supporting the 'paid_plan_required' and 'needs_outreach' or gated verdict.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

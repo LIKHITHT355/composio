@@ -1,0 +1,112 @@
+{
+  "id": 9,
+  "app": "Copper",
+  "category": "CRM and Sales",
+  "one_liner": "Copper is purpose-built to help relationship-focused businesses manage their entire customer journey.",
+  "official_domain": "copper.com",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "API keys require token in header with email address; OAuth2.0 is supported with the developer/v1/all scope.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developer.copper.com/introduction/authentication.html",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Copper provides public developer APIs accessible via API keys and OAuth2.0, allowing straightforward integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "To generate an API token, in the Copper web app go to System settings > API Keys and click the 'GENERATE API KEY' button.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://copper.com",
+      "quote": "Connect the tools you\u2019re already using",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "quote": "There are two ways to access the Copper Developer API: API keys and OAuth2.0.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:56:50.927683+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "copper.com API docs"
+    ],
+    "urls_inspected": [
+      "https://copper.com",
+      "https://developer.copper.com/introduction/authentication.html"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The API claims are fully supported by the provided documentation quotes. The API exists, uses standard REST with API keys or OAuth2, and keys can be generated via self-serve in the app settings without paid tiers or manual approval blockers.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

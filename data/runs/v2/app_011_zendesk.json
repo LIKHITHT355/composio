@@ -1,0 +1,66 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer service software with ticketing, self-service, and AI agent capabilities.",
+  "official_domain": "zendesk.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "docs_unclear",
+  "verdict_reason": "Although APIs are mentioned generally on the site, there is insufficient detailed evidence in the provided passages regarding specific authentication methods, API documentation URLs, or credential access.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.zendesk.com/",
+      "quote": "Integrate Zendesk with your existing systems through prebuilt integrations and APIs to reduce manual work and speed up collaboration.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:28:10.287082+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 1,
+    "verified_quotes": 1,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

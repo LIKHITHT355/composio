@@ -1,0 +1,124 @@
+{
+  "id": 26,
+  "app": "Discord",
+  "category": "Communications and Messaging",
+  "one_liner": "A command center for creating bots, integrating apps, and tailoring your Discord server.",
+  "official_domain": "discord.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "basic"
+  ],
+  "auth_notes": "Supports basic authentication with credentials as client ID and client secret, OAuth2 bearer tokens, and bot tokens.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.discord.com/developers/reference",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Discord provides a robust REST and WebSocket API with self-serve credentials and clear documentation, making it immediately ready for integration.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "Rate limits are in place to prevent abuse and ensure the stability of the Discord platform.",
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "bearer_token",
+      "oauth2"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/reference",
+      "quote": "Using basic authentication with credentials as the client ID and client secret found on the OAuth2 page of your app\u2019s settings in the format client_id:client_secret as a Base64 encoded string.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.discord.com/developers/reference",
+      "quote": "Using an OAuth2 bearer token gained through the OAuth2 API.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://rhmdb.irs.kg.gov.ng/kg-news/discord-developer-portal-your-ultimate-guide-1767647958",
+      "quote": "You can create a new application by clicking the \u201cNew Application\u201d button. After providing a name, you\u2019ll be taken to the application\u2019s settings",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://rhmdb.irs.kg.gov.ng/kg-news/discord-developer-portal-your-ultimate-guide-1767647958",
+      "quote": "Authentication is essential for all API requests. Your bot needs to authenticate itself to verify that it is authorized to perform actions on Discord servers.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://github.com/topics/discord-api-docs",
+      "quote": "discord-api-docs Here is 1 public repository matching this topic...",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://rhmdb.irs.kg.gov.ng/kg-news/discord-developer-portal-your-ultimate-guide-1767647958",
+      "quote": "The Discord Developer Portal is your starting point, the place where all the magic happens. Think of it as your command center for creating bots, integrating apps, and tailoring your Discord server to fit your exact needs.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:58:03.384915+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "discord.com API docs"
+    ],
+    "urls_inspected": [
+      "https://docs.discord.com/developers/reference",
+      "https://rhmdb.irs.kg.gov.ng/kg-news/discord-developer-portal-your-ultimate-guide-1767647958",
+      "https://github.com/topics/discord-api-docs"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The API exists, uses standard REST architecture with OAuth2 and Basic auth, credentials are self-serve free via the developer portal, and the evidence fully supports the claims.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

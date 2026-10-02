@@ -1,0 +1,120 @@
+{
+  "id": 23,
+  "app": "Zoho Cliq",
+  "category": "Communications and Messaging",
+  "one_liner": "Zoho Cliq provides enterprise team messaging, chat, and collaboration tools via REST APIs and webhooks.",
+  "official_domain": "zoho.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Zoho's OAuth implementation uses the Bearer authentication scheme with prefix 'Zoho-oauthtoken'. API tokens are also provided while creating an application with integration components.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Zoho Cliq offers fully documented REST APIs with standard OAuth2 authentication and self-serve developer access via the Zoho API console.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "quote": "Zoho's OAuth implementation uses the Bearer authentication scheme; hence, when making API calls, the access token must be passed in the Authorization header with the prefix \"Zoho-oauthtoken\".",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "quote": "The first step in using OAuth authentication is registering your app with the Zoho API console. Once you register your client, you will get a Client ID and Client secret for your application.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://www.zoho.com/cliq/help/platform/faq.html",
+      "quote": "Zoho Cliq API is organized around REST, and follows HTTP rules. Cliq REST APIs are authenticated with an OAuth token.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://www.zoho.com/cliq/help/platform/faq.html",
+      "quote": "Does Cliq use a token based authentication to authenticate all requests?Zoho Cliq API is organized around REST, and follows HTTP rules.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "quote": "The first step in using OAuth authentication is registering your app with the Zoho API console. Once you register your client, you will get a Client ID and Client secret for your application.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "main_blocker",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "quote": "After your app has the access token, it can access Zoho's protected resources.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:57:58.144099+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "rule_verified"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "zoho.com API docs"
+    ],
+    "urls_inspected": [
+      "https://www.zoho.com/cliq/help/platform/faq.html",
+      "https://www.zoho.com/cliq/help/restapi/v3/oauth/"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The API existence, REST style, and OAuth authentication are fully supported by the provided quotes. Credential access via the Zoho API console is self-serve and free of charge, supporting the ready_now verdict.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

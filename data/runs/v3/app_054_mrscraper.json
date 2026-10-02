@@ -1,0 +1,106 @@
+{
+  "id": 54,
+  "app": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "one_liner": "An AI scraping platform that provides workflows, scrapers, and APIs to extract website content and automate data extraction.",
+  "official_domain": "docs.mrscraper.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Tokens are used for authentication.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "sdk_only"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://docs.mrscraper.com/docs/getting-started/overview",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "MrScraper offers a public API with SDK support, API token authentication, and documented developer tools including an MCP server.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "python"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+      "quote": "Learn how tokens work and create an API token for authentication.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+      "quote": "Workflow API Access\n\nActivate a scraper as an API endpoint and run it programmaticlly.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": false
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+      "quote": "The MrScraper MCP server source code is available on GitHub for local setup, contributions, and issue reports.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+      "quote": "Call the MrScraper API asynchronously with the mrscraper-sdk package.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "low",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "medium",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:40.028826+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "needs_human",
+    "api.exists": "agent_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "docs.mrscraper.com API docs"
+    ],
+    "urls_inspected": [
+      "https://docs.mrscraper.com/docs/getting-started/overview"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims are accurately supported by the provided documentation quotes, confirming a true REST API with programmatic access, self-serve token authentication, and SDK support without hidden blockers or mandatory sales approval.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

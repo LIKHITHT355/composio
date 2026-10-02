@@ -1,0 +1,98 @@
+{
+  "id": 4,
+  "app": "Attio",
+  "category": "CRM and Sales",
+  "one_liner": "CRM and Sales platform offering a REST API, OAuth 2.0 authentication, and webhooks.",
+  "official_domain": "attio.com",
+  "auth_methods": [
+    "oauth2",
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports OAuth 2.0 with PKCE and API keys. Access tokens use Bearer scheme.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.attio.com/rest-api/overview",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Attio provides a fully documented REST API supporting OAuth 2.0 and API keys, alongside webhook integrations.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "Working within our rate limits",
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.attio.com/rest-api/overview",
+      "quote": "Building an OAuth flow for your app\nWorking within our rate limits\nSetting up and listening to webhooks\nFiltering and sorting record and entry API queries\nPaginating API responses",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "By implementing an OAuth 2.0 flow",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "By generating an API key for your workspace",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "quote": "Authorization: Bearer <access_token>",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://docs.attio.com/docs/overview",
+      "quote": "App SDK\nREST API\nMCP\nSQL",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "low",
+    "mcp.status": "medium",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:19:32.073815+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 5,
+    "verified_quotes": 5,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "one_liner": "A specialized Model Context Protocol (MCP) implementation designed to facilitate seamless interaction between large language models (LLMs) and Salesforce orgs.",
+  "official_domain": "salesforce.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "basic"
+  ],
+  "auth_notes": "OAuth (Recommended) via SALESFORCE_ACCESS_TOKEN and SALESFORCE_INSTANCE_URL, Client Credentials flow, or Legacy Username/Password with security token.",
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/salesforcecli/mcp"
+  },
+  "build_form": "reuse_existing_mcp",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Salesforce has an official MCP server implementation and supports REST API requests.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "mcp.status",
+      "url": "https://github.com/salesforcecli/mcp",
+      "quote": "The Salesforce DX MCP Server is a specialized Model Context Protocol (MCP) implementation designed to facilitate seamless interaction between large language models (LLMs) and Salesforce orgs.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://github.com/smn2gnt/MCP-Salesforce",
+      "quote": "Make direct REST API calls to Salesforce",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/smn2gnt/MCP-Salesforce",
+      "quote": "OAuth (Recommended): Set SALESFORCE_ACCESS_TOKEN and SALESFORCE_INSTANCE_URL as environment variables.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "low",
+    "api.exists": "high",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:55:35.998507+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "disputed",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "salesforce.com API docs"
+    ],
+    "urls_inspected": [
+      "https://github.com/smn2gnt/MCP-Salesforce",
+      "https://github.com/salesforcecli/mcp"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "Salesforce definitely has a robust enterprise API ecosystem, but claims regarding credential access and readiness should reflect that setup, OAuth configuration, and an existing Salesforce account are strictly mandatory.",
+    "disagreements": [
+      {
+        "field": "credential_access",
+        "counter_claim": "requires_approval",
+        "critique": "Salesforce API access natively requires connected app setup and enterprise credentials, making 'no_public_api' or 'self_serve_free' inaccurate for general open developer signup without friction."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "requires_signup",
+        "critique": "Salesforce requires a developer edition account or enterprise org signup and OAuth configuration; it is not instantly ready without prior account provisioning."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged credential_access as disputed: Salesforce API access natively requires connected app setup and enterprise credentials, making 'no_public_api' or 'self_serve_free' inaccurate for general open developer signup without friction.",
+      "Flagged verdict as disputed: Salesforce requires a developer edition account or enterprise org signup and OAuth configuration; it is not instantly ready without prior account provisioning."
+    ]
+  }
+}

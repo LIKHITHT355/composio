@@ -27,6 +27,8 @@ load_dotenv()
 OPENAI_COMPATIBLE_ENDPOINTS = {
     "openai": "https://api.openai.com/v1/chat/completions",
     "groq": "https://api.groq.com/openai/v1/chat/completions",
+    "cerebras": "https://api.cerebras.ai/v1/chat/completions",
+    "mistral": "https://api.mistral.ai/v1/chat/completions",
     "deepseek": "https://api.deepseek.com/chat/completions",
     "openrouter": "https://openrouter.ai/api/v1/chat/completions",
     "together": "https://api.together.xyz/v1/chat/completions",
@@ -44,6 +46,8 @@ class LLMClient:
         self.openai_key = os.getenv("OPENAI_API_KEY")
         self.anthropic_key = os.getenv("ANTHROPIC_API_KEY")
         self.groq_key = os.getenv("GROQ_API_KEY")
+        self.cerebras_key = os.getenv("CEREBRAS_API_KEY")
+        self.mistral_key = os.getenv("MISTRAL_API_KEY")
         self.hf_key = os.getenv("HUGGINGFACE_API_KEY")
         self.deepseek_key = os.getenv("DEEPSEEK_API_KEY")
         self.openrouter_key = os.getenv("OPENROUTER_API_KEY")
@@ -82,6 +86,8 @@ class LLMClient:
             "openai": self.openai_key,
             "anthropic": self.anthropic_key,
             "groq": self.groq_key,
+            "cerebras": self.cerebras_key,
+            "mistral": self.mistral_key,
             "huggingface": self.hf_key,
             "deepseek": self.deepseek_key,
             "openrouter": self.openrouter_key,
@@ -155,10 +161,10 @@ class LLMClient:
                             prompt_tokens = usage.get("promptTokenCount", len(prompt) // 4)
                             completion_tokens = usage.get("candidatesTokenCount", len(raw_text) // 4)
                             break
-                        elif resp.status_code == 429:
-                            time.sleep(2 * (attempt + 1))
+                        elif resp.status_code in [429, 503]:
+                            time.sleep(3 * (attempt + 1))
                             if attempt == 2:
-                                raise RuntimeError(f"Gemini API rate limit (429): {resp.text}")
+                                raise RuntimeError(f"Gemini API temporary limit/unavailable ({resp.status_code}): {resp.text}")
                         else:
                             raise RuntimeError(f"Gemini API error ({resp.status_code}): {resp.text}")
                 except (httpx.RemoteProtocolError, httpx.ReadTimeout, httpx.ConnectError) as net_err:
@@ -234,7 +240,12 @@ class LLMClient:
             start_idx = raw_text.find("{")
             end_idx = raw_text.rfind("}")
             if start_idx != -1 and end_idx != -1:
-                parsed_data = json.loads(raw_text[start_idx:end_idx+1])
+                sub = raw_text[start_idx:end_idx+1]
+                clean_sub = re.sub(r",\s*([\}\]])", r"\1", sub)
+                try:
+                    parsed_data = json.loads(clean_sub)
+                except Exception as ex:
+                    raise RuntimeError(f"Failed to parse JSON response ({ex}): {raw_text[:200]}")
             else:
                 raise RuntimeError(f"Failed to parse JSON response: {raw_text[:200]}")
 

@@ -14,7 +14,7 @@ import time
 import argparse
 from pathlib import Path
 from datetime import datetime, timezone
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Tuple
 
 from schema.app_record import (
     AppRecord,
@@ -148,26 +148,35 @@ def run_app_v2(app_row: dict, resolver: EntityResolver, discoverer: FieldDiscove
     # 2. Discover targeted endpoints & URLs
     discovered = discoverer.discover(resolved["app"], resolved["official_domain"], app_row["hint"])
     candidate_urls = []
-    
-    # Priority: primary docs from resolver
-    if resolved.get("primary_docs"):
-        candidate_urls.append(resolved["primary_docs"])
 
-    for field_cat, items in discovered.items():
-        for item in items[:2]:
+    # Priority 1: Top organic search URLs from targeted queries
+    for field_cat in ["api", "auth", "gating", "mcp"]:
+        for item in discovered.get(field_cat, [])[:2]:
             u = item.get("url")
             if u and u not in candidate_urls:
                 candidate_urls.append(u)
 
+    # Priority 2: Primary docs from resolver/hint
+    if resolved.get("primary_docs") and resolved["primary_docs"] not in candidate_urls:
+        candidate_urls.append(resolved["primary_docs"])
+
+    # Priority 3: Direct standard subdomains
+    for item in discovered.get("direct_candidates", []):
+        u = item.get("url")
+        if u and u not in candidate_urls:
+            candidate_urls.append(u)
+
     # 3. Fetch & extract top passages (~6k tokens cap)
     evidence_passages = []
-    keywords = ["api", "oauth", "token", "key", "developer", "pricing", "free", "tier", "mcp", "rest", "graphql", "sign"]
-    
-    for url in candidate_urls[:4]: # Limit to top 4 relevant pages for token thrift
+    keywords = ["api", "oauth", "token", "key", "developer", "pricing", "free", "tier", "mcp", "rest", "graphql", "signature", "hmac", "secret"]
+
+    for url in candidate_urls:
+        if len(evidence_passages) >= 3:
+            break
         page_data = fetcher.fetch(url)
-        if page_data["status_code"] == 200:
-            top_text = fetcher.get_top_passages(page_data["clean_text"], keywords, max_chars=3500)
-            if top_text.strip():
+        if page_data["status_code"] == 200 and len(page_data.get("clean_text", "")) > 100:
+            top_text = fetcher.get_top_passages(page_data["clean_text"], keywords, max_chars=3000)
+            if len(top_text.strip()) > 100:
                 evidence_passages.append({
                     "url": page_data["url"],
                     "text": top_text
@@ -192,6 +201,49 @@ def run_app_v2(app_row: dict, resolver: EntityResolver, discoverer: FieldDiscove
     raw_data["provenance"]["model"] = usage.get("model", "gemini-3.5-flash-lite")
     raw_data["provenance"]["prompt_version"] = "v2.0"
     raw_data["provenance"]["timestamp"] = datetime.now(timezone.utc).isoformat()
+
+    # Robust Normalization before Pydantic validation
+    VALID_CREDS = {"self_serve_free", "self_serve_trial", "paid_plan_required", "approval_required", "partner_or_sales_gated", "no_public_api", "not_applicable"}
+    if str(raw_data.get("credential_access", "")).lower() not in VALID_CREDS:
+        raw_data["credential_access"] = "no_public_api"
+    else:
+        raw_data["credential_access"] = str(raw_data["credential_access"]).lower()
+
+    VALID_AUTH = {"oauth2", "api_key", "bearer_token", "basic", "jwt", "hmac_signing", "aws_sigv4", "none", "other"}
+    if "auth_methods" in raw_data and isinstance(raw_data["auth_methods"], list):
+        norm_auth = []
+        for m in raw_data["auth_methods"]:
+            m_s = str(m).lower()
+            if m_s == "token":
+                m_s = "bearer_token"
+            elif m_s not in VALID_AUTH:
+                m_s = "other"
+            norm_auth.append(m_s)
+        raw_data["auth_methods"] = norm_auth or ["none"]
+    else:
+        raw_data["auth_methods"] = ["none"]
+
+    if "evidence" in raw_data and isinstance(raw_data["evidence"], list):
+        norm_ev = []
+        for e in raw_data["evidence"]:
+            if isinstance(e, dict) and e.get("quote"):
+                e["quote"] = str(e["quote"])[:300]
+                if not e.get("retrieved_at"):
+                    e["retrieved_at"] = datetime.now(timezone.utc).isoformat()
+                norm_ev.append(e)
+        raw_data["evidence"] = norm_ev
+
+    VALID_VERDICTS = {"ready_now", "ready_with_caveats", "needs_outreach", "blocked", "not_an_api_product"}
+    if str(raw_data.get("verdict", "")).lower() not in VALID_VERDICTS:
+        raw_data["verdict"] = "blocked"
+    else:
+        raw_data["verdict"] = str(raw_data["verdict"]).lower()
+
+    VALID_BLOCKERS = {"none", "no_public_api", "paid_plan", "app_review_or_approval", "partner_program", "contact_sales", "complex_auth", "docs_unclear", "not_a_hosted_service", "other"}
+    if str(raw_data.get("main_blocker", "")).lower() not in VALID_BLOCKERS:
+        raw_data["main_blocker"] = "no_public_api" if raw_data["verdict"] == "blocked" else "none"
+    else:
+        raw_data["main_blocker"] = str(raw_data["main_blocker"]).lower()
 
     # Model validation
     record = AppRecord.model_validate(raw_data)

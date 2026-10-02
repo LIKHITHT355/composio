@@ -1,0 +1,104 @@
+{
+  "id": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "one_liner": "Airtable's structured field types, relational links, and built-in automations make it a rich data layer for AI agents.",
+  "official_domain": "airtable.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Connects in one click via OAuth.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "moderate",
+    "docs_url": "https://airtable.com/developers",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://airtable.com/developers"
+  },
+  "build_form": "reuse_existing_mcp",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Airtable provides an official MCP server with one-click OAuth connection and structured field support for AI agents.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "bearer_token"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://airtable.com/developers",
+      "quote": "Connects in one click via OAuth.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://airtable.com/developers",
+      "quote": "Any MCP-compatible tool can read, write, and query your bases through natural language, scoped to your existing permissions.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://airtable.com/developers",
+      "quote": "The Airtable MCP server gives agents your base's full structure \u2014 field types, relationships, and views \u2014 so they can make context-aware decisions.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://airtable.com/developers",
+      "quote": "Connects in one click via OAuth.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:03:52.485474+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "airtable.com API docs"
+    ],
+    "urls_inspected": [
+      "https://airtable.com/developers"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims are accurately supported by the provided evidence. Airtable provides a legitimate cloud-based API with self-serve OAuth2 credential generation.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

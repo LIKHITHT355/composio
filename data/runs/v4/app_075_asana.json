@@ -1,0 +1,116 @@
+{
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "one_liner": "Integrate tools, automate actions, and customize workflows with Asana's developer platform and REST API.",
+  "official_domain": "developers.asana.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Supports Personal Access Tokens (PAT), Service Account tokens, and OAuth.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Developer sandbox allows testing premium features not included in a free account.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.asana.com/docs",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Asana provides a fully documented REST API with self-serve token generation (PAT) and OAuth support, making it readily buildable.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "bearer_token"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.asana.com/docs",
+      "quote": "The primary feature of Asana\u2019s platform is our rest API, so we recommend getting familiar with how our API works.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.asana.com/docs",
+      "quote": "Choose your authentication method. Your app may ultimately use OAuth, but most developers test our API by creating a Personal Access Token (PAT) to make their first API calls.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.asana.com/docs",
+      "quote": "Choose your test workspace. You can test in any of your existing workspaces, create a free account, or request a developer sandbox.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developers.asana.com",
+      "quote": "Automate tedious work in powerful, bespoke ways with our platform features like rule actions, webhooks, and our API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.asana.com",
+      "quote": "New to the Asana API? Build your first app with our step by step quick start guide. Learn to create and authorize with a token then create tasks via the API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.378557+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developers.asana.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developers.asana.com",
+      "https://developers.asana.com/docs"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence provided strongly supports the existence of a REST API with OAuth2 and bearer token (Personal Access Token) support. Credential access is genuinely self-serve via free accounts or developer sandboxes, and the verdict 'ready_now' is justified by the public quick start and documentation.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

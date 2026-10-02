@@ -1,0 +1,108 @@
+{
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer service software with ticketing, self-service, and AI agent capabilities.",
+  "official_domain": "zendesk.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "docs_unclear",
+  "verdict_reason": "Although APIs are mentioned generally on the site, there is insufficient detailed evidence in the provided passages regarding specific authentication methods, API documentation URLs, or credential access.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "api_key"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.zendesk.com/",
+      "quote": "Integrate Zendesk with your existing systems through prebuilt integrations and APIs to reduce manual work and speed up collaboration.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.315936+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "disputed",
+    "main_blocker": "disputed"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "zendesk.com API docs"
+    ],
+    "urls_inspected": [
+      "https://www.zendesk.com/"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "Zendesk is a major enterprise SaaS platform with a fully documented public REST API. The assessment incorrectly labels it as having no public API and no auth.",
+    "disagreements": [
+      {
+        "field": "credential_access",
+        "counter_claim": "full_public_api",
+        "critique": "Zendesk has a well-known, comprehensive public REST API for ticketing, help center, and users, contradicting 'no_public_api'."
+      },
+      {
+        "field": "auth_methods",
+        "counter_claim": "oauth2, api_key, basic",
+        "critique": "Zendesk requires authentication (OAuth 2.0, API token, or Basic auth with email/token), not 'none'."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "ready_now",
+        "critique": "Zendesk's API is publicly documented and readily available for developer use, so it is not blocked."
+      },
+      {
+        "field": "main_blocker",
+        "counter_claim": "none",
+        "critique": "There is no major blocker preventing access to the public Zendesk API."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: Zendesk requires authentication (OAuth 2.0, API token, or Basic auth with email/token), not 'none'.",
+      "Flagged credential_access as disputed: Zendesk has a well-known, comprehensive public REST API for ticketing, help center, and users, contradicting 'no_public_api'.",
+      "Flagged verdict as disputed: Zendesk's API is publicly documented and readily available for developer use, so it is not blocked.",
+      "Flagged main_blocker as disputed: There is no major blocker preventing access to the public Zendesk API."
+    ]
+  }
+}

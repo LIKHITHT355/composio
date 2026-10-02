@@ -1,0 +1,100 @@
+{
+  "id": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "one_liner": "Plaid helps users connect their financial accounts and provides server-side API libraries to integrate with API endpoints for banking, transactions, investments, and more.",
+  "official_domain": "plaid.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://plaid.com/docs/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "docs_unclear",
+  "verdict_reason": "Plaid provides server-side API libraries and extensive endpoints, but authentication methods and exact credential self-serve acquisition details are not explicitly described in the provided text snippets.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://plaid.com/docs/",
+      "quote": "Explore server-side API libraries and integrate with API endpoints",
+      "retrieved_at": "2026-03-31T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "credential_access": "low",
+    "auth_methods": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.384332+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "disputed",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "plaid.com API docs"
+    ],
+    "urls_inspected": [
+      "https://plaid.com/docs/"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The claim correctly identifies that Plaid has a REST API, but mischaracterizes the authentication as 'none' and the credential access as having no public API, whereas Plaid is a well-known gated public API product.",
+    "disagreements": [
+      {
+        "field": "credential_access",
+        "counter_claim": "signup_required",
+        "critique": "Plaid requires account creation, application approval, and contractual agreement before API keys are issued, it is not 'no_public_api'."
+      },
+      {
+        "field": "auth_methods",
+        "counter_claim": "api_key",
+        "critique": "Plaid API endpoints use client_id and secret/API keys for authentication, not 'none'."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "requires_approval",
+        "critique": "Plaid is a financial API platform that requires vetting and approval for production access, making 'ready_with_caveats' or 'requires_approval' more accurate."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: Plaid API endpoints use client_id and secret/API keys for authentication, not 'none'.",
+      "Flagged credential_access as disputed: Plaid requires account creation, application approval, and contractual agreement before API keys are issued, it is not 'no_public_api'.",
+      "Flagged verdict as disputed: Plaid is a financial API platform that requires vetting and approval for production access, making 'ready_with_caveats' or 'requires_approval' more accurate."
+    ]
+  }
+}

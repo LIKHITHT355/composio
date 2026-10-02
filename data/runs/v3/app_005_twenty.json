@@ -1,0 +1,90 @@
+{
+  "id": 5,
+  "app": "Twenty",
+  "category": "CRM and Sales",
+  "one_liner": "Open-source CRM with REST and GraphQL APIs.",
+  "official_domain": "twenty.com",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "Uses Authorization: Bearer YOUR_API_KEY",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "graphql"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://docs.twenty.com/developers/extend/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Twenty provides both REST and GraphQL APIs with standard Bearer token authentication and self-serve documentation.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "Requests: 100 per minute, Batch size: 60 records per call",
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "/rest/\n/graphql/",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "quote": "Authorization: Bearer YOUR_API_KEY",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "low",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:56:42.389746+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "needs_human",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "twenty.com API docs"
+    ],
+    "urls_inspected": [
+      "https://docs.twenty.com/developers/extend/api"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence provided directly supports the existence of REST and GraphQL endpoints as well as Bearer token authentication. Twenty is an open-source CRM with cloud and self-hosted options supporting self-serve API access, making the claims accurate.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

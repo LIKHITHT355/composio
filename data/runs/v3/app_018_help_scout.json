@@ -1,0 +1,119 @@
+{
+  "id": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "one_liner": "Help Scout is a customer support platform that brings email, chat, voice, and help center resources into one workspace with AI-powered assistance and reporting.",
+  "official_domain": "helpscout.com",
+  "auth_methods": [
+    "oauth2",
+    "basic"
+  ],
+  "auth_notes": "Mailbox API uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows. Docs API uses API keys passed via HTTP Basic Authentication in the username field with a dummy password.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Help Scout provides documented REST APIs (Mailbox API and Docs API) supporting OAuth 2.0 and API key (Basic) authentication, which are publicly accessible to developers.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "Rate limits are based on the number of Docs Sites the account has (e.g. 2000 requests every 10 mins for 1 site).",
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows. All requests have to be authenticated via the Authorization header:",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.helpscout.com/docs-api/",
+      "quote": "This is an HTTPS-only API. Authentication is based on API keys. Each API key is associated with a Help Scout user. Results returned from various responses are based upon the role of the user to which the API key is tied. The API key is passed via HTTP Basic Authentication and goes in the username fi",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "quote": "You need to create an OAuth2 application before you can use the API. Create one by navigating to Your Profile > My apps and click Create My App.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication",
+      "quote": "This is an HTTPS-only API and it uses OAuth 2.0 authorization, implementing Authorization Code and Client Credential flows.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:57:46.549239+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "helpscout.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.helpscout.com/docs-api/",
+      "https://developer.helpscout.com/mailbox-api/overview/authentication"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims are fully supported by the provided evidence quotes. Help Scout provides a legitimate REST API with self-serve app creation, supporting both OAuth2 and Basic authentication as claimed.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

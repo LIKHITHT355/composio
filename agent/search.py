@@ -1,10 +1,13 @@
 """
 Pluggable search module for App Buildability Agent with local caching.
 Supports:
-1. SerpAPI (if SERPAPI_API_KEY configured)
-2. Composio search action (if COMPOSIO_API_KEY configured)
-3. Tavily API (if TAVILY_API_KEY configured)
-4. Direct Hint/Domain Snippet fetcher (zero-credential fallback)
+1. Brave Search API (BRAVE_API_KEY - 2,000 free queries/mo)
+2. Serper.dev (SERPER_API_KEY - 2,500 free Google search queries)
+3. Exa.ai (EXA_API_KEY - 1,000 free neural search queries)
+4. SerpAPI (SERPAPI_API_KEY)
+5. Tavily API (TAVILY_API_KEY)
+6. Composio search action (COMPOSIO_API_KEY)
+7. Direct Hint/Domain Snippet fetcher (zero-credential fallback)
 """
 
 import os
@@ -21,9 +24,13 @@ load_dotenv()
 
 class SearchProvider:
     def __init__(self, cache_dir: str = "data/cache/search"):
-        self.composio_key = os.getenv("COMPOSIO_API_KEY")
-        self.tavily_key = os.getenv("TAVILY_API_KEY")
+        self.brave_key = os.getenv("BRAVE_API_KEY")
+        self.serper_key = os.getenv("SERPER_API_KEY")
+        self.exa_key = os.getenv("EXA_API_KEY")
         self.serpapi_key = os.getenv("SERPAPI_API_KEY")
+        self.tavily_key = os.getenv("TAVILY_API_KEY")
+        self.composio_key = os.getenv("COMPOSIO_API_KEY")
+        
         self.timeout = 15.0
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
@@ -36,9 +43,6 @@ class SearchProvider:
         return self.cache_dir / f"{h}.json"
 
     def search_snippets(self, app_name: str, hint: str, query: str = None) -> List[Dict[str, str]]:
-        """
-        Returns top snippets: [{'title': ..., 'snippet': ..., 'url': ...}]
-        """
         search_query = query or f"{app_name} API developer documentation authentication"
         cache_path = self._get_cache_path(search_query)
 
@@ -48,7 +52,80 @@ class SearchProvider:
 
         snippets = []
 
-        # 1. Try SerpAPI if available
+        # 1. Try Brave Search (2,000 free monthly queries)
+        if self.brave_key:
+            try:
+                resp = httpx.get(
+                    "https://api.search.brave.com/res/v1/web/search",
+                    headers={"X-Subscription-Token": self.brave_key, "Accept": "application/json"},
+                    params={"q": search_query, "count": 5},
+                    timeout=self.timeout
+                )
+                if resp.status_code == 200:
+                    data = resp.json()
+                    web_results = data.get("web", {}).get("results", [])
+                    for item in web_results[:5]:
+                        snippets.append({
+                            "title": item.get("title", ""),
+                            "snippet": item.get("description", "")[:300],
+                            "url": item.get("url", "")
+                        })
+                    if snippets:
+                        with open(cache_path, "w", encoding="utf-8") as f:
+                            json.dump(snippets, f, indent=2)
+                        return snippets
+            except Exception:
+                pass
+
+        # 2. Try Serper.dev (2,500 free Google queries)
+        if self.serper_key:
+            try:
+                resp = httpx.post(
+                    "https://google.serper.dev/search",
+                    headers={"X-API-KEY": self.serper_key, "Content-Type": "application/json"},
+                    json={"q": search_query, "num": 5},
+                    timeout=self.timeout
+                )
+                if resp.status_code == 200:
+                    data = resp.json()
+                    for item in data.get("organic", [])[:5]:
+                        snippets.append({
+                            "title": item.get("title", ""),
+                            "snippet": item.get("snippet", "")[:300],
+                            "url": item.get("link", "")
+                        })
+                    if snippets:
+                        with open(cache_path, "w", encoding="utf-8") as f:
+                            json.dump(snippets, f, indent=2)
+                        return snippets
+            except Exception:
+                pass
+
+        # 3. Try Exa.ai (1,000 free queries)
+        if self.exa_key:
+            try:
+                resp = httpx.post(
+                    "https://api.exa.ai/search",
+                    headers={"x-api-key": self.exa_key, "Content-Type": "application/json"},
+                    json={"query": search_query, "numResults": 5, "useAutoprompt": True},
+                    timeout=self.timeout
+                )
+                if resp.status_code == 200:
+                    data = resp.json()
+                    for item in data.get("results", [])[:5]:
+                        snippets.append({
+                            "title": item.get("title", ""),
+                            "snippet": (item.get("text", "") or item.get("title", ""))[:300],
+                            "url": item.get("url", "")
+                        })
+                    if snippets:
+                        with open(cache_path, "w", encoding="utf-8") as f:
+                            json.dump(snippets, f, indent=2)
+                        return snippets
+            except Exception:
+                pass
+
+        # 4. Try SerpAPI if available
         if self.serpapi_key:
             try:
                 resp = httpx.get(
@@ -77,7 +154,7 @@ class SearchProvider:
             except Exception:
                 pass
 
-        # 2. Try Tavily directly
+        # 5. Try Tavily directly
         if self.tavily_key:
             try:
                 resp = httpx.post(
@@ -100,14 +177,13 @@ class SearchProvider:
             except Exception:
                 pass
 
-        # 3. Direct domain fallback using the hint
+        # 6. Direct domain fallback using the hint
         snippets = self._fallback_hint_snippets(app_name, hint)
         with open(cache_path, "w", encoding="utf-8") as f:
             json.dump(snippets, f, indent=2)
         return snippets
 
     def _fallback_hint_snippets(self, app_name: str, hint: str) -> List[Dict[str, str]]:
-        """Zero-credential fallback: fetches public meta tags and headlines from hint domain."""
         snippets = []
         raw_url = hint.split()[0].strip() if hint else ""
         if not raw_url.startswith("http"):

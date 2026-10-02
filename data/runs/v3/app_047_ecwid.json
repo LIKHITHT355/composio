@@ -1,0 +1,100 @@
+{
+  "id": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "one_liner": "Ecwid Ecommerce integration and API documentation platform for customizing stores, automating integrations, and managing orders.",
+  "official_domain": "api-docs.ecwid.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "broad",
+    "docs_url": "https://api-docs.ecwid.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Ecwid provides comprehensive API documentation and integration guides, but specific authentication methods and OpenAPI schema details are not explicitly detailed in the provided text.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://api-docs.ecwid.com",
+      "quote": "Explore our guides and examples to integrate Ecwid Ecommerce\nCustomize your store\nGet access to API with an app",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "extras.webhooks",
+      "url": "https://api-docs.ecwid.com",
+      "quote": "Automate integrations\nWebhooks\nAutomate your business logic",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "credential_access": "low",
+    "auth_methods": "low",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:59:18.428241+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "api-docs.ecwid.com API docs"
+    ],
+    "urls_inspected": [
+      "https://api-docs.ecwid.com"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "Ecwid has a legitimate web API, but claiming 'none' for authentication is inaccurate and a developer account/app creation is required to access credentials, contradicting pure 'self_serve_free' without friction.",
+    "disagreements": [
+      {
+        "field": "auth_methods",
+        "counter_claim": "OAuth2 / Access Token",
+        "critique": "The claim states auth_methods is 'none', which is highly unlikely for a commercial e-commerce platform API. Ecwid typically requires OAuth or token-based authentication to access store data."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "developer_account_required",
+        "critique": "The quote mentions 'Get access to API with an app', implying that developer registration and app creation are necessary, rather than completely open 'self_serve_free' without a registration step."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: The claim states auth_methods is 'none', which is highly unlikely for a commercial e-commerce platform API. Ecwid typically requires OAuth or token-based authentication to access store data.",
+      "Flagged credential_access as disputed: The quote mentions 'Get access to API with an app', implying that developer registration and app creation are necessary, rather than completely open 'self_serve_free' without a registration step."
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": 32,
+  "app": "Meta Ads",
+  "category": "Marketing",
+  "one_liner": "Meta Ads (Facebook and Instagram) marketing API and MCP integration for campaign, ad set, and audience management.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Connects with an OAuth token on Meta's Marketing API.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": "https://github.com/pipeboard-co/meta-ads-mcp"
+  },
+  "build_form": "reuse_existing_mcp",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Meta Ads provides an official Marketing API accessible via OAuth tokens and has multiple community-available MCP implementations.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://wevion.ai/en/blog/meta-ads-tool-total-cost-comparison/",
+      "quote": "Wevion connects with an OAuth token on Meta's Marketing API, so there is no browser session to place anywhere.",
+      "retrieved_at": "2026-03-29T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://wevion.ai/en/blog/meta-ads-tool-total-cost-comparison/",
+      "quote": "Wevion connects with an OAuth token on Meta's Marketing API, so there is no browser session to place anywhere.",
+      "retrieved_at": "2026-03-29T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://wevion.ai/en/blog/meta-ads-tool-total-cost-comparison/",
+      "quote": "restrictions have hit advertisers using nothing but the official Marketing API.",
+      "retrieved_at": "2026-03-29T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://github.com/pipeboard-co/meta-ads-mcp",
+      "quote": "Pipeboard ships a remote MCP server for every major ad platform \u2014 plus a single-binary CLI that wraps all of them.",
+      "retrieved_at": "2026-03-29T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "low",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.337043+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "disputed",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Ads API docs"
+    ],
+    "urls_inspected": [
+      "https://github.com/pipeboard-co/meta-ads-mcp",
+      "https://wevion.ai/en/blog/meta-ads-tool-total-cost-comparison/"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "Meta Ads has a legitimate REST API (Marketing API), so api_exists is true. However, claiming 'self_serve_free' credential access is overly generous given Meta's strict app review, permission tiers, and Business Verification requirements.",
+    "disagreements": [
+      {
+        "field": "credential_access",
+        "counter_claim": "approval_required",
+        "critique": "Meta Marketing API access requires app review, Business Verification, and specific permissions (like Ads Management Standard Access), meaning it is not purely 'self_serve_free'."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "review_required",
+        "critique": "Because Meta Ads API requires formal Meta Business Verification and app review for production tokens, the verdict should not be 'ready_now'."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged credential_access as disputed: Meta Marketing API access requires app review, Business Verification, and specific permissions (like Ads Management Standard Access), meaning it is not purely 'self_serve_free'.",
+      "Flagged verdict as disputed: Because Meta Ads API requires formal Meta Business Verification and app review for production tokens, the verdict should not be 'ready_now'."
+    ]
+  }
+}

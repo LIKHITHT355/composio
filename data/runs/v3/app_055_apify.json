@@ -1,0 +1,101 @@
+{
+  "id": 55,
+  "app": "Apify",
+  "category": "Data",
+  "one_liner": "Cloud platform for web scraping and data extraction",
+  "official_domain": "SEO",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No evidence passages provided to confirm API existence or documentation.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api.exists": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:43.155745+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "needs_human",
+    "verdict": "disputed",
+    "main_blocker": "disputed"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "SEO API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": false,
+    "skeptic_notes": "Apify is a major cloud scraping and automation platform with a comprehensive public REST API. The assessment incorrectly states that no public API exists.",
+    "disagreements": [
+      {
+        "field": "api_exists",
+        "counter_claim": true,
+        "critique": "Apify has a well-known, robust public web API (REST API) used to run actors, manage datasets, and integrate workflows. Claiming no public API exists is false."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "self_serve_free",
+        "critique": "Apify provides free-tier accounts with instant API token generation upon sign-up, requiring no manual approval or sales contact."
+      },
+      {
+        "field": "auth_methods",
+        "counter_claim": [
+          "bearer"
+        ],
+        "critique": "Apify API uses token-based authentication via Authorization headers or query parameters, not 'none'."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "ready_now",
+        "critique": "Since a public REST API exists with self-serve free credential access, the verdict should be ready_now rather than blocked."
+      },
+      {
+        "field": "main_blocker",
+        "counter_claim": null,
+        "critique": "There is no blocker; Apify provides a fully accessible public API with a generous free tier."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: Apify API uses token-based authentication via Authorization headers or query parameters, not 'none'.",
+      "Flagged credential_access as disputed: Apify provides free-tier accounts with instant API token generation upon sign-up, requiring no manual approval or sales contact.",
+      "Flagged verdict as disputed: Since a public REST API exists with self-serve free credential access, the verdict should be ready_now rather than blocked.",
+      "Flagged main_blocker as disputed: There is no blocker; Apify provides a fully accessible public API with a generous free tier."
+    ]
+  }
+}

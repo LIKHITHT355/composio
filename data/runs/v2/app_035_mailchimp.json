@@ -1,0 +1,86 @@
+{
+  "id": 35,
+  "app": "Mailchimp",
+  "category": "Marketing",
+  "one_liner": "Mailchimp is a marketing platform that offers a powerful delivery API tool for transactional emails and SMS messages.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "No specific authentication methods mentioned in the provided text.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Mailchimp features a delivery API tool for transactional emails and SMS, but the provided text lacks complete documentation on auth and full API specifications.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "quote": "Mailchimp Transactional is a powerful delivery API tool. Use Mailchimp Transactional to send e-commerce notifications and automated transactional email and SMS messages such as password resets, order notifications, and appointment reminders.",
+      "retrieved_at": "2026-03-04T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "quote": "Our Free Marketing plan is ideal for beginners who want to grow their audience and create emails while testing out some of Mailchimp's tools and features. It includes all the basics you need to start marketing.",
+      "retrieved_at": "2026-03-04T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "quote": "Mailchimp Transactional is a powerful delivery API tool.",
+      "retrieved_at": "2026-03-04T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "credential_access": "high",
+    "auth_methods": "low",
+    "mcp.status": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:47:21.023473+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 3,
+    "verified_quotes": 3,
+    "quote_accuracy": 1.0,
+    "flags": [
+      "Third-party evidence domain used: https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "Third-party evidence domain used: https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "Third-party evidence domain used: https://mailchimp.com/help/about-mailchimp-pricing-plans/"
+    ]
+  }
+}

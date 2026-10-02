@@ -1,0 +1,105 @@
+{
+  "id": 22,
+  "app": "Twilio",
+  "category": "Communications and Messaging",
+  "one_liner": "Cloud communications platform for building SMS, voice, and messaging applications.",
+  "official_domain": "twilio.com",
+  "auth_methods": [
+    "basic",
+    "api_key",
+    "bearer_token",
+    "jwt"
+  ],
+  "auth_notes": "Authenticate Twilio API requests with HTTP Basic authentication using an API key and API key secret, or Account SID and Auth Token. OAuth requests use a Bearer access token or JWT access tokens.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "sdk_only"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://www.twilio.com/docs/api",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Twilio provides a well-documented REST API with clear authentication via HTTP Basic, API keys, and OAuth/JWT access tokens.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "csharp",
+      "java",
+      "node"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.twilio.com/docs/api/errors/57019",
+      "quote": "Authenticate Twilio API requests with HTTP Basic authentication using an API key and API key secret, or for local testing, your Account SID and Auth Token. If the endpoint uses OAuth, send Authorization: Bearer {AccessToken}.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.twilio.com/en-us",
+      "quote": "Find your Account SID and Auth Token at twilio.com/console",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://www.twilio.com/docs/api/errors/57019",
+      "quote": "Twilio returns this error when a Messaging request does not include a usable Authorization header. Authenticate Twilio API requests with HTTP Basic authentication using an API key and API key secret, or for local testing, your Account SID and Auth Token.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://www.twilio.com/en-us",
+      "quote": "Install the C# / .NET helper library from twilio.com/docs/csharp/install",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://www.twilio.com/docs/api/errors/57019",
+      "quote": "Twilio API requests use HTTP Basic authentication for API key or Account SID credentials, while OAuth requests use a Bearer access token.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:37:13.309106+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 5,
+    "verified_quotes": 5,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

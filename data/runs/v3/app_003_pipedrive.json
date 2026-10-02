@@ -1,0 +1,108 @@
+{
+  "id": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "one_liner": "Pipedrive is a web-based Sales CRM and pipeline management software with a RESTful API and developer platform.",
+  "official_domain": "pipedrive.com",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "API token can be provided in the x-api-token header or access token via OAuth 2.0.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Pipedrive provides a robust RESTful API with free self-serve API tokens and OAuth 2.0 support, making it fully ready for integration development.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": true,
+    "rate_limit_note": null,
+    "official_sdks": [
+      "Node.js",
+      "PHP"
+    ],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "quote": "Access to the Pipedrive API is only possible using the API key or an access token when using OAuth 2.0.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "quote": "Every Pipedrive plan comes with an API token that gives you access to our RESTful API for free.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developers.pipedrive.com/docs/api/v1",
+      "quote": "This reference helps you implement the RESTful Pipedrive API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developers.pipedrive.com/docs/api/v1",
+      "quote": "We offer two official Pipedrive API client libraries: Node.js and PHP.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:23.051030+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "pipedrive.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developers.pipedrive.com/docs/api/v1",
+      "https://www.pipedrive.com/en/features/crm-api"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The claims are fully supported by the provided quotes and official documentation. Pipedrive offers a genuine REST API supporting both API keys and OAuth2, accessible freely via standard plans without requiring manual approval.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

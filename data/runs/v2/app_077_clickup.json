@@ -1,0 +1,80 @@
+{
+  "id": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "one_liner": "Productivity and project management platform with public API, webhooks, OAuth, and MCP server support.",
+  "official_domain": "clickup.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "OAuth lets people sign into their ClickUp account.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "moderate",
+    "docs_url": "https://developer.clickup.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "ClickUp provides a public API, OAuth authentication, webhooks, and an official MCP server, making it fully ready for integration.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.clickup.com",
+      "quote": "Build integrations and apps with our Public API.",
+      "retrieved_at": "2023-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.clickup.com",
+      "quote": "Connect your AI with ClickUp using our MCP Server.",
+      "retrieved_at": "2023-10-25T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.clickup.com",
+      "quote": "Let people sign into their ClickUp account.",
+      "retrieved_at": "2023-10-25T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "mcp.status": "high",
+    "credential_access": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:08:51.071527+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 3,
+    "verified_quotes": 3,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "id": 41,
+  "app": "Shopify",
+  "category": "Ecommerce",
+  "one_liner": "Ecommerce platform that lets people build online stores and retail point-of-sale systems.",
+  "official_domain": "shopify.dev",
+  "auth_methods": [
+    "other"
+  ],
+  "auth_notes": "How authentication works across Shopify's APIs, and which token and header each API uses.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "Some APIs also require Shopify's approval or a specific Shopify plan.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "graphql",
+      "rest",
+      "sdk_only",
+      "cli"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://shopify.dev/docs",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Shopify provides comprehensive documentation, official SDK libraries, and broad GraphQL and REST API capabilities accessible via developer tools.",
+  "extras": {
+    "webhooks": true,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "Limits covers input array size, pagination depth, how rate limiting works, and where to find the rate limit figures for each API.",
+    "official_sdks": [
+      "ruby",
+      "node",
+      "php",
+      "go",
+      ".net"
+    ],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2"
+    ]
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://shopify.dev/api",
+      "quote": "GraphQL Admin API reads and writes products, customers, orders, inventory, and the rest of the data behind the Shopify admin.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://shopify.dev/docs",
+      "quote": "Learn how to build an app, or customize your storefront. Whether you're just getting started, deep in the development process, or ready to distribute and monetize your work, Shopify's docs, dev tools and frameworks make building easy and efficient.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://shopify.dev/api",
+      "quote": "How authentication works across Shopify's APIs, and which token and header each API uses.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://shopify.dev/docs",
+      "quote": "Agents\nBuild agentic shopping experiences powered by Shopify merchants, from product discovery to checkout.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp.status": "medium",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.343653+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "shopify.dev API docs"
+    ],
+    "urls_inspected": [
+      "https://shopify.dev/api",
+      "https://shopify.dev/docs"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "Shopify clearly possesses fully-featured GraphQL and REST APIs, so api_exists is correct. However, auth_methods and credential_access require more precise classification than generic placeholder or unconditional self-serve free values.",
+    "disagreements": [
+      {
+        "field": "auth_methods",
+        "counter_claim": "oauth2, api_key",
+        "critique": "The generic quote about authentication does not substantiate 'other'; Shopify standardly uses OAuth2 and custom app access tokens (API keys)."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "approval_or_paid",
+        "critique": "While development stores are free, deploying apps to live merchant stores often requires a Shopify merchant plan, partnership accounts, or app store review processes rather than a purely instant self-serve free credential generation without constraints."
+      },
+      {
+        "field": "api_styles",
+        "counter_claim": [
+          "graphql",
+          "rest"
+        ],
+        "critique": "Including 'cli' and 'sdk_only' is overly broad given the evidence focuses strictly on the GraphQL and REST Admin APIs."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: The generic quote about authentication does not substantiate 'other'; Shopify standardly uses OAuth2 and custom app access tokens (API keys).",
+      "Flagged credential_access as disputed: While development stores are free, deploying apps to live merchant stores often requires a Shopify merchant plan, partnership accounts, or app store review processes rather than a purely instant self-serve free credential generation without constraints."
+    ]
+  }
+}

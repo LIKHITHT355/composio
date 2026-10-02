@@ -1,0 +1,69 @@
+{
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer",
+  "one_liner": "Neo4j graph database platform",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "unknown",
+  "credential_access": "no_public_api",
+  "gate_notes": "unknown",
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "unknown",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No fetched evidence passages or public API documentation were available to evaluate this application.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [],
+  "confidence": {
+    "api.exists": "low",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "mcp.status": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:03:41.128558+00:00"
+  },
+  "field_status": {
+    "auth_methods": "needs_human",
+    "credential_access": "needs_human",
+    "api.exists": "needs_human",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Infra API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The application correctly identifies that Neo4j is a database management system/infrastructure rather than a hosted SaaS with a public HTTP API out of the box, aligning with the evidence and constraints.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

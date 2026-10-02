@@ -1,0 +1,110 @@
+{
+  "id": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "one_liner": "Smartsheet developers and API ecosystem providing guides, reference docs, samples, and MCP server tools.",
+  "official_domain": "smartsheet.com",
+  "auth_methods": [
+    "other"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developers.smartsheet.com/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://developers.smartsheet.com/"
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "none",
+  "verdict_reason": "Smartsheet provides comprehensive API documentation and an official MCP server, allowing integration development.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.smartsheet.com/",
+      "quote": "Smartsheet API Reference",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developers.smartsheet.com/",
+      "quote": "Explore API docs, connect to our MCP server, develop faster on SDKs, and join a thriving community building on Smartsheet.",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.smartsheet.com/",
+      "quote": "Explore API docs, connect to our MCP server, develop faster on SDKs, and join a thriving community building on Smartsheet.",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "mcp": "high",
+    "credential_access": "low",
+    "auth_methods": "low",
+    "api.exists": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:06:30.516160+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "smartsheet.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developers.smartsheet.com/"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The claims assume 'self_serve_free' credential access without sufficient evidence, as Smartsheet is a commercial paid platform. Additionally, the auth method is vaguely classified as 'other' instead of standard token/OAuth mechanisms.",
+    "disagreements": [
+      {
+        "field": "auth_methods",
+        "counter_claim": "bearer",
+        "critique": "The auth_methods is listed as 'other', but Smartsheet standard API authentication uses OAuth 2.0 or API Access Tokens (Bearer tokens). 'other' is insufficiently specific given standard REST API conventions."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "requires_paid_account",
+        "critique": "The quote 'Explore API docs... and join a thriving community' does not support the claim of 'self_serve_free' credential access. Smartsheet is a paid SaaS product, and API access typically requires a paid Smartsheet account, not a free self-serve tier."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: The auth_methods is listed as 'other', but Smartsheet standard API authentication uses OAuth 2.0 or API Access Tokens (Bearer tokens). 'other' is insufficiently specific given standard REST API conventions.",
+      "Flagged credential_access as disputed: The quote 'Explore API docs... and join a thriving community' does not support the claim of 'self_serve_free' credential access. Smartsheet is a paid SaaS product, and API access typically requires a paid Smartsheet account, not a free self-serve tier."
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": 61,
+  "app": "GitHub",
+  "category": "Developer",
+  "one_liner": "Developer platform for version control and collaboration",
+  "official_domain": "Infra",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "No evidence passages provided to ground API or authentication details.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": true,
+    "composio_auth_schemes": [
+      "oauth2",
+      "api_key",
+      "bearer_token"
+    ]
+  },
+  "evidence": [],
+  "confidence": {
+    "auth_methods": "low",
+    "credential_access": "low",
+    "api.exists": "low",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:02:56.424782+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "needs_human",
+    "verdict": "disputed",
+    "main_blocker": "disputed"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "Infra API docs"
+    ],
+    "urls_inspected": [],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The claims drastically misrepresent GitHub, stating that no public API exists and that authentication is 'none', which contradicts reality and standard developer knowledge.",
+    "disagreements": [
+      {
+        "field": "api_exists",
+        "counter_claim": "true",
+        "critique": "GitHub has one of the most prominent public REST and GraphQL APIs in the industry; claiming no API exists is factually incorrect."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "public",
+        "critique": "GitHub API credentials are publicly accessible via OAuth, personal access tokens, and GitHub Apps."
+      },
+      {
+        "field": "auth_methods",
+        "counter_claim": "[\"oauth\", \"bearer\", \"basic\"]",
+        "critique": "GitHub APIs require authentication using OAuth tokens, Personal Access Tokens (Bearer), or Basic auth, not 'none'."
+      },
+      {
+        "field": "verdict",
+        "counter_claim": "ready_now",
+        "critique": "The GitHub API is fully public, self-serve, and ready for integration immediately."
+      },
+      {
+        "field": "main_blocker",
+        "counter_claim": "none",
+        "critique": "There is no blocker since a robust public API exists."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: GitHub APIs require authentication using OAuth tokens, Personal Access Tokens (Bearer), or Basic auth, not 'none'.",
+      "Flagged credential_access as disputed: GitHub API credentials are publicly accessible via OAuth, personal access tokens, and GitHub Apps.",
+      "Flagged verdict as disputed: The GitHub API is fully public, self-serve, and ready for integration immediately.",
+      "Flagged main_blocker as disputed: There is no blocker since a robust public API exists."
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": 28,
+  "app": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "one_liner": "Messaging platform offering volume tiers for utility and authentication messages.",
+  "official_domain": "developers.facebook.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "None of the provided evidence specifies the authentication methods for the API.",
+  "credential_access": "no_public_api",
+  "gate_notes": "No public API details or credentials are provided in the source text.",
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "The provided text contains no documentation or evidence regarding a public API for WhatsApp Business.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "credential_access",
+      "url": "https://whatsappbusiness.com/products/platform-pricing/",
+      "quote": "As businesses send more messages on WhatsApp, they can unlock more attractive pricing via our volume tiers.",
+      "retrieved_at": "2026-03-08T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "credential_access": "low",
+    "api.exists": "low",
+    "verdict": "low",
+    "auth_methods": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:58:07.645076+00:00"
+  }
+}

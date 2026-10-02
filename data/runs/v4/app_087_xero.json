@@ -1,0 +1,103 @@
+{
+  "id": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "one_liner": "Cloud-based accounting software platform providing APIs, SDKs, and developer tools for small businesses and accountants.",
+  "official_domain": "developer.xero.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developer.xero.com",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Xero provides public APIs, SDKs, developer tools, and an official AI Toolkit featuring an MCP Server, allowing free account creation to build integrations.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.xero.com",
+      "quote": "This includes Xero APIs, SDKs, code samples, documentation and more.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.xero.com",
+      "quote": "Xero's AI ToolkitGet Started with Xero's AI Toolkit including OpenAI Agents SDK, MCP Server, LangChain and prompt examples.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer.xero.com",
+      "quote": "Start Building Sign up for a free account to build on the Xero platform.",
+      "retrieved_at": "2023-10-27T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "mcp.status": "high",
+    "credential_access": "high",
+    "verdict": "low",
+    "auth_methods": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.385752+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developer.xero.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.xero.com"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "While Xero clearly has a REST API and free developer signup, claiming 'none' for authentication on a financial API is a critical security and factual error. Xero strictly uses OAuth 2.0.",
+    "disagreements": [
+      {
+        "field": "auth_methods",
+        "counter_claim": "oauth2",
+        "critique": "Xero requires OAuth 2.0 for API access, not 'none'. The claim stating 'none' is completely incorrect for a financial accounting platform."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: Xero requires OAuth 2.0 for API access, not 'none'. The claim stating 'none' is completely incorrect for a financial accounting platform."
+    ]
+  }
+}

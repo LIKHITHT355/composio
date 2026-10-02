@@ -1,0 +1,92 @@
+{
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "one_liner": "A collaboration platform that provides document processing, conversation management, calendar scheduling, and more via official OpenAPI and MCP support.",
+  "official_domain": "open.larksuite.com",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Supports App ID, App Secret, and OAuth user access tokens.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest",
+      "sdk_only"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://github.com/larksuite/lark-openapi-mcp",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "official",
+    "url": "https://github.com/larksuite/lark-openapi-mcp"
+  },
+  "build_form": "reuse_existing_mcp",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Lark provides an official OpenAPI MCP repository with documented setup, App ID and App Secret authentication, and OAuth 2.0 support.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "mcp.status",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "quote": "This is the Feishu/Lark official OpenAPI MCP (Model Context Protocol) tool designed to help users quickly connect to the Feishu/Lark platform and enable efficient collaboration between AI Agents and Feishu/Lark.",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "quote": "The tool encapsulates Feishu/Lark Open Platform API interfaces as MCP tools, allowing AI assistants to directly call these interfaces and implement various automation scenarios such as document processing, conversation management, calendar scheduling, and more.",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "quote": "If you need to call APIs as a user, set the OAuth 2.0 redirect URL to http://localhost:3000/callback",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "quote": "Obtain the App ID and App Secret, which will be used for API authentication",
+      "retrieved_at": "2025-02-18T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "app": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:39:01.617479+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 4,
+    "verified_quotes": 4,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

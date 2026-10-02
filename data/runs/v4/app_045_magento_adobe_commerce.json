@@ -1,0 +1,117 @@
+{
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "one_liner": "Adobe Commerce provides developers with software, tools, and services to customize and extend Adobe Commerce and integrate with backend systems.",
+  "official_domain": "developer.adobe.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [],
+    "breadth": "broad",
+    "docs_url": "https://developer.adobe.com/commerce/",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Adobe Commerce provides developer documentation, resources, and API-first commerce extensibility features allowing system integrations.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.adobe.com/commerce/",
+      "quote": "Make innovation a constant with a secure, scalable, and extensible commerce platform.",
+      "retrieved_at": "2026-03-04T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer.adobe.com/commerce/",
+      "quote": "Get Developer Docs\nGet Merchant Docs\nGet Operations Docs",
+      "retrieved_at": "2026-03-04T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.adobe.com/commerce/",
+      "quote": "Adobe provides developers with software, tools, and services to customize and extend Adobe Commerce to support multichannel, global commerce for B2B and B2C, and integrate with backend systems.",
+      "retrieved_at": "2026-03-04T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "low",
+    "credential_access": "low",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": true,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.349556+00:00"
+  },
+  "field_status": {
+    "auth_methods": "disputed",
+    "credential_access": "disputed",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "developer.adobe.com API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.adobe.com/commerce/"
+    ],
+    "skeptic_verdict": false,
+    "skeptic_notes": "The claims rely on extremely vague marketing homepage quotes rather than concrete API documentation. The auth method 'none' is incorrect for an enterprise commerce platform.",
+    "disagreements": [
+      {
+        "field": "auth_methods",
+        "counter_claim": "[\"oauth\", \"token\"]",
+        "critique": "The claim states auth_methods is 'none', but Adobe Commerce/Magento APIs require OAuth or integration tokens."
+      },
+      {
+        "field": "api_styles",
+        "counter_claim": "[\"rest\", \"graphql\", \"soap\"]",
+        "critique": "The evidence quotes fail to detail the API styles, but Adobe Commerce robustly provides REST, GraphQL, and SOAP APIs which are omitted here."
+      },
+      {
+        "field": "credential_access",
+        "counter_claim": "approval_required",
+        "critique": "Adobe Commerce (formerly Magento) requires access to an instance, and Adobe developer accounts often involve administrative setup or organization approval, not purely instant self-serve free API credential generation without a platform setup."
+      },
+      {
+        "field": "evidence_quotes",
+        "counter_claim": "insufficient_evidence",
+        "critique": "The provided quotes are generic marketing blurbs ('Make innovation a constant...') and do not substantiate API existence, authentication methods, or credential access."
+      }
+    ],
+    "arbiter_decisions": [
+      "Flagged auth_methods as disputed: The claim states auth_methods is 'none', but Adobe Commerce/Magento APIs require OAuth or integration tokens.",
+      "Flagged credential_access as disputed: Adobe Commerce (formerly Magento) requires access to an instance, and Adobe developer accounts often involve administrative setup or organization approval, not purely instant self-serve free API credential generation without a platform setup."
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": 16,
+  "app": "LiveAgent",
+  "category": "Support and Helpdesk",
+  "one_liner": "LiveAgent is a helpdesk and customer support software offering ticketing, live chat, call center, and robust API integration capabilities.",
+  "official_domain": "liveagent.com",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Supports API key authentication as referenced in technical support documentation.",
+  "credential_access": "self_serve_trial",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://support.liveagent.com/066804-LiveAgent-API",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "LiveAgent provides a public REST API supporting both v1 and v3 endpoints with API key authentication, and offers a free trial.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": "API rate limit (API requests limit)",
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://support.liveagent.com/066804-LiveAgent-API",
+      "quote": "LiveAgent API",
+      "retrieved_at": "2024-03-24T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://support.liveagent.com/066804-LiveAgent-API",
+      "quote": "API key",
+      "retrieved_at": "2024-03-24T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://www.liveagent.com/",
+      "quote": "Yes \u2014 LiveAgent comes with a 30\u2011day free trial that requires no credit card, letting you test all features before committing to a paid plan.",
+      "retrieved_at": "2024-03-24T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://support.liveagent.com/066804-LiveAgent-API",
+      "quote": "LiveAgent API",
+      "retrieved_at": "2024-03-24T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "mcp.status": "high",
+    "verdict": "low",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:32:16.748126+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 4,
+    "verified_quotes": 4,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

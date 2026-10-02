@@ -1,0 +1,106 @@
+{
+  "id": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "one_liner": "Notion is a productivity and project management workspace providing custom automations, workflows, and integrations via its API.",
+  "official_domain": "developers.notion.com",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Supports internal connections using static internal connection API tokens, personal access tokens (PATs), and public connections using OAuth 2.0.",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.notion.com/guides/get-started/overview",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Notion provides a public API with clear documentation, supporting both OAuth 2.0 and token-based authentication methods for custom integrations and apps.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "Internal connections are scoped to a single workspace and use a static credential called an internal connection API token.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "Public connections use OAuth 2.0 for authentication.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "Internal connections are scoped to a single workspace and use a static credential called an internal connection API token. They\u2019re ideal for custom automations and workflows \u2014 things like syncing data, sending notifications, or building internal dashboards.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "api.exists",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "Personal access tokens use the token creator\u2019s existing Notion permissions. If the creator can access a page in Notion, a PAT with the right capabilities can access it through the API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "API reference",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "quote": "Public connections use the OAuth page picker, where users select which pages to grant access to during the authorization flow.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "auth_methods": "high",
+    "credential_access": "high",
+    "api": "high",
+    "mcp": "high",
+    "verdict": "high",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T13:05:10.749862+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 6,
+    "verified_quotes": 6,
+    "quote_accuracy": 1.0,
+    "flags": []
+  }
+}

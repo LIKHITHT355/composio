@@ -1,0 +1,89 @@
+{
+  "id": 17,
+  "app": "Plain",
+  "category": "Support and Helpdesk",
+  "one_liner": "Customer support platform that brings channels, AI agents, and workflows into a single queue built on an API.",
+  "official_domain": "plain.com",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses an API key passed as a Bearer token in the Authorization header (Authorization: Bearer YOUR_TOKEN).",
+  "credential_access": "self_serve_free",
+  "gate_notes": null,
+  "api": {
+    "exists": true,
+    "styles": [
+      "graphql"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://www.plain.com/docs/graphql/introduction",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Plain provides a well-documented GraphQL API accessible using API keys via Bearer token authentication.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://www.plain.com/docs/graphql/introduction",
+      "quote": "Authorization: Bearer YOUR_TOKEN where the token is your API key. See authentication for more details.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://www.plain.com/docs/graphql/introduction",
+      "quote": "Authorization: Bearer YOUR_TOKEN where the token is your API key. See authentication for more details.",
+      "retrieved_at": "2026-03-30T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api": "high",
+    "auth_methods": "high",
+    "credential_access": "low",
+    "verdict": "low",
+    "api.exists": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v4_refined",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v4.0_taxonomy_refined",
+    "timestamp": "2026-10-02T14:10:05.322995+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "needs_human",
+    "api.exists": "rule_verified",
+    "verdict": "needs_human",
+    "main_blocker": "needs_human"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "plain.com API docs"
+    ],
+    "urls_inspected": [
+      "https://www.plain.com/docs/graphql/introduction"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The API claim is verified by documentation showing a GraphQL endpoint utilizing Bearer token authentication via API keys, accessible self-serve.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

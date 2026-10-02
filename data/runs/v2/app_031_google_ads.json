@@ -1,0 +1,111 @@
+{
+  "id": 31,
+  "app": "Google Ads",
+  "category": "Marketing",
+  "one_liner": "API and developer tools to help advertisers manage their Google Ads accounts and campaigns more efficiently.",
+  "official_domain": "Ads",
+  "auth_methods": [
+    "oauth2",
+    "jwt"
+  ],
+  "auth_notes": "The Google Ads API uses OAuth 2.0 for authorizing API requests. Both OAuth 2.0 user authentication flow and service account flow are supported. A developer token is also required in the developer-token HTTP header for every API call.",
+  "credential_access": "approval_required",
+  "gate_notes": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "broad",
+    "docs_url": "https://developers.google.com/google-ads/api/rest/auth",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "community",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_with_caveats",
+  "main_blocker": "app_review_or_approval",
+  "verdict_reason": "Google Ads provides a fully functional REST API with OAuth2 and developer tokens, but obtaining access requires an application review process.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developers.google.com/google-ads/api/rest/auth",
+      "quote": "When calling the Google Ads API, you need both OAuth 2.0 application credentials and a developer token.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developers.google.com/google-ads/api/rest/auth",
+      "quote": "The Google Ads API uses OAuth 2.0 for authorizing API requests. Both OAuth 2.0 user authentication flow and service account flow are supported.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "quote": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "quote": "The Google Ads API has access levels associated with the Google Cloud project, and uses an application review process to grant various access levels.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "main_blocker",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "quote": "The Google Ads API has access levels tied to the developer token and requires an application review to grant them.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://support.google.com/adspolicy/answer/6169371?hl=en",
+      "quote": "The Google Ads API and other Google Ads developer tools like MCPs (\u201cDeveloper Services\u201d) let developers build tools that help advertisers manage their Google Ads accounts and campaigns more efficiently and creatively.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "verdict": "high",
+    "mcp.status": "low",
+    "main_blocker": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v2_grounded",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v2.0",
+    "timestamp": "2026-10-02T12:42:34.590448+00:00"
+  },
+  "_verifier_a": {
+    "total_quotes": 6,
+    "verified_quotes": 6,
+    "quote_accuracy": 1.0,
+    "flags": [
+      "Third-party evidence domain used: https://developers.google.com/google-ads/api/rest/auth",
+      "Third-party evidence domain used: https://developers.google.com/google-ads/api/rest/auth",
+      "Third-party evidence domain used: https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "Third-party evidence domain used: https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "Third-party evidence domain used: https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "Third-party evidence domain used: https://support.google.com/adspolicy/answer/6169371?hl=en"
+    ]
+  }
+}

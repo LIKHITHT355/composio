@@ -1,0 +1,117 @@
+{
+  "id": 29,
+  "app": "Aircall",
+  "category": "Communications and Messaging",
+  "one_liner": "Aircall Public API for managing phone systems and call workflows.",
+  "official_domain": "aircall.io",
+  "auth_methods": [
+    "api_key",
+    "basic"
+  ],
+  "auth_notes": "API key authentication works by sending your credentials in the Authorization header of each request, encoded in Base64 using the format api_id:api_token.",
+  "credential_access": "self_serve_free",
+  "gate_notes": "You must have an Aircall account. Sign up as a customer here or if you qualify to be a tech partner you can then sign up for a developer account here.",
+  "api": {
+    "exists": true,
+    "styles": [
+      "rest"
+    ],
+    "breadth": "moderate",
+    "docs_url": "https://developer.aircall.io/docs/basic-authentication",
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "api_toolkit",
+  "verdict": "ready_now",
+  "main_blocker": "none",
+  "verdict_reason": "Aircall provides a public REST API with self-serve API key/Basic authentication and clear developer documentation.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://developer.aircall.io/docs/basic-authentication",
+      "quote": "Learn how to generate your Aircall API keys and use them to authenticate requests to the Aircall Public API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "auth_methods",
+      "url": "https://developer.aircall.io/docs/basic-authentication",
+      "quote": "API key authentication works by sending your credentials in the Authorization header of each request, encoded in Base64. The format is api_id:api_token.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://developer.aircall.io/docs/basic-authentication",
+      "quote": "Open your Aircall Dashboard > Integrations > API keys.\n\nIn the top right corner, click Generate API key.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "mcp.status",
+      "url": "https://developer.aircall.io/docs/basic-authentication",
+      "quote": "Learn how to generate your Aircall API keys and use them to authenticate requests to the Aircall Public API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://developer.aircall.io/docs/basic-authentication",
+      "quote": "Learn how to generate your Aircall API keys and use them to authenticate requests to the Aircall Public API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "main_blocker",
+      "url": "https://developer.aircall.io/docs/basic-authentication",
+      "quote": "Learn how to generate your Aircall API keys and use them to authenticate requests to the Aircall Public API.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "auth_methods": "high",
+    "credential_access": "high",
+    "mcp.status": "high",
+    "verdict": "high",
+    "main_blocker": "high"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T12:58:09.434770+00:00"
+  },
+  "field_status": {
+    "auth_methods": "rule_verified",
+    "credential_access": "rule_verified",
+    "api.exists": "rule_verified",
+    "verdict": "rule_verified",
+    "main_blocker": "rule_verified"
+  },
+  "audit_trace": {
+    "queries_run": [
+      "aircall.io API docs"
+    ],
+    "urls_inspected": [
+      "https://developer.aircall.io/docs/basic-authentication"
+    ],
+    "skeptic_verdict": true,
+    "skeptic_notes": "The evidence provided accurately supports the claims. Aircall has a public REST API, uses API key/basic auth encoded in Base64 as described, and keys can be generated directly via self-serve through the Aircall Dashboard without manual approval or sales contact.",
+    "disagreements": [],
+    "arbiter_decisions": []
+  }
+}

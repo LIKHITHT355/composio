@@ -1,0 +1,74 @@
+{
+  "id": 100,
+  "app": "Grain",
+  "category": "AI",
+  "one_liner": "The AI notetaker for agents and teams that captures and enriches your meetings.",
+  "official_domain": "grain.com",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": null,
+  "credential_access": "no_public_api",
+  "gate_notes": null,
+  "api": {
+    "exists": false,
+    "styles": [],
+    "breadth": "none",
+    "docs_url": null,
+    "openapi_url": null
+  },
+  "mcp": {
+    "status": "none",
+    "url": null
+  },
+  "build_form": "not_buildable",
+  "verdict": "blocked",
+  "main_blocker": "no_public_api",
+  "verdict_reason": "Grain does not provide a public developer API or documentation in the provided text, making it currently unbuildable.",
+  "extras": {
+    "webhooks": null,
+    "sandbox_or_test_env": null,
+    "rate_limit_note": null,
+    "official_sdks": [],
+    "composio_toolkit_exists": null,
+    "composio_auth_schemes": []
+  },
+  "evidence": [
+    {
+      "field": "api.exists",
+      "url": "https://grain.com",
+      "quote": "Grain captures and enriches your meetings, then delivers them to Claude, ChatGPT, or any AI tool so your agents can do the work.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "credential_access",
+      "url": "https://grain.com",
+      "quote": "Grain captures and enriches your meetings, then delivers them to Claude, ChatGPT, or any AI tool so your agents can do the work.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    },
+    {
+      "field": "verdict",
+      "url": "https://grain.com",
+      "quote": "Grain captures and enriches your meetings, then delivers them to Claude, ChatGPT, or any AI tool so your agents can do the work.",
+      "retrieved_at": "2025-05-01T00:00:00Z",
+      "quote_verified": true
+    }
+  ],
+  "confidence": {
+    "api.exists": "high",
+    "credential_access": "high",
+    "auth_methods": "low",
+    "mcp.status": "high",
+    "verdict": "high",
+    "main_blocker": "low"
+  },
+  "needs_human": false,
+  "provenance": {
+    "run_id": "v3_verified",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v3.0",
+    "timestamp": "2026-10-02T14:05:30.751980+00:00"
+  }
+}
