@@ -2,11 +2,11 @@
 
 **Workspace**: `c:\Users\lliki\Downloads\composio_research`  
 **Max Budget**: $20 USD  
-**Status**: IN PROGRESS (Phase 1: Rubric & Schema Specification)
+**Status**: IN PROGRESS (Phase 2: Agent v1 Naive Baseline)
 
 ## Phase Checklist
 - [x] Phase 0: Workspace Setup & Appendix A Ingestion (Passed 100 rows, 10 categories, preflight ok)
-- [ ] Phase 1: Rubric + Schema Contract (Pydantic, JSON Schema, Written enum rules)
+- [x] Phase 1: Rubric + Schema Contract (Pydantic models, JSON schema, RUBRIC.md, 100% tests pass)
 - [ ] Phase 2: Agent v1 (Naive Baseline on 100 apps)
 - [ ] Phase 3: Agent v2 & v3 (Evidence-Grounded & Arbiter Verification)
 - [ ] Phase 4: Gold Sample Hand-Check & Accuracy Benchmark
@@ -20,10 +20,11 @@
 |---|---|---|
 | 2026-10-02 16:40 | Initial project setup & protocol alignment | 2 min |
 | 2026-10-02 16:45 | Ingestion of Appendix A (100 apps across 10 categories) | 1 min |
+| 2026-10-02 16:50 | Schema validation, Pydantic data contracts & Rubric specifications | 3 min |
 
 ## Decisions & Assumptions
-- Python 3.12 environment with caching for web fetches and LLM outputs.
-- Windows-safe execution commands.
+- Standardized Pydantic v2 data model with strict key field enums (`auth_methods`, `credential_access`, `api.exists`, `mcp.status`, `verdict`, `main_blocker`).
+- JSON Schema generated and verified against hand-crafted gold examples.
 - Token thrift rules active (<=6k tokens context cap, prompt caching, deterministic temperature=0).
 
 ## Open Questions & Risks

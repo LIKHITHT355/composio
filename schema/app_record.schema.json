@@ -1,0 +1,474 @@
+{
+  "$defs": {
+    "ApiBreadthEnum": {
+      "enum": [
+        "broad",
+        "moderate",
+        "narrow",
+        "none"
+      ],
+      "title": "ApiBreadthEnum",
+      "type": "string"
+    },
+    "ApiSpec": {
+      "properties": {
+        "exists": {
+          "description": "Whether a public/usable API exists for the product",
+          "title": "Exists",
+          "type": "boolean"
+        },
+        "styles": {
+          "description": "Architectural styles supported by API",
+          "items": {
+            "$ref": "#/$defs/ApiStyleEnum"
+          },
+          "title": "Styles",
+          "type": "array"
+        },
+        "breadth": {
+          "$ref": "#/$defs/ApiBreadthEnum",
+          "default": "none",
+          "description": "Functional breadth of endpoints"
+        },
+        "docs_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Primary developer / API reference documentation URL",
+          "title": "Docs Url"
+        },
+        "openapi_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Direct URL to OpenAPI / Swagger / schema file if found",
+          "title": "Openapi Url"
+        }
+      },
+      "required": [
+        "exists"
+      ],
+      "title": "ApiSpec",
+      "type": "object"
+    },
+    "ApiStyleEnum": {
+      "enum": [
+        "rest",
+        "graphql",
+        "soap",
+        "grpc",
+        "sdk_only",
+        "cli"
+      ],
+      "title": "ApiStyleEnum",
+      "type": "string"
+    },
+    "AuthMethodEnum": {
+      "enum": [
+        "oauth2",
+        "api_key",
+        "bearer_token",
+        "basic",
+        "jwt",
+        "hmac_signing",
+        "aws_sigv4",
+        "none",
+        "other"
+      ],
+      "title": "AuthMethodEnum",
+      "type": "string"
+    },
+    "BuildFormEnum": {
+      "enum": [
+        "api_toolkit",
+        "reuse_existing_mcp",
+        "cli_skill",
+        "not_buildable"
+      ],
+      "title": "BuildFormEnum",
+      "type": "string"
+    },
+    "ConfidenceEnum": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "title": "ConfidenceEnum",
+      "type": "string"
+    },
+    "CredentialAccessEnum": {
+      "enum": [
+        "self_serve_free",
+        "self_serve_trial",
+        "paid_plan_required",
+        "approval_required",
+        "partner_or_sales_gated",
+        "no_public_api",
+        "not_applicable"
+      ],
+      "title": "CredentialAccessEnum",
+      "type": "string"
+    },
+    "EvidenceItem": {
+      "properties": {
+        "field": {
+          "description": "Schema field name this evidence supports",
+          "title": "Field",
+          "type": "string"
+        },
+        "url": {
+          "description": "Exact URL where evidence was fetched",
+          "title": "Url",
+          "type": "string"
+        },
+        "quote": {
+          "description": "Verbatim quote (<=300 chars) from the fetched page",
+          "maxLength": 300,
+          "title": "Quote",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "description": "ISO timestamp of when the page was retrieved",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "quote_verified": {
+          "default": false,
+          "description": "Deterministic check verifying quote is literally in cached content",
+          "title": "Quote Verified",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "field",
+        "url",
+        "quote",
+        "retrieved_at"
+      ],
+      "title": "EvidenceItem",
+      "type": "object"
+    },
+    "ExtrasSpec": {
+      "properties": {
+        "webhooks": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Whether outbound webhooks or event subscriptions exist",
+          "title": "Webhooks"
+        },
+        "sandbox_or_test_env": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Whether sandbox, mock or test credentials exist",
+          "title": "Sandbox Or Test Env"
+        },
+        "rate_limit_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Overview of rate limits (e.g. 10 req/sec, tiered)",
+          "title": "Rate Limit Note"
+        },
+        "official_sdks": {
+          "description": "List of official SDK languages (e.g. python, node)",
+          "items": {
+            "type": "string"
+          },
+          "title": "Official Sdks",
+          "type": "array"
+        },
+        "composio_toolkit_exists": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Whether Composio already supports this app",
+          "title": "Composio Toolkit Exists"
+        },
+        "composio_auth_schemes": {
+          "description": "Auth schemes supported in Composio catalog",
+          "items": {
+            "type": "string"
+          },
+          "title": "Composio Auth Schemes",
+          "type": "array"
+        }
+      },
+      "title": "ExtrasSpec",
+      "type": "object"
+    },
+    "MainBlockerEnum": {
+      "enum": [
+        "none",
+        "no_public_api",
+        "paid_plan",
+        "app_review_or_approval",
+        "partner_program",
+        "contact_sales",
+        "complex_auth",
+        "docs_unclear",
+        "not_a_hosted_service",
+        "other"
+      ],
+      "title": "MainBlockerEnum",
+      "type": "string"
+    },
+    "McpSpec": {
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/McpStatusEnum",
+          "description": "MCP server availability status"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Repository or registry URL of the MCP server",
+          "title": "Url"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "title": "McpSpec",
+      "type": "object"
+    },
+    "McpStatusEnum": {
+      "enum": [
+        "official",
+        "community",
+        "none",
+        "unknown"
+      ],
+      "title": "McpStatusEnum",
+      "type": "string"
+    },
+    "ProvenanceSpec": {
+      "properties": {
+        "run_id": {
+          "description": "Identifier for execution run (e.g. v1_naive, v2_grounded, v3_verified)",
+          "title": "Run Id",
+          "type": "string"
+        },
+        "model": {
+          "description": "Model identifier used for extraction",
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt_version": {
+          "description": "Prompt template version tag",
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "timestamp": {
+          "description": "ISO timestamp of record creation",
+          "title": "Timestamp",
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "model",
+        "prompt_version",
+        "timestamp"
+      ],
+      "title": "ProvenanceSpec",
+      "type": "object"
+    },
+    "VerdictEnum": {
+      "enum": [
+        "ready_now",
+        "ready_with_caveats",
+        "needs_outreach",
+        "blocked",
+        "not_an_api_product"
+      ],
+      "title": "VerdictEnum",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "id": {
+      "description": "App ID from Appendix A (1-100)",
+      "maximum": 100,
+      "minimum": 1,
+      "title": "Id",
+      "type": "integer"
+    },
+    "app": {
+      "description": "Official name of the application",
+      "title": "App",
+      "type": "string"
+    },
+    "category": {
+      "description": "Standard category from Appendix A",
+      "title": "Category",
+      "type": "string"
+    },
+    "one_liner": {
+      "description": "Concise description of the product and its primary function",
+      "title": "One Liner",
+      "type": "string"
+    },
+    "official_domain": {
+      "description": "Primary verified domain (e.g. salesforce.com)",
+      "title": "Official Domain",
+      "type": "string"
+    },
+    "auth_methods": {
+      "description": "Supported API authentication methods",
+      "items": {
+        "$ref": "#/$defs/AuthMethodEnum"
+      },
+      "title": "Auth Methods",
+      "type": "array"
+    },
+    "auth_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Specific auth details (e.g. PKCE, custom headers)",
+      "title": "Auth Notes"
+    },
+    "credential_access": {
+      "$ref": "#/$defs/CredentialAccessEnum",
+      "description": "Accessibility tier for obtaining API credentials"
+    },
+    "gate_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Gating specifics (e.g. developer plan required, manual review)",
+      "title": "Gate Notes"
+    },
+    "api": {
+      "$ref": "#/$defs/ApiSpec",
+      "description": "API presence, styles, and documentation links"
+    },
+    "mcp": {
+      "$ref": "#/$defs/McpSpec",
+      "description": "Model Context Protocol server status"
+    },
+    "build_form": {
+      "$ref": "#/$defs/BuildFormEnum",
+      "description": "Target format for composio integration"
+    },
+    "verdict": {
+      "$ref": "#/$defs/VerdictEnum",
+      "description": "Overall buildability status verdict"
+    },
+    "main_blocker": {
+      "$ref": "#/$defs/MainBlockerEnum",
+      "default": "none",
+      "description": "Primary blocker if not ready_now"
+    },
+    "verdict_reason": {
+      "description": "Concise rationale for verdict (<=2 sentences)",
+      "maxLength": 400,
+      "title": "Verdict Reason",
+      "type": "string"
+    },
+    "extras": {
+      "$ref": "#/$defs/ExtrasSpec",
+      "description": "Additional technical capabilities"
+    },
+    "evidence": {
+      "description": "Grounding citations and verbatim quotes",
+      "items": {
+        "$ref": "#/$defs/EvidenceItem"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "confidence": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ConfidenceEnum"
+      },
+      "description": "Confidence per Key Field",
+      "title": "Confidence",
+      "type": "object"
+    },
+    "needs_human": {
+      "default": false,
+      "description": "Flagged for manual human review or ambiguous findings",
+      "title": "Needs Human",
+      "type": "boolean"
+    },
+    "provenance": {
+      "$ref": "#/$defs/ProvenanceSpec",
+      "description": "Metadata tracing model, prompt, and execution run"
+    }
+  },
+  "required": [
+    "id",
+    "app",
+    "category",
+    "one_liner",
+    "official_domain",
+    "credential_access",
+    "api",
+    "mcp",
+    "build_form",
+    "verdict",
+    "verdict_reason",
+    "provenance"
+  ],
+  "title": "AppRecord",
+  "type": "object"
+}

@@ -12,6 +12,7 @@ help:
 
 check:
 	$(PYTHON) tests/test_preflight.py
+	$(PYTHON) -m pytest tests/test_schema.py
 
 test:
 	$(PYTHON) -m pytest tests/
