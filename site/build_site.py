@@ -692,11 +692,17 @@ def main():
 </html>
 """
 
+    # Write to site/index.html
     out_file = site_dir / "index.html"
     with open(out_file, "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    print(f"Generated standalone case study HTML to {out_file} ({len(html_content)} bytes)")
+    # Write to root index.html for instant GitHub Pages root deployment
+    root_index = Path("index.html")
+    with open(root_index, "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+    print(f"Generated standalone case study HTML to {out_file} and {root_index} ({len(html_content)} bytes)")
 
 if __name__ == "__main__":
     main()
